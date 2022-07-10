@@ -1,0 +1,538 @@
+계정 만들기
+
+한줄 명령어로 만들기  useradd -d -c -u -g -s  // mkdir -p 
+
+1 /xeneration/spur/home/user1 이라는 홈디렉토리가 생성하도록 user1 계정을 만드시오
+mkdir -p /xeneration/spur/home/ && useradd -d /xeneration/spur/home/user1 user1
+
+2 /xeneration/spur/home/user2 이라는 홈디렉토리와 ksh 쉘을 쓰는 user2 계정을 만드시오.
+useradd -d /xeneration/spur/home/user2 -s /bin/ksh user2
+
+3 아래와 같이 user3 를 만드시오
+  홈디렉토리 /test/home/user3 : -d
+  쉘 /bin/ksh : -s
+  설명 genius : -c
+  UID 510 : -u
+mkdir -p /test/home && useradd -d /test/home/user3 -s /bin/ksh -c genius -u 510  user3
+4 index.html 이라는 파일이 홈디렉토리에 생성되면서 user4 를 만드시오.
+cp -r /etc/skel /test/skel1 && useradd -mk /test/skel1/ user4
+
+5 /home/user5 홈디렉토리를 가지는 user5 를 생성한 후,
+  /xeneration/spur/home/user5 로 홈디렉토리를 옮기시오..
+  usermod -md /xeneration/spur/home/user5 user5 
+  /etc/passwd 의 6번째 필드 즉, 홈디렉토리는 = 접속경로를 나타낸다
+  실제 홈디렉토리는 항상 같아야 한다. (★★★★★★★★★★★★★★★)
+
+
+6. user6 를 만드신 다음 홈디렉토리와 실제 홈디렉토리를 같이 옮기세요 -md
+   경로 : /backup/home/user6
+ mkdir -p /backup/home && useradd user6 && usermod -md /backup/home/user6 user6
+
+7. aaa aa a 1 11 111 1231 1321 을 포함 하는 디렉토리 test 를 생성하면서
+   사용자 user7 을 만드세요
+
+8. user1~user5 까지  사용자 영구 삭제를 하세요
+userdel -r user1 // userdel user1
+
+9. user8~user10 까지 아래와 같은 내용으로 사용자를 생성하세요
+
+   홈디렉토리 : /backup/home
+   쉘 : /bin/bash
+   홈 디렉토리 안 내용 : index.html
+   스켈 : /test/skel2
+---------------------------------------------------------
+ls -l * 	모든 문자 = * = 에스테리스크 / ? = 대체문자 = 글자 수 => 필터링
+ls -l ?		글자 수 1개인것은 모두 나타내라
+ls -l ??	글자 수 2개인것은 모두 나타내라
+ls -l ???	글자 수 3개인것은 모두 나타내라
+ls -l 1*	1로 시작되는 모든것
+ls -l *1	1로 끝나는 모든것
+ls -l *11*	중간에 11이 포함되는 모든것
+rm -rf /	절대 쓰지않는다
+==========================
+
+
+
+
+
+
+
+
+
+
+
+login as: root
+root@192.168.1.130's password:
+Last login: Sun Feb 20 00:19:36 2022 from 192.168.1.1
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+iu:x:501:501::/home/iu:/bin/bash
+suzi:x:502:502::/home/suzi:/bin/bash
+[root@optimus ~]# userdel -r iu
+[root@optimus ~]# userdel -r suzio\
+> userdel -r suzio\^C
+[root@optimus ~]# userdel -r suzi
+[root@optimus ~]# tail /etc/passwd
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# tail /etc/shadow
+haldaemon:!!:19035::::::
+ntp:!!:19035::::::
+apache:!!:19035::::::
+saslauth:!!:19035::::::
+postfix:!!:19035::::::
+gdm:!!:19035::::::
+pulse:!!:19035::::::
+sshd:!!:19035::::::
+tcpdump:!!:19035::::::
+kgitbank:$6$9SfPVpSD$n.SQBlrMXU0ntiGyCmwnKXubNzn/dhFrqt/.EeGOExDkDP2UN1eH9CcZkk1QwDa/xT1WrJdVtW58feDgmPtZP1:1903      6:0:99999:7:::
+[root@optimus ~]# tail /etc/group
+pulse:x:496:
+pulse-access:x:495:
+fuse:x:494:
+sshd:x:74:
+slocate:x:21:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+tcpdump:x:72:
+kgitbank:x:500:root
+[root@optimus ~]# ls -l /home/
+합계 15
+drwx------. 5 kgitbank kgitbank  1024 2022-02-19 20:51 kgitbank
+drwx------. 2 root     root     12288 2022-02-12 16:16 lost+found
+[root@optimus ~]# ls -l /export
+ls: cannot access /export: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -ld /etc/skel*\
+> ^C
+[root@optimus ~]# ls -ld /etc/skel*
+drwx------. 4 root root 4096 2022-02-20 01:46 /etc/skel
+[root@optimus ~]# vi /etc/default/useradd
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir -p /xeneration/spur/home
+[root@optimus ~]# useradd -d /xeneration/spur/home/user1 user1
+[root@optimus ~]# passwd user1
+user1 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# tail /etc/passwd
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+user1:x:501:501::/xeneration/spur/home/user1:/bin/bash
+[root@optimus ~]# clear
+[root@optimus ~]# useradd -d /xeneration/spur/home/user2 -s /bin/ksh user2
+[root@optimus ~]# passwd user2
+user2 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+user1:x:501:501::/xeneration/spur/home/user1:/bin/bash
+user2:x:502:502::/xeneration/spur/home/user2:/bin/ksh
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir -p /test/home
+[root@optimus ~]# useradd -d /test/home/user3 -s /bin/ksh -c genius -u 510 user3
+[root@optimus ~]# passwd user3
+user3 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+user1:x:501:501::/xeneration/spur/home/user1:/bin/bash
+user2:x:502:502::/xeneration/spur/home/user2:/bin/ksh
+user3:x:510:510:genius:/test/home/user3:/bin/ksh
+[root@optimus ~]# ls -ld ~user3
+drwx------. 4 user3 user3 4096 2022-02-20 05:39 /test/home/user3
+[root@optimus ~]# clear
+[root@optimus ~]# clear
+[root@optimus ~]# ls -al /etc/skel/
+합계 40
+drwx------.   4 root root  4096 2022-02-20 01:46 .
+drwxr-xr-x. 119 root root 12288 2022-02-20 05:39 ..
+-rw-r--r--.   1 root root    18 2022-02-20 01:46 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 01:46 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 01:46 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 01:46 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 01:46 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 01:46 .mozilla
+[root@optimus ~]# clear
+[root@optimus ~]# cp -r /etc/skel/ /etc/skel1
+[root@optimus ~]# ls -ld /etc/skel*
+drwx------. 4 root root 4096 2022-02-20 01:46 /etc/skel
+drwx------. 4 root root 4096 2022-02-20 05:40 /etc/skel1
+[root@optimus ~]# cd /etc/skel1
+[root@optimus skel1]# pwd
+/etc/skel1
+[root@optimus skel1]# ls -al
+합계 40
+drwx------.   4 root root  4096 2022-02-20 05:40 .
+drwxr-xr-x. 120 root root 12288 2022-02-20 05:40 ..
+-rw-r--r--.   1 root root    18 2022-02-20 05:40 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 05:40 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 05:40 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 05:40 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 05:40 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 05:40 .mozilla
+[root@optimus skel1]# pwd
+/etc/skel1
+[root@optimus skel1]# vi index.html
+[root@optimus skel1]# cat -n index.html
+     1  동해물과 백두산이 마르고 닳도록
+     2  하느님이 보우하사 우리나라 만세
+     3  무궁화 삼천리 화려강산
+     4  대한사람 대한으로 길이 보전하세
+[root@optimus skel1]# cd
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# clear
+[root@optimus ~]# useradd -mkd /etc/skel1 user4
+Usage: useradd [options] LOGIN
+       useradd -D
+       useradd -D [options]
+
+Options:
+  -b, --base-dir BASE_DIR       base directory for the home directory of the
+                                new account
+  -c, --comment COMMENT         GECOS field of the new account
+  -d, --home-dir HOME_DIR       home directory of the new account
+  -D, --defaults                print or change default useradd configuration
+  -e, --expiredate EXPIRE_DATE  expiration date of the new account
+  -f, --inactive INACTIVE       password inactivity period of the new account
+  -g, --gid GROUP               name or ID of the primary group of the new
+                                account
+  -G, --groups GROUPS           list of supplementary groups of the new
+                                account
+  -h, --help                    display this help message and exit
+  -k, --skel SKEL_DIR           use this alternative skeleton directory
+  -K, --key KEY=VALUE           override /etc/login.defs defaults
+  -l, --no-log-init             do not add the user to the lastlog and
+                                faillog databases
+  -m, --create-home             create the user's home directory
+  -M, --no-create-home          do not create the user's home directory
+  -N, --no-user-group           do not create a group with the same name as
+                                the user
+  -o, --non-unique              allow to create users with duplicate
+                                (non-unique) UID
+  -p, --password PASSWORD       encrypted password of the new account
+  -r, --system                  create a system account
+  -R, --root CHROOT_DIR         directory to chroot into
+  -s, --shell SHELL             login shell of the new account
+  -u, --uid UID                 user ID of the new account
+  -U, --user-group              create a group with the same name as the user
+  -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mapping
+
+[root@optimus ~]# useradd -mk /etc/skel1 user4
+[root@optimus ~]# passwd user4
+user4 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# useradd user5
+[root@optimus ~]# passwd user5
+user5 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# grep user5 /etc/passwd && ls -ld ~user5
+user5:x:512:512::/home/user5:/bin/bash
+drwx------. 4 user5 user5 1024 2022-02-20 05:43 /home/user5
+[root@optimus ~]# usermod -d /xeneration/spur/home/user5 user5
+[root@optimus ~]# grep user5 /etc/passwd
+user5:x:512:512::/xeneration/spur/home/user5:/bin/bash
+[root@optimus ~]# ls -ld ~user5
+ls: cannot access /xeneration/spur/home/user5: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# clear
+[root@optimus ~]# ls -ld /home/user5
+drwx------. 4 user5 user5 1024 2022-02-20 05:43 /home/user5
+[root@optimus ~]# mv /home/user5 /xeneration/spur/home/
+[root@optimus ~]# ls -ld ~user5
+drwx------. 4 user5 user5 4096 2022-02-20 05:43 /xeneration/spur/home/user5
+[root@optimus ~]# clear
+[root@optimus ~]# useradd user6
+[root@optimus ~]# passwd user6
+user6 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# grep user6 /etc/passwd && ls -ld ~user6
+user6:x:513:513::/home/user6:/bin/bash
+drwx------. 4 user6 user6 1024 2022-02-20 05:46 /home/user6
+[root@optimus ~]# ls -l /xeneration/spur/home/
+합계 12
+drwx------. 4 user1 user1 4096 2022-02-20 05:38 user1
+drwx------. 4 user2 user2 4096 2022-02-20 05:38 user2
+drwx------. 4 user5 user5 4096 2022-02-20 05:45 user5
+[root@optimus ~]# usermod -md /xeneration/spur/home/user6 user6
+[root@optimus ~]# grep user6 /etc/passwd && ls -ld ~user6
+user6:x:513:513::/xeneration/spur/home/user6:/bin/bash
+drwx------. 4 user6 user6 4096 2022-02-20 05:46 /xeneration/spur/home/user6
+[root@optimus ~]# ls -ld /home/user6
+ls: cannot access /home/user6: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# clear
+[root@optimus ~]# cp -r /etc/skel /aaa
+[root@optimus ~]# ls -al /aaa/
+합계 32
+drwx------.  4 root root 4096 2022-02-20 05:47 .
+dr-xr-xr-x. 31 root root 4096 2022-02-20 05:47 ..
+-rw-r--r--.  1 root root   18 2022-02-20 05:47 .bash_logout
+-rw-r--r--.  1 root root  176 2022-02-20 05:47 .bash_profile
+-rw-r--r--.  1 root root  124 2022-02-20 05:47 .bashrc
+drwxr-xr-x.  2 root root 4096 2022-02-20 05:47 .gnome2
+-rw-r--r--.  1 root root  171 2022-02-20 05:47 .kshrc
+drwxr-xr-x.  4 root root 4096 2022-02-20 05:47 .mozilla
+[root@optimus ~]# clear
+[root@optimus ~]# cd /aaa/
+[root@optimus aaa]# ls -al
+합계 32
+drwx------.  4 root root 4096 2022-02-20 05:47 .
+dr-xr-xr-x. 31 root root 4096 2022-02-20 05:47 ..
+-rw-r--r--.  1 root root   18 2022-02-20 05:47 .bash_logout
+-rw-r--r--.  1 root root  176 2022-02-20 05:47 .bash_profile
+-rw-r--r--.  1 root root  124 2022-02-20 05:47 .bashrc
+drwxr-xr-x.  2 root root 4096 2022-02-20 05:47 .gnome2
+-rw-r--r--.  1 root root  171 2022-02-20 05:47 .kshrc
+drwxr-xr-x.  4 root root 4096 2022-02-20 05:47 .mozilla
+[root@optimus aaa]# mkdir test
+[root@optimus aaa]# cd test/
+[root@optimus test]# touch aaa aa a 1 11 111 1321 1231
+[root@optimus test]# ll
+합계 0
+-rw-r--r--. 1 root root 0 2022-02-20 05:48 1
+-rw-r--r--. 1 root root 0 2022-02-20 05:48 11
+-rw-r--r--. 1 root root 0 2022-02-20 05:48 111
+-rw-r--r--. 1 root root 0 2022-02-20 05:48 1231
+-rw-r--r--. 1 root root 0 2022-02-20 05:48 1321
+-rw-r--r--. 1 root root 0 2022-02-20 05:48 a
+-rw-r--r--. 1 root root 0 2022-02-20 05:48 aa
+-rw-r--r--. 1 root root 0 2022-02-20 05:48 aaa
+[root@optimus test]# cd
+[root@optimus ~]# clear
+[root@optimus ~]# useradd -mk /aaa/ user7
+[root@optimus ~]# passwd user7
+user7 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# ls -lR ~user7
+/home/user7:
+합계 2
+drwxr-xr-x. 2 user7 user7 1024 2022-02-20 05:48 test
+
+/home/user7/test:
+합계 8
+-rw-r--r--. 1 user7 user7 0 2022-02-20 05:48 1
+-rw-r--r--. 1 user7 user7 0 2022-02-20 05:48 11
+-rw-r--r--. 1 user7 user7 0 2022-02-20 05:48 111
+-rw-r--r--. 1 user7 user7 0 2022-02-20 05:48 1231
+-rw-r--r--. 1 user7 user7 0 2022-02-20 05:48 1321
+-rw-r--r--. 1 user7 user7 0 2022-02-20 05:48 a
+-rw-r--r--. 1 user7 user7 0 2022-02-20 05:48 aa
+-rw-r--r--. 1 user7 user7 0 2022-02-20 05:48 aaa
+[root@optimus ~]# clear
+[root@optimus ~]# userdel -r user1
+[root@optimus ~]# userdel -r user2
+[root@optimus ~]# userdel -r user3
+[root@optimus ~]# userdel -r user4
+[root@optimus ~]# userdel -r user5
+[root@optimus ~]# tail /etc/passwd
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+user6:x:513:513::/xeneration/spur/home/user6:/bin/bash
+user7:x:514:514::/home/user7:/bin/bash
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /backup/
+합계 28
+-rw-r--r--. 1 root root  24 2022-02-19 23:29 a
+-rw-r--r--. 1 root root   4 2022-02-19 23:20 b
+-rw-r--r--. 1 root root  21 2022-02-19 23:21 c
+-rw-r--r--. 1 root root   4 2022-02-19 23:23 d
+-rw-------. 1 root root 745 2022-02-19 17:02 grub.conf
+-rw-r--r--. 1 root root 769 2022-02-20 00:15 inittab
+-rw-r--r--. 1 root root 513 2022-02-19 23:26 ip
+[root@optimus ~]# mkdir /backup/home
+[root@optimus ~]# ls -al /etc/skel1
+합계 44
+drwx------.   4 root root  4096 2022-02-20 05:41 .
+drwxr-xr-x. 120 root root 12288 2022-02-20 05:48 ..
+-rw-r--r--.   1 root root    18 2022-02-20 05:40 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 05:40 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 05:40 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 05:40 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 05:40 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 05:40 .mozilla
+-rw-r--r--.   1 root root   171 2022-02-20 05:41 index.html
+[root@optimus ~]# clear
+[root@optimus ~]# vi /etc/default/useradd
+[root@optimus ~]# cp -r /etc/skel1 /test/
+[root@optimus ~]# ls -al /test/skel1/
+합계 36
+drwx------. 4 root root 4096 2022-02-20 05:51 .
+drwxr-xr-x. 4 root root 4096 2022-02-20 05:51 ..
+-rw-r--r--. 1 root root   18 2022-02-20 05:51 .bash_logout
+-rw-r--r--. 1 root root  176 2022-02-20 05:51 .bash_profile
+-rw-r--r--. 1 root root  124 2022-02-20 05:51 .bashrc
+drwxr-xr-x. 2 root root 4096 2022-02-20 05:51 .gnome2
+-rw-r--r--. 1 root root  171 2022-02-20 05:51 .kshrc
+drwxr-xr-x. 4 root root 4096 2022-02-20 05:51 .mozilla
+-rw-r--r--. 1 root root  171 2022-02-20 05:51 index.html
+[root@optimus ~]# clear
+[root@optimus ~]# useradd user8
+[root@optimus ~]# useradd user9
+[root@optimus ~]# useradd user10
+[root@optimus ~]# ls -l ~user8 ~user9 ~user10
+/backup/home/user10:
+합계 4
+-rw-r--r--. 1 user10 user10 171 2022-02-20 05:51 index.html
+
+/backup/home/user8:
+합계 4
+-rw-r--r--. 1 user8 user8 171 2022-02-20 05:51 index.html
+
+/backup/home/user9:
+합계 4
+-rw-r--r--. 1 user9 user9 171 2022-02-20 05:51 index.html
+[root@optimus ~]# tail /etc/passwd
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+user6:x:513:513::/xeneration/spur/home/user6:/bin/bash
+user7:x:514:514::/home/user7:/bin/bash
+user8:x:515:515::/backup/home/user8:/bin/bash
+user9:x:516:516::/backup/home/user9:/bin/bash
+user10:x:517:517::/backup/home/user10:/bin/bash
+[root@optimus ~]# userdel -r user10
+[root@optimus ~]# userdel -r user9
+[root@optimus ~]# userdel -r user8
+[root@optimus ~]# userdel -r user7
+[root@optimus ~]# userdel -r user6
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# tail /etc/shadow
+haldaemon:!!:19035::::::
+ntp:!!:19035::::::
+apache:!!:19035::::::
+saslauth:!!:19035::::::
+postfix:!!:19035::::::
+gdm:!!:19035::::::
+pulse:!!:19035::::::
+sshd:!!:19035::::::
+tcpdump:!!:19035::::::
+kgitbank:$6$9SfPVpSD$n.SQBlrMXU0ntiGyCmwnKXubNzn/dhFrqt/.EeGOExDkDP2UN1eH9CcZkk1QwDa/xT1WrJdVtW58feDgmPtZP1:19036:0:99999:7:::
+[root@optimus ~]# tail /etc/group
+pulse:x:496:
+pulse-access:x:495:
+fuse:x:494:
+sshd:x:74:
+slocate:x:21:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+tcpdump:x:72:
+kgitbank:x:500:root
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /home/
+합계 15
+drwx------. 5 kgitbank kgitbank  1024 2022-02-19 20:51 kgitbank
+drwx------. 2 root     root     12288 2022-02-12 16:16 lost+found
+[root@optimus ~]# rm -rf /xeneration/ /backup/home/ /aaa /etc/skel?
+[root@optimus ~]# vi /etc/default/
+[root@optimus ~]# vi /etc/default/useradd
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]#
+
+
+
+
+
+
+
+
+
+

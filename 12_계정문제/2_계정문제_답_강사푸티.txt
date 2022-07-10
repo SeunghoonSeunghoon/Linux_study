@@ -1,0 +1,1088 @@
+login as: root
+root@192.168.1.130's password:
+Last login: Sun Feb 20 05:26:43 2022 from 192.168.1.1
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# useradd -c testuser -s /bin/ksh user1
+[root@optimus ~]# passwd user1
+user1 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# grep user1 /etc/passwd /etc/shadow /etc/group && ls -ld ~user1 /var/spool/mail/user1
+/etc/passwd:user1:x:501:501:testuser:/home/user1:/bin/ksh
+/etc/shadow:user1:$6$AhO0Qaj3$QOAj/bVcTTxS2mV6Z5u7pN/gRJndZndqhBII5jDAYCj7MGc5x.lR.VdBU7kTvUqTNgQ6218UXIxS3RQnRnrVt/:19042:0:99999:7:::
+/etc/group:user1:x:501:
+drwx------. 4 user1 user1 1024 2022-02-20 05:55 /home/user1
+-rw-rw----. 1 user1 mail     0 2022-02-20 05:55 /var/spool/mail/user1
+[root@optimus ~]# clear
+[root@optimus ~]# cp -r /etc/skel/ /etc/skel2
+[root@optimus ~]# touch /etc/skel2
+[root@optimus ~]# touch /etc/skel2/kgitbank
+[root@optimus ~]# ls -al /etc/skel2
+합계 40
+drwx------.   4 root root  4096 2022-02-20 05:56 .
+drwxr-xr-x. 120 root root 12288 2022-02-20 05:56 ..
+-rw-r--r--.   1 root root    18 2022-02-20 05:56 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 05:56 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 05:56 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 05:56 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 05:56 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 05:56 .mozilla
+-rw-r--r--.   1 root root     0 2022-02-20 05:56 kgitbank
+[root@optimus ~]# clear
+[root@optimus ~]# useradd -mk /etc/skel2 user2
+[root@optimus ~]# passwd user2
+user2 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# ls -l ~user2
+합계 1
+-rw-r--r--. 1 user2 user2 0 2022-02-20 05:56 kgitbank
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir /etc/skel3
+[root@optimus ~]# cd /etc/skel3
+[root@optimus skel3]# pwd
+/etc/skel3
+[root@optimus skel3]# ls -al
+합계 16
+drwxr-xr-x.   2 root root  4096 2022-02-20 05:57 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+[root@optimus skel3]# ls -al /etc/skel
+합계 40
+drwx------.   4 root root  4096 2022-02-20 01:46 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root    18 2022-02-20 01:46 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 01:46 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 01:46 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 01:46 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 01:46 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 01:46 .mozilla
+[root@optimus skel3]# clear
+[root@optimus skel3]# cp -r /etc/skel/.* .
+cp: cannot copy a directory, `/etc/skel/..', into itself, `.'
+cp: overwrite `./.bash_logout'? y
+cp: overwrite `./.bash_profile'? y
+cp: overwrite `./.bashrc'? y
+cp: overwrite `./.kshrc'? y
+[root@optimus skel3]# y
+-bash: y: command not found
+[root@optimus skel3]# clear
+[root@optimus skel3]# ls -al
+합계 996
+drwxr-xr-x.  73 root root   4096 2022-02-20 05:59 .
+drwxr-xr-x. 121 root root  12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root     18 2022-02-20 05:59 .bash_logout
+-rw-r--r--.   1 root root    176 2022-02-20 05:59 .bash_profile
+-rw-r--r--.   1 root root    124 2022-02-20 05:59 .bashrc
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 .gnome2
+-rw-r--r--.   1 root root    171 2022-02-20 05:59 .kshrc
+drwxr-xr-x.   4 root root   4096 2022-02-20 05:59 .mozilla
+-rw-------.   1 root root      0 2022-02-20 05:59 .pwd.lock
+-rw-r--r--.   1 root root   5139 2022-02-20 05:59 DIR_COLORS.256color
+-rw-r--r--.   1 root root   4113 2022-02-20 05:59 DIR_COLORS.lightbgcolor
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 PackageKit
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 abrt
+-rw-r--r--.   1 root root     47 2022-02-20 05:59 adjtime
+-rw-r--r--.   1 root root  12288 2022-02-20 05:59 aliases.db
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 alternatives
+-rw-------.   1 root root    541 2022-02-20 05:59 anacrontab
+-rw-r--r--.   1 root root      1 2022-02-20 05:59 at.deny
+drwxr-x---.   3 root root   4096 2022-02-20 05:59 audisp
+-rw-r--r--.   1 root root    667 2022-02-20 05:59 auto.master
+-rw-r--r--.   1 root root    524 2022-02-20 05:59 auto.misc
+-rwxr-xr-x.   1 root root   1260 2022-02-20 05:59 auto.net
+-rw-r--r--.   1 root root  13034 2022-02-20 05:59 autofs.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 avahi
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 bash_completion.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 blkid
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 bluetooth
+-rw-r--r--.   1 root root   1780 2022-02-20 05:59 cas.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 chkconfig.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 cron.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 cron.daily
+-rw-------.   1 root root      0 2022-02-20 05:59 cron.deny
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 cron.hourly
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 cron.weekly
+-rw-r--r--.   1 root root      0 2022-02-20 05:59 crypttab
+-rw-r--r--.   1 root root   1602 2022-02-20 05:59 csh.cshrc
+drwxr-xr-x.   4 root root   4096 2022-02-20 05:59 dbus-1
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 dnsmasq.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 dracut.conf.d
+-rw-r--r--.   1 root root   4843 2022-02-20 05:59 enscript.cfg
+-rw-r--r--.   1 root root     28 2022-02-20 05:59 ethers
+-rw-r--r--.   1 root root      0 2022-02-20 05:59 exports
+-rw-r--r--.   1 root root     20 2022-02-20 05:59 fprintd.conf
+-rw-r--r--.   1 root root   1087 2022-02-20 05:59 fstab
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 gcrypt
+drwxr-xr-x.   6 root root   4096 2022-02-20 05:59 gdm
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 ghostscript
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 gnome-vfs-2.0
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 gnupg
+-rw-r--r--.   1 root root    837 2022-02-20 05:59 group
+-rw-r--r--.   1 root root    824 2022-02-20 05:59 group-
+----------.   1 root root    676 2022-02-20 05:59 gshadow-
+-rw-r--r--.   1 root root    801 2022-02-20 05:59 gssapi_mech.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 gtk-2.0
+-rw-r--r--.   1 root root    158 2022-02-20 05:59 hosts
+-rw-r--r--.   1 root root    370 2022-02-20 05:59 hosts.allow
+drwxr-xr-x.   4 root root   4096 2022-02-20 05:59 httpd
+-rw-r--r--.   1 root root      0 2022-02-20 05:59 init.conf
+lrwxrwxrwx.   1 root root     11 2022-02-20 05:59 init.d -> rc.d/init.d
+-rw-r--r--.   1 root root    884 2022-02-20 05:59 inittab
+-rw-r--r--.   1 root root    942 2022-02-20 05:59 inputrc
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 ipa
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 iproute2
+-rw-r--r--.   1 root root     47 2022-02-20 05:59 issue
+-rw-r--r--.   1 root root     46 2022-02-20 05:59 issue.net
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 jvm
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 jvm-commmon
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 kde
+-rw-r--r--.   1 root root   8120 2022-02-20 05:59 kdump.conf
+-rw-r--r--.   1 root root   1128 2022-02-20 05:59 kshrc
+-rw-r--r--.   1 root root   1662 2022-02-20 05:59 latrace.conf
+-rw-r--r--.   1 root root     28 2022-02-20 05:59 ld.so.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 ld.so.conf.d
+-rw-r-----.   1 root root    191 2022-02-20 05:59 libaudit.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 libnl
+drwxr-xr-x.   5 root root   4096 2022-02-20 05:59 libreport
+-rw-r--r--.   1 root root   1816 2022-02-20 05:59 login.defs
+-rw-r--r--.   1 root root    662 2022-02-20 05:59 logrotate.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 logrotate.d
+-rw-r--r--.   1 root root  10814 2022-02-20 05:59 ltrace.conf
+-rw-r--r--.   1 root root   1909 2022-02-20 05:59 mail.rc
+-rw-r--r--.   1 root root   4940 2022-02-20 05:59 man.config
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 maven
+-rw-r--r--.   1 root root  43591 2022-02-20 05:59 mime.types
+-rw-r--r--.   1 root root    827 2022-02-20 05:59 mke2fs.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 modprobe.d
+-rw-r--r--.   1 root root    541 2022-02-20 05:59 mtab
+-rw-r--r--.   1 root root   2620 2022-02-20 05:59 mtools.conf
+-rw-r--r--.   1 root root    251 2022-02-20 05:59 my.cnf
+-rw-r--r--.   1 root root   7846 2022-02-20 05:59 nanorc
+-rw-r--r--.   1 root root     58 2022-02-20 05:59 networks
+-rw-r--r--.   1 root root   3605 2022-02-20 05:59 nfsmount.conf
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 ntp
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 obex-data-server
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 openldap
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 opt
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 pango
+-rw-r--r--.   1 root root   1714 2022-02-20 05:59 passwd
+-rw-r--r--.   1 root root   1675 2022-02-20 05:59 passwd-
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 pcmcia
+-rw-r--r--.   1 root root   2872 2022-02-20 05:59 pinforc
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 pkcs11
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 plymouth
+-rw-r--r--.   1 root root    370 2022-02-20 05:59 pm-utils-hd-apm-restore.conf
+-rw-r--r--.   1 root root   6300 2022-02-20 05:59 pnm2ppa.conf
+drwxr-xr-x.   5 root root   4096 2022-02-20 05:59 polkit-1
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 popt.d
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 ppp
+-rw-r--r--.   1 root root 318129 2022-02-20 05:59 prelink.cache
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 prelink.conf.d
+-rw-r--r--.   1 root root    233 2022-02-20 05:59 printcap
+-rw-r--r--.   1 root root   1796 2022-02-20 05:59 profile
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 profile.d
+-rw-r--r--.   1 root root   6455 2022-02-20 05:59 protocols
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 pulse
+lrwxrwxrwx.   1 root root     10 2022-02-20 05:59 rc0.d -> rc.d/rc0.d
+lrwxrwxrwx.   1 root root     10 2022-02-20 05:59 rc2.d -> rc.d/rc2.d
+lrwxrwxrwx.   1 root root     10 2022-02-20 05:59 rc5.d -> rc.d/rc5.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 rdma
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 redhat-lsb
+lrwxrwxrwx.   1 root root     14 2022-02-20 05:59 redhat-release -> centos-release
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 request-key.d
+-rw-r--r--.   1 root root     91 2022-02-20 05:59 resolv.conf
+-rw-r--r--.   1 root root   1615 2022-02-20 05:59 rpc
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 rpm
+-rw-r--r--.   1 root root   2875 2022-02-20 05:59 rsyslog.conf
+-rw-r--r--.   1 root root    930 2022-02-20 05:59 rwtab
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 rwtab.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 sasl2
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 scl
+-rw-------.   1 root root    122 2022-02-20 05:59 securetty
+-rw-r--r--.   1 root root    216 2022-02-20 05:59 sestatus.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 setuptool.d
+-rw-r--r--.   1 root root     70 2022-02-20 05:59 shells
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 skel3
+-rw-r--r--.   1 root root   6717 2022-02-20 05:59 smartd.conf
+-rw-r--r--.   1 root root    256 2022-02-20 05:59 sos.conf
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 sound
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 ssh
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 ssl
+drwx------.   2 root root   4096 2022-02-20 05:59 sssd
+-rw-r--r--.   1 root root    212 2022-02-20 05:59 statetab
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 statetab.d
+-rw-r-----.   1 root root   3181 2022-02-20 05:59 sudo-ldap.conf
+drwxr-x---.   2 root root   4096 2022-02-20 05:59 sudoers.d
+drwxr-xr-x.   7 root root   4096 2022-02-20 05:59 sysconfig
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 sysctl.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 terminfo
+-rw-r--r--.   1 root root   1982 2022-02-20 05:59 vimrc
+-rw-r--r--.   1 root root   3008 2022-02-20 05:59 warnquota.conf
+drwxr-xr-x.   4 root root   4096 2022-02-20 05:59 xdg
+-rw-------.   1 root root   1001 2022-02-20 05:59 xinetd.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 xml
+drwxr-xr-x.   5 root root   4096 2022-02-20 05:59 yum
+[root@optimus skel3]# clear
+[root@optimus skel3]# ls -l /etc/
+합계 2056
+drwxr-xr-x.  5 root root   4096 2022-02-12 16:20 ConsoleKit
+-rw-r--r--.  1 root root   4439 2016-04-12 16:56 DIR_COLORS
+-rw-r--r--.  1 root root   5139 2016-04-12 16:56 DIR_COLORS.256color
+-rw-r--r--.  1 root root   4113 2016-04-12 16:56 DIR_COLORS.lightbgcolor
+drwxr-xr-x.  5 root root   4096 2022-02-12 16:23 NetworkManager
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:21 PackageKit
+-rw-r--r--.  1 root root     45 2014-02-12 21:04 Trolltech.conf
+drwxr-xr-x.  6 root root   4096 2022-02-12 16:22 X11
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:20 abrt
+drwxr-xr-x.  4 root root   4096 2022-02-12 16:24 acpi
+-rw-r--r--.  1 root root     47 2022-02-19 19:21 adjtime
+-rw-r--r--.  1 root root   1512 2010-01-12 22:28 aliases
+-rw-r--r--.  1 root root  12288 2022-02-12 16:28 aliases.db
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:23 alsa
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 alternatives
+-rw-------.  1 root root    541 2015-11-10 19:14 anacrontab
+-rw-r--r--.  1 root root    245 2010-11-11 09:14 anthy-conf
+-rw-r--r--.  1 root root    148 2016-01-13 00:40 asound.conf
+-rw-r--r--.  1 root root      1 2015-02-20 01:23 at.deny
+drwxr-x---.  3 root root   4096 2022-02-12 16:24 audisp
+drwxr-x---.  3 root root   4096 2022-02-12 16:24 audit
+-rw-r--r--.  1 root root    667 2016-05-11 16:23 auto.master
+-rw-r--r--.  1 root root    524 2016-05-11 16:23 auto.misc
+-rwxr-xr-x.  1 root root   1260 2016-05-11 16:23 auto.net
+-rwxr-xr-x.  1 root root    687 2016-05-11 16:23 auto.smb
+-rw-r--r--.  1 root root  13034 2016-05-11 16:23 autofs.conf
+-rw-------.  1 root root    232 2016-05-11 16:23 autofs_ldap_auth.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:20 avahi
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:25 bash_completion.d
+-rw-r--r--.  1 root root   2699 2022-02-19 20:08 bashrc
+drwxr-xr-x.  2 root root   4096 2016-05-11 07:58 blkid
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:23 bluetooth
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:19 bonobo-activation
+-rw-r--r--.  1 root root   1780 2009-10-16 03:16 cas.conf
+-rw-r--r--.  1 root root     27 2016-05-19 04:47 centos-release
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 certmonger
+drwxr-xr-x.  2 root root   4096 2016-05-11 06:18 chkconfig.d
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:23 cron.d
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 cron.daily
+-rw-------.  1 root root      0 2015-11-10 19:14 cron.deny
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 cron.hourly
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 cron.monthly
+drwxr-xr-x.  2 root root   4096 2011-09-27 10:33 cron.weekly
+-rw-r--r--.  1 root root    457 2011-09-27 10:33 crontab
+-rw-r--r--.  1 root root      0 2022-02-12 16:18 crypttab
+-rw-r--r--.  1 root root   1602 2013-10-02 18:06 csh.cshrc
+-rw-r--r--.  1 root root    794 2013-10-02 18:06 csh.login
+drwxr-xr-x.  5 root lp     4096 2022-02-12 16:24 cups
+drwxr-xr-x.  4 root root   4096 2022-02-12 16:20 dbus-1
+drwxr-xr-x.  2 root root   4096 2022-02-20 05:53 default
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:20 depmod.d
+drwxr-x---.  3 root root   4096 2016-05-12 04:22 dhcp
+-rw-r--r--.  1 root root  21214 2016-05-11 07:46 dnsmasq.conf
+drwxr-xr-x.  2 root root   4096 2016-05-11 07:46 dnsmasq.d
+-rw-r--r--.  1 root root    519 2016-05-11 15:22 dracut.conf
+drwxr-xr-x.  2 root root   4096 2016-05-11 15:22 dracut.conf.d
+-rw-r--r--.  1 root root   3384 2016-05-11 13:37 drirc
+-rw-r--r--.  1 root root   4843 2010-11-11 15:44 enscript.cfg
+-rw-r--r--.  1 root root      0 2013-10-02 18:06 environment
+-rw-r--r--.  1 root root     28 2012-05-10 17:17 ethers
+-rw-r--r--.  1 root root      0 2010-01-12 22:28 exports
+lrwxrwxrwx.  1 root root     56 2022-02-12 16:20 favicon.png -> /usr/share/icons/hicolor/16x16/apps/system-logo-icon.png
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:21 festival
+-rw-r--r--.  1 root root     64 2013-10-02 18:06 filesystems
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:23 firefox
+drwxr-xr-x.  4 root root   4096 2022-02-12 16:20 fonts
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 foomatic
+-rw-r--r--.  1 root root     20 2015-03-10 19:28 fprintd.conf
+-rw-r--r--.  1 root root   1087 2022-02-12 16:18 fstab
+-rw-r--r--.  1 root root      0 2016-05-10 22:57 gai.conf
+drwxr-xr-x.  7 root root   4096 2022-02-12 16:20 gconf
+drwxr-xr-x.  2 root root   4096 2013-10-25 00:38 gcrypt
+drwxr-xr-x.  6 root root   4096 2022-02-12 16:22 gdm
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:20 ghostscript
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:20 gnome-vfs-2.0
+drwxr-xr-x.  2 root root   4096 2014-06-30 20:09 gnupg
+-rw-r--r--.  1 root root    837 2022-02-20 05:56 group
+-rw-r--r--.  1 root root    824 2022-02-20 05:55 group-
+lrwxrwxrwx.  1 root root     22 2022-02-12 16:27 grub.conf -> ../boot/grub/grub.conf
+----------.  1 root root    686 2022-02-20 05:56 gshadow
+----------.  1 root root    676 2022-02-20 05:55 gshadow-
+-rw-r--r--.  1 root root    801 2011-07-19 17:21 gssapi_mech.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:21 gtk-2.0
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:22 hal
+-rw-r--r--.  1 root root      9 2013-10-02 18:06 host.conf
+-rw-r--r--.  1 root root    158 2010-01-12 22:28 hosts
+-rw-r--r--.  1 root root    370 2010-01-12 22:28 hosts.allow
+-rw-r--r--.  1 root root    460 2010-01-12 22:28 hosts.deny
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 hp
+drwxr-xr-x.  4 root root   4096 2022-02-12 16:22 httpd
+-rw-r--r--.  1 root root   3581 2015-07-24 17:27 idmapd.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 init
+-rw-r--r--.  1 root root      0 2016-05-11 06:13 init.conf
+lrwxrwxrwx.  1 root root     11 2022-02-12 16:19 init.d -> rc.d/init.d
+-rw-r--r--.  1 root root    884 2022-02-12 16:27 inittab
+-rw-r--r--.  1 root root    942 2010-01-12 22:28 inputrc
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 ipa
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:21 iproute2
+-rw-r--r--.  1 root root     47 2016-05-19 04:47 issue
+-rw-r--r--.  1 root root     46 2016-05-19 04:47 issue.net
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:20 java
+drwxr-xr-x.  2 root root   4096 2016-05-11 03:27 jvm
+drwxr-xr-x.  2 root root   4096 2016-05-11 03:27 jvm-commmon
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:21 kde
+drwxr-xr-x.  4 root root   4096 2022-02-12 16:22 kdump-adv-conf
+-rw-r--r--.  1 root root   8120 2022-02-12 16:42 kdump.conf
+-rw-r--r--.  1 root root    449 2016-03-09 08:56 krb5.conf
+-rw-r--r--.  1 root root   1128 2016-05-11 08:36 kshrc
+-rw-r--r--.  1 root root   1662 2010-11-12 02:47 latrace.conf
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:26 latrace.d
+-rw-r--r--.  1 root root  60241 2022-02-12 16:26 ld.so.cache
+-rw-r--r--.  1 root root     28 2013-07-25 03:50 ld.so.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:23 ld.so.conf.d
+-rw-r-----.  1 root root    191 2015-12-19 04:20 libaudit.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:20 libnl
+drwxr-xr-x.  5 root root   4096 2022-02-12 16:20 libreport
+-rw-r--r--.  1 root root   2293 2015-07-26 00:59 libuser.conf
+-rw-r--r--.  1 root root    557 2022-02-12 16:41 localtime
+-rw-r--r--.  1 root root   1816 2016-02-09 18:55 login.defs
+-rw-r--r--.  1 root root    662 2007-08-29 16:19 logrotate.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 logrotate.d
+-rw-r--r--.  1 root root    152 2022-02-12 16:22 lsb-release
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 lsb-release.d
+-rw-r--r--.  1 root root  10814 2006-02-21 06:55 ltrace.conf
+drwxr-xr-x.  6 root root   4096 2022-02-12 16:24 lvm
+-rw-r--r--.  1 root root    111 2016-05-11 06:02 magic
+-rw-r--r--.  1 root root   1909 2014-12-17 03:57 mail.rc
+-rw-r--r--.  1 root root    272 2009-11-18 06:13 mailcap
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:20 makedev.d
+-rw-r--r--.  1 root root   4940 2013-02-22 11:13 man.config
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:20 maven
+-rw-r--r--.  1 root root  43591 2011-09-24 00:02 mime.types
+-rw-r--r--.  1 root root    827 2015-07-24 19:32 mke2fs.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 modprobe.d
+-rw-r--r--.  1 root root      0 2010-01-12 22:28 motd
+-rw-r--r--.  1 root root    541 2022-02-19 19:27 mtab
+-rw-r--r--.  1 root root   2620 2010-08-17 06:28 mtools.conf
+-rw-r--r--.  1 root root    251 2016-05-11 15:31 my.cnf
+-rw-r--r--.  1 root root   7846 2010-11-12 16:18 nanorc
+-rw-r--r--.  1 root root    767 2009-11-30 23:04 netconfig
+-rw-r--r--.  1 root root     58 2016-05-12 04:34 networks
+-rw-r--r--.  1 root root   3605 2016-05-11 15:22 nfsmount.conf
+-rw-r--r--.  1 root root   1688 2010-05-05 04:22 nsswitch.conf
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:22 ntp
+-rw-r--r--.  1 root root   1778 2016-01-26 22:45 ntp.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:21 obex-data-server
+drwxr-xr-x.  2 root root   4096 2016-05-11 03:37 oddjob
+-rw-r--r--.  1 root root   4922 2016-05-11 03:37 oddjobd.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 oddjobd.conf.d
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:20 openldap
+drwxr-xr-x.  2 root root   4096 2011-09-23 20:50 opt
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:27 pam.d
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:20 pango
+-rw-r--r--.  1 root root   1714 2022-02-20 05:56 passwd
+-rw-r--r--.  1 root root   1675 2022-02-20 05:55 passwd-
+-rw-r--r--.  1 root root   1362 2010-08-23 08:28 pbm2ppa.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:23 pcmcia
+-rw-r--r--.  1 root root   2872 2010-08-21 10:43 pinforc
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:19 pkcs11
+drwxr-xr-x.  9 root root   4096 2022-02-12 16:22 pki
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:21 plymouth
+drwxr-xr-x.  5 root root   4096 2022-02-12 16:19 pm
+-rw-r--r--.  1 root root    370 2014-10-15 14:11 pm-utils-hd-apm-restore.conf
+-rw-r--r--.  1 root root   6300 2010-08-23 08:28 pnm2ppa.conf
+drwxr-xr-x.  5 root root   4096 2022-02-12 16:20 polkit-1
+drwxr-xr-x.  2 root root   4096 2010-08-21 14:30 popt.d
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 portreserve
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 postfix
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:22 ppp
+-rw-r--r--.  1 root root 318129 2022-02-20 03:49 prelink.cache
+-rw-r--r--.  1 root root    789 2013-07-19 23:35 prelink.conf
+drwxr-xr-x.  2 root root   4096 2013-08-19 21:36 prelink.conf.d
+-rw-r--r--.  1 root root    233 2010-01-12 22:28 printcap
+-rw-r--r--.  1 root root   1796 2013-10-02 18:06 profile
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 profile.d
+-rw-r--r--.  1 root root   6455 2010-01-12 22:28 protocols
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:23 pulse
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:21 purple
+-rw-r--r--.  1 root root    220 2008-10-14 02:29 quotagrpadmins
+-rw-r--r--.  1 root root    259 2015-07-24 03:14 quotatab
+lrwxrwxrwx.  1 root root      7 2022-02-12 16:21 rc -> rc.d/rc
+drwxr-xr-x. 10 root root   4096 2022-02-12 16:21 rc.d
+lrwxrwxrwx.  1 root root     13 2022-02-12 16:21 rc.local -> rc.d/rc.local
+lrwxrwxrwx.  1 root root     15 2022-02-12 16:21 rc.sysinit -> rc.d/rc.sysinit
+lrwxrwxrwx.  1 root root     10 2022-02-12 16:21 rc0.d -> rc.d/rc0.d
+lrwxrwxrwx.  1 root root     10 2022-02-12 16:21 rc1.d -> rc.d/rc1.d
+lrwxrwxrwx.  1 root root     10 2022-02-12 16:21 rc2.d -> rc.d/rc2.d
+lrwxrwxrwx.  1 root root     10 2022-02-12 16:21 rc3.d -> rc.d/rc3.d
+lrwxrwxrwx.  1 root root     10 2022-02-12 16:21 rc4.d -> rc.d/rc4.d
+lrwxrwxrwx.  1 root root     10 2022-02-12 16:21 rc5.d -> rc.d/rc5.d
+lrwxrwxrwx.  1 root root     10 2022-02-12 16:21 rc6.d -> rc.d/rc6.d
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 rdma
+-rw-r--r--.  1 root root    966 2013-11-23 22:52 readahead.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 redhat-lsb
+lrwxrwxrwx.  1 root root     14 2022-02-12 16:21 redhat-release -> centos-release
+-rw-r--r--.  1 root root   1484 2014-10-15 20:08 request-key.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 request-key.d
+-rw-r--r--.  1 root root     91 2022-02-20 05:26 resolv.conf
+-rw-r--r--.  1 root root   1615 2010-05-04 20:27 rpc
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 rpm
+-rw-r--r--.  1 root root   2875 2014-12-10 19:05 rsyslog.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 rsyslog.d
+-rw-r--r--.  1 root root    930 2016-05-12 04:34 rwtab
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 rwtab.d
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 samba
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:22 sane.d
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 sasl2
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:25 scl
+-rw-------.  1 root root    122 2010-01-12 22:28 securetty
+drwxr-xr-x.  6 root root   4096 2022-02-12 16:22 security
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:23 selinux
+-rw-r--r--.  1 root root 641020 2013-10-02 18:06 services
+-rw-r--r--.  1 root root    216 2016-05-11 07:57 sestatus.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 setuptool.d
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:20 sgml
+----------.  1 root root   1275 2022-02-20 05:56 shadow
+----------.  1 root root   1151 2022-02-20 05:55 shadow-
+-rw-r--r--.  1 root root     70 2022-02-12 16:24 shells
+drwx------.  4 root root   4096 2022-02-20 01:46 skel
+drwx------.  4 root root   4096 2022-02-20 05:56 skel2
+drwxr-xr-x. 73 root root   4096 2022-02-20 05:59 skel3
+-rw-r--r--.  1 root root   6717 2013-02-22 07:26 smartd.conf
+-rw-r--r--.  1 root root    256 2016-05-12 05:21 sos.conf
+drwxr-xr-x.  3 root root   4096 2022-02-12 16:21 sound
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:28 ssh
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:20 ssl
+drwx------.  2 root root   4096 2016-05-11 17:04 sssd
+-rw-r--r--.  1 root root    212 2016-05-12 04:34 statetab
+drwxr-xr-x.  2 root root   4096 2016-05-12 04:34 statetab.d
+-rw-r-----.  1 root root   3181 2016-03-02 00:01 sudo-ldap.conf
+-rw-r-----.  1 root root   1786 2012-09-26 00:46 sudo.conf
+-r--r-----.  1 root root   3729 2015-12-08 21:43 sudoers
+drwxr-x---.  2 root root   4096 2016-05-11 08:13 sudoers.d
+drwxr-xr-x.  7 root root   4096 2022-02-12 16:42 sysconfig
+-rw-r--r--.  1 root root   1057 2016-05-12 04:34 sysctl.conf
+drwxr-xr-x.  2 root root   4096 2016-05-12 04:34 sysctl.d
+lrwxrwxrwx.  1 root root     14 2022-02-12 16:21 system-release -> centos-release
+-rw-r--r--.  1 root root     25 2016-05-19 04:47 system-release-cpe
+drwxr-xr-x.  2 root root   4096 2015-03-16 17:53 terminfo
+drwxr-xr-x.  4 root root   4096 2022-02-12 16:21 udev
+-rw-r--r--.  1 root root    478 2015-01-26 19:48 updatedb.conf
+-rw-r--r--.  1 root root   1982 2015-04-01 00:07 vimrc
+-rw-r--r--.  1 root root   1982 2015-04-01 00:07 virc
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:24 vsftpd
+-rw-r--r--.  1 root root   3008 2015-07-24 03:15 warnquota.conf
+-rw-r--r--.  1 root root   4479 2016-01-13 03:20 wgetrc
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:22 wpa_supplicant
+drwxr-xr-x.  4 root root   4096 2022-02-12 16:21 xdg
+-rw-------.  1 root root   1001 2016-05-11 03:36 xinetd.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:25 xinetd.d
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:19 xml
+-rw-r--r--.  1 root root    585 2016-05-11 07:33 yp.conf
+drwxr-xr-x.  5 root root   4096 2022-02-12 16:20 yum
+-rw-r--r--.  1 root root    969 2016-05-12 05:37 yum.conf
+drwxr-xr-x.  2 root root   4096 2022-02-12 16:21 yum.repos.d
+[root@optimus skel3]# clear
+[root@optimus skel3]# ls -al
+합계 996
+drwxr-xr-x.  73 root root   4096 2022-02-20 05:59 .
+drwxr-xr-x. 121 root root  12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root     18 2022-02-20 05:59 .bash_logout
+-rw-r--r--.   1 root root    176 2022-02-20 05:59 .bash_profile
+-rw-r--r--.   1 root root    124 2022-02-20 05:59 .bashrc
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 .gnome2
+-rw-r--r--.   1 root root    171 2022-02-20 05:59 .kshrc
+drwxr-xr-x.   4 root root   4096 2022-02-20 05:59 .mozilla
+-rw-------.   1 root root      0 2022-02-20 05:59 .pwd.lock
+-rw-r--r--.   1 root root   5139 2022-02-20 05:59 DIR_COLORS.256color
+-rw-r--r--.   1 root root   4113 2022-02-20 05:59 DIR_COLORS.lightbgcolor
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 PackageKit
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 abrt
+-rw-r--r--.   1 root root     47 2022-02-20 05:59 adjtime
+-rw-r--r--.   1 root root  12288 2022-02-20 05:59 aliases.db
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 alternatives
+-rw-------.   1 root root    541 2022-02-20 05:59 anacrontab
+-rw-r--r--.   1 root root      1 2022-02-20 05:59 at.deny
+drwxr-x---.   3 root root   4096 2022-02-20 05:59 audisp
+-rw-r--r--.   1 root root    667 2022-02-20 05:59 auto.master
+-rw-r--r--.   1 root root    524 2022-02-20 05:59 auto.misc
+-rwxr-xr-x.   1 root root   1260 2022-02-20 05:59 auto.net
+-rw-r--r--.   1 root root  13034 2022-02-20 05:59 autofs.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 avahi
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 bash_completion.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 blkid
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 bluetooth
+-rw-r--r--.   1 root root   1780 2022-02-20 05:59 cas.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 chkconfig.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 cron.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 cron.daily
+-rw-------.   1 root root      0 2022-02-20 05:59 cron.deny
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 cron.hourly
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 cron.weekly
+-rw-r--r--.   1 root root      0 2022-02-20 05:59 crypttab
+-rw-r--r--.   1 root root   1602 2022-02-20 05:59 csh.cshrc
+drwxr-xr-x.   4 root root   4096 2022-02-20 05:59 dbus-1
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 dnsmasq.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 dracut.conf.d
+-rw-r--r--.   1 root root   4843 2022-02-20 05:59 enscript.cfg
+-rw-r--r--.   1 root root     28 2022-02-20 05:59 ethers
+-rw-r--r--.   1 root root      0 2022-02-20 05:59 exports
+-rw-r--r--.   1 root root     20 2022-02-20 05:59 fprintd.conf
+-rw-r--r--.   1 root root   1087 2022-02-20 05:59 fstab
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 gcrypt
+drwxr-xr-x.   6 root root   4096 2022-02-20 05:59 gdm
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 ghostscript
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 gnome-vfs-2.0
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 gnupg
+-rw-r--r--.   1 root root    837 2022-02-20 05:59 group
+-rw-r--r--.   1 root root    824 2022-02-20 05:59 group-
+----------.   1 root root    676 2022-02-20 05:59 gshadow-
+-rw-r--r--.   1 root root    801 2022-02-20 05:59 gssapi_mech.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 gtk-2.0
+-rw-r--r--.   1 root root    158 2022-02-20 05:59 hosts
+-rw-r--r--.   1 root root    370 2022-02-20 05:59 hosts.allow
+drwxr-xr-x.   4 root root   4096 2022-02-20 05:59 httpd
+-rw-r--r--.   1 root root      0 2022-02-20 05:59 init.conf
+lrwxrwxrwx.   1 root root     11 2022-02-20 05:59 init.d -> rc.d/init.d
+-rw-r--r--.   1 root root    884 2022-02-20 05:59 inittab
+-rw-r--r--.   1 root root    942 2022-02-20 05:59 inputrc
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 ipa
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 iproute2
+-rw-r--r--.   1 root root     47 2022-02-20 05:59 issue
+-rw-r--r--.   1 root root     46 2022-02-20 05:59 issue.net
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 jvm
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 jvm-commmon
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 kde
+-rw-r--r--.   1 root root   8120 2022-02-20 05:59 kdump.conf
+-rw-r--r--.   1 root root   1128 2022-02-20 05:59 kshrc
+-rw-r--r--.   1 root root   1662 2022-02-20 05:59 latrace.conf
+-rw-r--r--.   1 root root     28 2022-02-20 05:59 ld.so.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 ld.so.conf.d
+-rw-r-----.   1 root root    191 2022-02-20 05:59 libaudit.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 libnl
+drwxr-xr-x.   5 root root   4096 2022-02-20 05:59 libreport
+-rw-r--r--.   1 root root   1816 2022-02-20 05:59 login.defs
+-rw-r--r--.   1 root root    662 2022-02-20 05:59 logrotate.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 logrotate.d
+-rw-r--r--.   1 root root  10814 2022-02-20 05:59 ltrace.conf
+-rw-r--r--.   1 root root   1909 2022-02-20 05:59 mail.rc
+-rw-r--r--.   1 root root   4940 2022-02-20 05:59 man.config
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 maven
+-rw-r--r--.   1 root root  43591 2022-02-20 05:59 mime.types
+-rw-r--r--.   1 root root    827 2022-02-20 05:59 mke2fs.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 modprobe.d
+-rw-r--r--.   1 root root    541 2022-02-20 05:59 mtab
+-rw-r--r--.   1 root root   2620 2022-02-20 05:59 mtools.conf
+-rw-r--r--.   1 root root    251 2022-02-20 05:59 my.cnf
+-rw-r--r--.   1 root root   7846 2022-02-20 05:59 nanorc
+-rw-r--r--.   1 root root     58 2022-02-20 05:59 networks
+-rw-r--r--.   1 root root   3605 2022-02-20 05:59 nfsmount.conf
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 ntp
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 obex-data-server
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 openldap
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 opt
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 pango
+-rw-r--r--.   1 root root   1714 2022-02-20 05:59 passwd
+-rw-r--r--.   1 root root   1675 2022-02-20 05:59 passwd-
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 pcmcia
+-rw-r--r--.   1 root root   2872 2022-02-20 05:59 pinforc
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 pkcs11
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 plymouth
+-rw-r--r--.   1 root root    370 2022-02-20 05:59 pm-utils-hd-apm-restore.conf
+-rw-r--r--.   1 root root   6300 2022-02-20 05:59 pnm2ppa.conf
+drwxr-xr-x.   5 root root   4096 2022-02-20 05:59 polkit-1
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 popt.d
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 ppp
+-rw-r--r--.   1 root root 318129 2022-02-20 05:59 prelink.cache
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 prelink.conf.d
+-rw-r--r--.   1 root root    233 2022-02-20 05:59 printcap
+-rw-r--r--.   1 root root   1796 2022-02-20 05:59 profile
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 profile.d
+-rw-r--r--.   1 root root   6455 2022-02-20 05:59 protocols
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 pulse
+lrwxrwxrwx.   1 root root     10 2022-02-20 05:59 rc0.d -> rc.d/rc0.d
+lrwxrwxrwx.   1 root root     10 2022-02-20 05:59 rc2.d -> rc.d/rc2.d
+lrwxrwxrwx.   1 root root     10 2022-02-20 05:59 rc5.d -> rc.d/rc5.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 rdma
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 redhat-lsb
+lrwxrwxrwx.   1 root root     14 2022-02-20 05:59 redhat-release -> centos-release
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 request-key.d
+-rw-r--r--.   1 root root     91 2022-02-20 05:59 resolv.conf
+-rw-r--r--.   1 root root   1615 2022-02-20 05:59 rpc
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 rpm
+-rw-r--r--.   1 root root   2875 2022-02-20 05:59 rsyslog.conf
+-rw-r--r--.   1 root root    930 2022-02-20 05:59 rwtab
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 rwtab.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 sasl2
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 scl
+-rw-------.   1 root root    122 2022-02-20 05:59 securetty
+-rw-r--r--.   1 root root    216 2022-02-20 05:59 sestatus.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 setuptool.d
+-rw-r--r--.   1 root root     70 2022-02-20 05:59 shells
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 skel3
+-rw-r--r--.   1 root root   6717 2022-02-20 05:59 smartd.conf
+-rw-r--r--.   1 root root    256 2022-02-20 05:59 sos.conf
+drwxr-xr-x.   3 root root   4096 2022-02-20 05:59 sound
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 ssh
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 ssl
+drwx------.   2 root root   4096 2022-02-20 05:59 sssd
+-rw-r--r--.   1 root root    212 2022-02-20 05:59 statetab
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 statetab.d
+-rw-r-----.   1 root root   3181 2022-02-20 05:59 sudo-ldap.conf
+drwxr-x---.   2 root root   4096 2022-02-20 05:59 sudoers.d
+drwxr-xr-x.   7 root root   4096 2022-02-20 05:59 sysconfig
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 sysctl.d
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 terminfo
+-rw-r--r--.   1 root root   1982 2022-02-20 05:59 vimrc
+-rw-r--r--.   1 root root   3008 2022-02-20 05:59 warnquota.conf
+drwxr-xr-x.   4 root root   4096 2022-02-20 05:59 xdg
+-rw-------.   1 root root   1001 2022-02-20 05:59 xinetd.conf
+drwxr-xr-x.   2 root root   4096 2022-02-20 05:59 xml
+drwxr-xr-x.   5 root root   4096 2022-02-20 05:59 yum
+[root@optimus skel3]# clear
+[root@optimus skel3]# rm -rf *
+[root@optimus skel3]# ls -al
+합계 40
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:01 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root    18 2022-02-20 05:59 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 05:59 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 05:59 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 05:59 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 05:59 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 05:59 .mozilla
+-rw-------.   1 root root     0 2022-02-20 05:59 .pwd.lock
+[root@optimus skel3]# rm -f .pwd.lock
+[root@optimus skel3]# ls -al
+합계 40
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:02 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root    18 2022-02-20 05:59 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 05:59 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 05:59 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 05:59 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 05:59 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 05:59 .mozilla
+[root@optimus skel3]# clar
+-bash: clar: command not found
+[root@optimus skel3]# clear
+[root@optimus skel3]# ls -al
+합계 40
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:02 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root    18 2022-02-20 05:59 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 05:59 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 05:59 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 05:59 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 05:59 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 05:59 .mozilla
+[root@optimus skel3]# rm -rf .*
+rm: cannot remove directory: `.'
+rm: cannot remove directory: `..'
+[root@optimus skel3]# ls -al
+합계 16
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:03 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+[root@optimus skel3]# clear
+[root@optimus skel3]# cp -r /etc/skel/. .
+[root@optimus skel3]# ls -al
+합계 40
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:04 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root    18 2022-02-20 06:04 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 06:04 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 06:04 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:04 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 06:04 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:04 .mozilla
+[root@optimus skel3]# rm -rf .*
+rm: cannot remove directory: `.'
+rm: cannot remove directory: `..'
+[root@optimus skel3]# ls -al
+합계 16
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:04 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+[root@optimus skel3]# clear
+[root@optimus skel3]# cp -r /etc/skel/.??* .
+[root@optimus skel3]# ls -al
+합계 40
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:05 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root    18 2022-02-20 06:05 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 06:05 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 06:05 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:05 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 06:05 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:05 .mozilla
+[root@optimus skel3]# rm -rf .*
+rm: cannot remove directory: `.'
+rm: cannot remove directory: `..'
+[root@optimus skel3]# ls -al
+합계 16
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:05 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+[root@optimus skel3]# clear
+[root@optimus skel3]# ls -al /etc/skel
+합계 40
+drwx------.   4 root root  4096 2022-02-20 01:46 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root    18 2022-02-20 01:46 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 01:46 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 01:46 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 01:46 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 01:46 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 01:46 .mozilla
+[root@optimus skel3]# clear
+[root@optimus skel3]# ls -al
+합계 16
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:05 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+[root@optimus skel3]# cp -r /etc/skel/. .
+[root@optimus skel3]# ls -al
+합계 40
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:06 .
+drwxr-xr-x. 121 root root 12288 2022-02-20 05:57 ..
+-rw-r--r--.   1 root root    18 2022-02-20 06:06 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 06:06 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 06:06 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:06 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 06:06 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:06 .mozilla
+[root@optimus skel3]# touch test
+[root@optimus skel3]# ll
+합계 0
+-rw-r--r--. 1 root root 0 2022-02-20 06:07 test
+[root@optimus skel3]# cd
+[root@optimus ~]# useradd -mk /etc/skel3 user3
+[root@optimus ~]# passwd user3
+user3 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# ls -al ~user3
+합계 17
+drwx------. 4 user3 user3 1024 2022-02-20 06:07 .
+drwxr-xr-x. 7 root  root  1024 2022-02-20 06:07 ..
+-rw-r--r--. 1 user3 user3   18 2022-02-20 06:06 .bash_logout
+-rw-r--r--. 1 user3 user3  176 2022-02-20 06:06 .bash_profile
+-rw-r--r--. 1 user3 user3  124 2022-02-20 06:06 .bashrc
+drwxr-xr-x. 2 user3 user3 1024 2022-02-20 06:06 .gnome2
+-rw-r--r--. 1 user3 user3  171 2022-02-20 06:06 .kshrc
+drwxr-xr-x. 4 user3 user3 1024 2022-02-20 06:06 .mozilla
+-rw-r--r--. 1 user3 user3    0 2022-02-20 06:07 test
+[root@optimus ~]# clera
+-bash: clera: command not found
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir /etc/skel4
+[root@optimus ~]# cd /etc/skel4
+[root@optimus skel4]# pwd
+/etc/skel4
+[root@optimus skel4]# ls -al
+합계 16
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:08 .
+drwxr-xr-x. 122 root root 12288 2022-02-20 06:08 ..
+[root@optimus skel4]# cp -r /etc/skel/.??* .
+[root@optimus skel4]# ls -al
+합계 40
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:08 .
+drwxr-xr-x. 122 root root 12288 2022-02-20 06:08 ..
+-rw-r--r--.   1 root root    18 2022-02-20 06:08 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 06:08 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 06:08 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:08 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 06:08 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:08 .mozilla
+[root@optimus skel4]# clear
+[root@optimus skel4]# mkdir public_html
+[root@optimus skel4]# ll
+합계 4
+drwxr-xr-x. 2 root root 4096 2022-02-20 06:08 public_html
+[root@optimus skel4]# cd
+[root@optimus ~]# useradd -mk /etc/skel4 user4
+[root@optimus ~]# passwd user4
+user4 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l ~user4
+합계 2
+drwxr-xr-x. 2 user4 user4 1024 2022-02-20 06:08 public_html
+[root@optimus ~]# clear
+[root@optimus ~]# vi /etc/default/useradd
+[root@optimus ~]# mkdir -p /export/home
+[root@optimus ~]# useradd user5
+[root@optimus ~]# grep user5 /etc/passwd && ls -ld ~user5
+user5:x:505:505::/export/home/user5:/bin/bash
+drwx------. 4 user5 user5 4096 2022-02-20 06:09 /export/home/user5
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir -p /local_host/home
+[root@optimus ~]# vi /etc/default/useradd
+[root@optimus ~]# clear
+[root@optimus ~]# useradd -d /local_host/home/user6 user6
+[root@optimus ~]# passwd user6
+user6 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# clear
+[root@optimus ~]# grep user6 /etc/passwd && ls -ld ~user6
+user6:x:506:506::/local_host/home/user6:/bin/ksh
+drwx------. 5 user6 user6 4096 2022-02-20 06:11 /local_host/home/user6
+[root@optimus ~]# ls -al /etc/skel4
+합계 44
+drwxr-xr-x.   5 root root  4096 2022-02-20 06:08 .
+drwxr-xr-x. 122 root root 12288 2022-02-20 06:11 ..
+-rw-r--r--.   1 root root    18 2022-02-20 06:08 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 06:08 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 06:08 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:08 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 06:08 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:08 .mozilla
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:08 public_html
+[root@optimus ~]# clear
+[root@optimus ~]# ls -al ~user6
+합계 36
+drwx------. 5 user6 user6 4096 2022-02-20 06:11 .
+drwxr-xr-x. 3 root  root  4096 2022-02-20 06:11 ..
+-rw-r--r--. 1 user6 user6   18 2022-02-20 06:08 .bash_logout
+-rw-r--r--. 1 user6 user6  176 2022-02-20 06:08 .bash_profile
+-rw-r--r--. 1 user6 user6  124 2022-02-20 06:08 .bashrc
+drwxr-xr-x. 2 user6 user6 4096 2022-02-20 06:08 .gnome2
+-rw-r--r--. 1 user6 user6  171 2022-02-20 06:08 .kshrc
+drwxr-xr-x. 4 user6 user6 4096 2022-02-20 06:08 .mozilla
+drwxr-xr-x. 2 user6 user6 4096 2022-02-20 06:08 public_html
+[root@optimus ~]# clear
+[root@optimus ~]# vi /etc/default/useradd
+[root@optimus ~]# groupadd g1
+[root@optimus ~]# ls -ld /local_host/home/
+drwxr-xr-x. 3 root root 4096 2022-02-20 06:11 /local_host/home/
+[root@optimus ~]# ls -ld /etc/skel*
+drwx------. 4 root root 4096 2022-02-20 01:46 /etc/skel
+drwx------. 4 root root 4096 2022-02-20 05:56 /etc/skel2
+drwxr-xr-x. 4 root root 4096 2022-02-20 06:07 /etc/skel3
+drwxr-xr-x. 5 root root 4096 2022-02-20 06:08 /etc/skel4
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir /etc/skel5
+[root@optimus ~]# cd /etc/skel5
+[root@optimus skel5]# clear
+[root@optimus skel5]# cp -r /etc/skel/. .
+[root@optimus skel5]# ls -al
+합계 40
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:16 .
+drwxr-xr-x. 123 root root 12288 2022-02-20 06:16 ..
+-rw-r--r--.   1 root root    18 2022-02-20 06:16 .bash_logout
+-rw-r--r--.   1 root root   176 2022-02-20 06:16 .bash_profile
+-rw-r--r--.   1 root root   124 2022-02-20 06:16 .bashrc
+drwxr-xr-x.   2 root root  4096 2022-02-20 06:16 .gnome2
+-rw-r--r--.   1 root root   171 2022-02-20 06:16 .kshrc
+drwxr-xr-x.   4 root root  4096 2022-02-20 06:16 .mozilla
+[root@optimus skel5]# clear
+[root@optimus skel5]# mkdir public_html
+[root@optimus skel5]# vi public_html/index.html
+[root@optimus skel5]# cd
+[root@optimus ~]# useradd -u 700 -g g1 -c 김덕현천재 -d /local_host/home/user7 -s /bin/ksh -mk /etc/skel5 user7
+[root@optimus ~]# passwd user7
+user7 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@optimus ~]# clear
+[root@optimus ~]# grep user7 /etc/passwd /etc/shadow /etc/group && ls -ld ~user7 /var/spool/mail/user7
+/etc/passwd:user7:x:700:507:김덕현천재:/local_host/home/user7:/bin/ksh
+/etc/shadow:user7:$6$JzUMtx9q$FgBrhmaX7VRE53.kGXBcqS7B7IZbY.RKSPdGVrcxVAZpG0Dx9w/DXqOh4NMbyO2VTbU92cHOQiDjg36P.SCgs1:19042:0:99999:7:::
+drwx------. 5 user7 g1   4096 2022-02-20 06:17 /local_host/home/user7
+-rw-rw----. 1 user7 mail    0 2022-02-20 06:17 /var/spool/mail/user7
+[root@optimus ~]# cler
+-bash: cler: command not found
+[root@optimus ~]# clear
+[root@optimus ~]# ls -lR ~user7
+/local_host/home/user7:
+합계 4
+drwxr-xr-x. 2 user7 g1 4096 2022-02-20 06:16 public_html
+
+/local_host/home/user7/public_html:
+합계 4
+-rw-r--r--. 1 user7 g1 19 2022-02-20 06:16 index.html
+[root@optimus ~]# cat -n ~user7/public_html/index.html
+     1  mgr.kgitbank.co.rk
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+user1:x:501:501:testuser:/home/user1:/bin/ksh
+user2:x:502:502::/home/user2:/bin/bash
+user3:x:503:503::/home/user3:/bin/bash
+user4:x:504:504::/home/user4:/bin/bash
+user5:x:505:505::/export/home/user5:/bin/bash
+user6:x:506:506::/local_host/home/user6:/bin/ksh
+user7:x:700:507:김덕현천재:/local_host/home/user7:/bin/ksh
+[root@optimus ~]# clear
+[root@optimus ~]# ls -ld ~user5 ~user6 ~user7
+drwx------. 4 user5 user5 4096 2022-02-20 06:09 /export/home/user5
+drwx------. 5 user6 user6 4096 2022-02-20 06:11 /local_host/home/user6
+drwx------. 5 user7 g1    4096 2022-02-20 06:17 /local_host/home/user7
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /home/
+합계 23
+drwx------. 5 kgitbank kgitbank  1024 2022-02-19 20:51 kgitbank
+drwx------. 2 root     root     12288 2022-02-12 16:16 lost+found
+drwx------. 4 user1    user1     1024 2022-02-20 05:55 user1
+drwx------. 4 user2    user2     1024 2022-02-20 05:56 user2
+drwx------. 4 user3    user3     1024 2022-02-20 06:07 user3
+drwx------. 5 user4    user4     1024 2022-02-20 06:08 user4
+[root@optimus ~]# clear
+[root@optimus ~]# usermod -md /home/user5 user5
+[root@optimus ~]# usermod -md /home/user6 user6
+[root@optimus ~]# usermod -md /home/user7 user7
+[root@optimus ~]# tail -3 /etc/passwd
+user5:x:505:505::/home/user5:/bin/bash
+user6:x:506:506::/home/user6:/bin/ksh
+user7:x:700:507:김덕현천재:/home/user7:/bin/ksh
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /local_host/home/
+합계 0
+[root@optimus ~]# ls -l /export/home/
+합계 0
+[root@optimus ~]# ls -l /home/
+합계 29
+drwx------. 5 kgitbank kgitbank  1024 2022-02-19 20:51 kgitbank
+drwx------. 2 root     root     12288 2022-02-12 16:16 lost+found
+drwx------. 4 user1    user1     1024 2022-02-20 05:55 user1
+drwx------. 4 user2    user2     1024 2022-02-20 05:56 user2
+drwx------. 4 user3    user3     1024 2022-02-20 06:07 user3
+drwx------. 5 user4    user4     1024 2022-02-20 06:08 user4
+drwx------. 4 user5    user5     1024 2022-02-20 06:09 user5
+drwx------. 5 user6    user6     1024 2022-02-20 06:11 user6
+drwx------. 5 user7    g1        1024 2022-02-20 06:17 user7
+[root@optimus ~]# clear
+[root@optimus ~]# userdel user7
+[root@optimus ~]# grep user7 /etc/passwd /etc/shadow /etc/group
+[root@optimus ~]# ls -ld /home/user7 /var/spool/mail/user7
+drwx------. 5 700 g1   1024 2022-02-20 06:17 /home/user7
+-rw-rw----. 1 700 mail    0 2022-02-20 06:17 /var/spool/mail/user7
+[root@optimus ~]# rm -rf /home/user7 /var/spool/mail/user7
+[root@optimus ~]# ls -ld /home/user7 /var/spool/mail/user7
+ls: cannot access /home/user7: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access /var/spool/mail/user7: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# clear
+[root@optimus ~]# usedel -r user6
+-bash: usedel: command not found
+[root@optimus ~]# userdel -r user6
+[root@optimus ~]# grep user6 /etc/passwd /etc/shadow /etc/group
+[root@optimus ~]# ls -ld /home/user6 /var/spool/mail/user6
+ls: cannot access /home/user6: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access /var/spool/mail/user6: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+user1:x:501:501:testuser:/home/user1:/bin/ksh
+user2:x:502:502::/home/user2:/bin/bash
+user3:x:503:503::/home/user3:/bin/bash
+user4:x:504:504::/home/user4:/bin/bash
+user5:x:505:505::/home/user5:/bin/bash
+[root@optimus ~]# userdel -r user1
+[root@optimus ~]# userdel -r user2
+[root@optimus ~]# userdel -r user3
+[root@optimus ~]# userdel -r user4
+[root@optimus ~]# userdel -r user5
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/shadow
+haldaemon:!!:19035::::::
+ntp:!!:19035::::::
+apache:!!:19035::::::
+saslauth:!!:19035::::::
+postfix:!!:19035::::::
+gdm:!!:19035::::::
+pulse:!!:19035::::::
+sshd:!!:19035::::::
+tcpdump:!!:19035::::::
+kgitbank:$6$9SfPVpSD$n.SQBlrMXU0ntiGyCmwnKXubNzn/dhFrqt/.EeGOExDkDP2UN1eH9CcZkk1QwDa/xT1WrJdVtW58feDgmPtZP1:19036:0:99999:7:::
+[root@optimus ~]# tail /etc/group
+pulse-access:x:495:
+fuse:x:494:
+sshd:x:74:
+slocate:x:21:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+tcpdump:x:72:
+kgitbank:x:500:root
+g1:x:507:
+[root@optimus ~]# groupdel g1
+[root@optimus ~]# tail /etc/group
+pulse:x:496:
+pulse-access:x:495:
+fuse:x:494:
+sshd:x:74:
+slocate:x:21:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+tcpdump:x:72:
+kgitbank:x:500:root
+[root@optimus ~]# ls -l /home/
+합계 15
+drwx------. 5 kgitbank kgitbank  1024 2022-02-19 20:51 kgitbank
+drwx------. 2 root     root     12288 2022-02-12 16:16 lost+found
+[root@optimus ~]# clear
+[root@optimus ~]# rm -rf /test/ /local_host/ /etc/skel?
+[root@optimus ~]# ls -ld /test /local_host /etc/skel*
+ls: cannot access /test: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access /local_host: 그런 파일이나 디렉터리가 없습니다
+drwx------. 4 root root 4096 2022-02-20 01:46 /etc/skel
+[root@optimus ~]# cat -n /etc/default/useradd
+     1  # useradd defaults file
+     2  GROUP=100
+     3  HOME=/home
+     4  INACTIVE=-1
+     5  EXPIRE=
+     6  SHELL=/bin/bash
+     7  SKEL=/etc/skel
+     8  CREATE_MAIL_SPOOL=yes
+     9
+[root@optimus ~]# clear
+[root@optimus ~]#

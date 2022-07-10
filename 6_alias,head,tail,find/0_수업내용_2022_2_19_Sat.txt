@@ -1,0 +1,3763 @@
+2022_2_19_Sat
+Linux 1 / 3 Days
+=======================================
+강사푸티 5시간 내용
+login as: root
+root@192.168.1.130's password:
+Last login: Sun Feb 13 16:24:27 2022 from 192.168.1.1
+[root@optimus ~]# whoami
+root
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# runlevel
+N 5
+[root@optimus ~]# history
+    1  init 0
+    2  ifconfig
+    3  clear
+    4  ifup eth0
+    5  clear
+    6  ifconfig
+    7  clear
+    8  ifconfig eth0\
+    9  ifconfig eth0
+   10  clear
+   11  ping 192.168.1.1
+   12  cls
+   13  clear
+   14  ping 192.168.1.1
+   15  exit
+   16  ifconfig eth0
+   17  clear
+   18  netstat -lntup
+   19  1
+   20  clear
+   21  ifconfig eth0
+   22  exit
+   23  runlevel
+   24  init 5
+   25  whoami
+   26  pwd
+   27  runlevel
+   28  ifconfig
+   29  clear
+   30  netstat -lntup
+   31  clear
+   32  runlevel
+   33  init 3
+   34  hostname
+   35  runlevel
+   36  clear
+   37  dir
+   38  ls
+   39  ls -l
+   40  clear
+   41  whoami
+   42  hostname
+   43  init 0
+   44  exit
+   45  ifconfig eth0
+   46  clear
+   47  ping 192.168.1.1
+   48  ifup eth0
+   49  ifconfig eth0
+   50  ping 192.168.1.1
+   51  clear
+   52  ifdown eth0
+   53  ifconfig eth0
+   54  ping 192.168.1.1\
+   55  ping 192.168.1.1
+   56  clear
+   57  netstat -lntup
+   58  ifup eth0
+   59  ifconfig eth0
+   60  netstat -lntup
+   61  clear
+   62  exit
+   63  init 6
+   64  whoami
+   65  pwd
+   66  runlevel
+   67  netstat -lntup
+   68  ifup eth0
+   69  ifconfig eth0
+   70  netstat -lntup
+   71  clear
+   72  whoami
+   73  pwd
+   74  runlevel
+   75  netstat -lntup
+   76  clear
+   77  ifconfig
+   78  ifconfig eth0
+   79  clear
+   80  ifconfig
+   81  clear
+   82  netstat -lntup
+   83  netstat -antup
+   84  clear
+   85  service sshd start
+   86  netstat -lntup
+   87  clear
+   88  service sshd stop
+   89  netstat -lntup
+   90  clear
+   91  service sshd start
+   92  netstat -lntup
+   93  clear
+   94  service sshd restart
+   95  clear
+   96  pwd
+   97  ls
+   98  dir
+   99  clear
+  100  ls
+  101  cler
+  102  clear
+  103  clear
+  104  ifconfig
+  105  cleawr
+  106  clear
+  107  ls
+  108  man ls
+  109  ls -l
+  110  ls -l -a
+  111  clear
+  112  ls -l -a -R
+  113  clear
+  114  ls -la
+  115  clear
+  116  .은 홀로 쓰이면 현재
+  117  .은 file/dir 앞에 붙게 되면 숨김
+  118  cd .
+  119  pwd
+  120  ls -al
+  121  clear
+  122  ls -al
+  123   ..
+  124  clear
+  125  pwd
+  126  ls -alR /
+  127  clear
+  128  ls -alR /
+  129  clear
+  130  man ls
+  131  ls -l /
+  132  clear
+  133  pwd
+  134  cd /
+  135  cd
+  136  pwd
+  137  cd ..
+  138  pwd
+  139  cd
+  140  clear
+  141  pwd
+  142  cd /home/kgitbank/
+  143  pwd
+  144  cd
+  145  pwd
+  146  cd ../home/kgitbank/
+  147  pwd
+  148  clear
+  149  cd
+  150  pwd
+  151  cd /media/CentOS_6.8_Final/Packages/
+  152  pwd
+  153  cd
+  154  pwd
+  155  cd ../media/CentOS_6.8_Final/Packages/
+  156  pwd
+  157  cd
+  158  c;ear
+  159  clear
+  160  ls -l /
+  161  clear
+  162  ls -ld /
+  163  ls -ld / /home/ /var/ /usr/ /boot/
+  164  clear
+  165  ls -hhl
+  166  clear
+  167  ls -ld /roo
+  168  ls -ld /roo /root/
+  169  clear
+  170  pwd
+  171  mkdir test
+  172  ll
+  173  clear
+  174  ll
+  175  pwd
+  176  cd test
+  177  pwd
+  178  clear
+  179  pwd
+  180  touch suzi.txt-_-.123.abc
+  181  ll
+  182  touch IU_suzi-11.txt
+  183  ll
+  184  clear
+  185  touch &kgitbank
+  186  ll
+  187  clear
+  188  touch a b c d e
+  189  ll
+  190  clear
+  191  touch 1|
+  192  ll
+  193  touch 1"
+  194  ll
+  195  touch 1'
+  196  ll
+  197  clear
+  198  pwd
+  199  ll
+  200  touch .1
+  201  ll
+  202  ls -al
+  203  mkdir .2
+  204  ll
+  205  ls -al
+  206  clear
+  207  touch test/
+  208  clear
+  209  cd ..
+  210  pwd
+  211  rm -rf test
+  212  ls -ld test
+  213  clear
+  214  ls -l /
+  215  clear
+  216  ls -l /boot/
+  217  clear
+  218  ls -l /bin
+  219  clear
+  220  ls -l /usr/bin/whoami
+  221  clear
+  222  ls -l /sbin/
+  223  clear
+  224  ls -l /home/
+  225  ls -l /etc
+  226  clear
+  227  ls -l /dev/
+  228  ls -l /lib
+  229  ls -l /mnt
+  230  clear
+  231  ls -l /media/
+  232  ls -l /media/CentOS_6.8_Final/
+  233  ls -l /usr
+  234  clear
+  235  ls -l /proc/
+  236  clear
+  237  ps -A
+  238  clear
+  239  ls -l /proc
+  240  2164
+  241  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2166
+  242  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2172
+  243  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:24 2183
+  244  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:24 2198
+  245  dr-xr-xr-x.  8 root      root         0 2022-02-14 01:23 22
+  246  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2243
+  247  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2251
+  248  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2290
+  249  clear
+  250  ls -l /tmp
+  251  log = 흔적남긴다
+  252  clear
+  253  ls -l /opt/
+  254  ls -l /opt/rh/
+  255  ls -l /sys/
+  256  ls -l /lost+found/
+  257  ls -l /srv/
+  258  clear
+  259  mkdir a
+  260  mkdir a/b
+  261  mkdir a/b/c
+  262  ls -ld a/b/c/
+  263  rm -rf a
+  264  ls -ld a
+  265  mkdir -p a/b/c
+  266  ls -ld a/b/c/
+  267  man mkdir
+  268  clear
+  269  rm -rf a
+  270  ls -ld a
+  271  clear
+  272  mkdir -p 1/2/3 x/y/z
+  273  ls -ld 1/2/3/ x/y/z/
+  274  clear
+  275  mv 1/2/3/ 1/2/iu
+  276  ls -l 1/2/
+  277  mv 1/2/iu/ x/y/z/
+  278  ls -l 1/2/
+  279  ls -l x/y/z/
+  280  clear
+  281  mv x/y/z/iu/ 1/2/z
+  282  ls -ld x/y/z/iu
+  283  ls -ld 1/2/z/
+  284  mv x/y/z/ 1/2/z/
+  285  ls -ld x/y/z
+  286  ls -ld 1/2/z/z/
+  287  clear
+  288  ls -l
+  289  clear
+  290  rmdir 1
+  291  ls -ld 1/2/z/z/
+  292  rmdir 1/2/
+  293  rmdir 1/2/z/
+  294  rmdir 1/2/z/z/
+  295  rmdir 1/2/z/
+  296  rmdir 1/2/
+  297  rmdir 1/
+  298  ls -ld 1
+  299  clear
+  300  man rm
+  301  rmdir x
+  302  ls -ld x/y/
+  303  rm x
+  304  rm -r x
+  305  ls -ld x
+  306  clear
+  307  man rm
+  308  mkdir -p 1/2/3/4/5
+  309  rmdir 1
+  310  rm -r 1
+  311  rm -rf 1
+  312  ls -ld 1
+  313  clear
+  314  touch 1
+  315  ls -l ?
+  316  ls -l
+  317  clear
+  318  touch 2  3 4
+  319  ll
+  320  clear
+  321  ls -l ?
+  322  touch 11 22 33 44
+  323  ls -l ??
+  324  clear
+  325  ls -l 1*
+  326  ls -l *1
+  327  rm -f 11 22 33 44
+  328  ls -l ??
+  329  clear
+  330  ls -l ?
+  331  rm -f ?
+  332  ls -l ?
+  333  clear
+  334  touch 1
+  335  ls -l ?
+  336  touch 1
+  337  ls -l ?
+  338  clear
+  339  ls -l ?
+  340  cat > 1
+  341  ls -l ?
+  342  cat > 1
+  343  ls -l ?
+  344  cat > 2
+  345  ls -l ?
+  346  cat < 1
+  347  cat < 2
+  348  cat 1
+  349  cat 2
+  350  cat -n 1
+  351  cat -n 1 2
+  352  cat 1 > 2
+  353  cat -n 1
+  354  cat -n 2
+  355  cat > 2
+  356  cat -n 2
+  357  cat -n 1
+  358  cat > 2
+  359  ls -l ?
+  360  clear
+  361  cat -n 1
+  362  cat -n 2
+  363  cat 1 > 2
+  364  cat -n 2
+  365  cat > 2
+  366  cat -n 2
+  367  ls -l ?
+  368  cat -n 1
+  369  cat >> 1
+  370  cat -n 1
+  371  ls -l ?
+  372  cat >> 3
+  373  ls -l ?
+  374  cat  1 2 3 > 4
+  375  ls -l ?
+  376  cat -n 4
+  377  cat 3 2 1 > 5
+  378  cat -n 5
+  379  병합
+  380  칟ㅁㄱ
+  381  clear
+  382  find / -name kgitbank
+  383  ls -ld /var/spool/mail/kgitbank /home/kgitbank/
+  384  find / -name kgitbank -type d
+  385  find / -name kgitbank -type f
+  386  clear
+  387  whoami
+  388  pwd
+  389  runlevel
+  390  history
+[root@optimus ~]# clear
+[root@optimus ~]# whoami
+root
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# ls -l
+합계 108
+drwxr-xr-x. 3 root root  4096 2022-02-13 19:17 1
+-rw-------. 1 root root  1561 2022-02-12 16:27 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2022-02-12 16:27 install.log
+-rw-r--r--. 1 root root 10033 2022-02-12 16:24 install.log.syslog
+drwxr-xr-x. 3 root root  4096 2022-02-13 19:17 x
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 공개
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 다운로드
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 문서
+drwxr-xr-x. 2 root root  4096 2022-02-12 19:14 바탕화면
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 비디오
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 사진
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 음악
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 템플릿
+[root@optimus ~]# rm -rf 1 x
+[root@optimus ~]# ls -l
+합계 100
+-rw-------. 1 root root  1561 2022-02-12 16:27 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2022-02-12 16:27 install.log
+-rw-r--r--. 1 root root 10033 2022-02-12 16:24 install.log.syslog
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 공개
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 다운로드
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 문서
+drwxr-xr-x. 2 root root  4096 2022-02-12 19:14 바탕화면
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 비디오
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 사진
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 음악
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 템플릿
+[root@optimus ~]# clear
+[root@optimus ~]# touch 1
+[root@optimus ~]# ll ?
+-rw-r--r--. 1 root root 0 2022-02-19 14:41 1
+[root@optimus ~]# cp 1 a
+[root@optimus ~]# ll ?
+-rw-r--r--. 1 root root 0 2022-02-19 14:41 1
+-rw-r--r--. 1 root root 0 2022-02-19 14:41 a
+[root@optimus ~]# ls -l ??
+공개:
+합계 0
+
+문서:
+합계 0
+
+사진:
+합계 0
+
+음악:
+합계 0
+[root@optimus ~]# ls -l ???
+비디오:
+합계 0
+
+템플릿:
+합계 0
+[root@optimus ~]# ls -l ????
+다운로드:
+합계 0
+
+바탕화면:
+합계 0
+[root@optimus ~]# ls -l ?????
+ls: cannot access ?????: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -l ??????
+ls: cannot access ??????: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l 1*
+-rw-r--r--. 1 root root 0 2022-02-19 14:41 1
+[root@optimus ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2022-02-19 14:41 1
+-rw-r--r--. 1 root root 0 2022-02-19 14:41 a
+[root@optimus ~]# cp 1 /iu
+[root@optimus ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2022-02-19 14:41 1
+-rw-r--r--. 1 root root 0 2022-02-19 14:41 a
+[root@optimus ~]# ls -l /??
+-rw-r--r--. 1 root root 0 2022-02-19 14:42 /iu
+[root@optimus ~]# rm -f /iu
+[root@optimus ~]# ls -l /??
+ls: cannot access /??: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# rm -f ?
+[root@optimus ~]# ls -l ?
+ls: cannot access ?: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# mkdir -p 1/2 x/y
+[root@optimus ~]# ls -ld 1/2/ x/y/
+drwxr-xr-x. 2 root root 4096 2022-02-19 14:44 1/2/
+drwxr-xr-x. 2 root root 4096 2022-02-19 14:44 x/y/
+[root@optimus ~]# cp -r 1/2/ x/y/
+[root@optimus ~]# ls -ld 1/2/ x/y/2/
+drwxr-xr-x. 2 root root 4096 2022-02-19 14:44 1/2/
+drwxr-xr-x. 2 root root 4096 2022-02-19 14:44 x/y/2/
+[root@optimus ~]# cp -r 1/2/ x/y/2/
+[root@optimus ~]# ls -ld 1/2/ x/y/2/2/
+drwxr-xr-x. 2 root root 4096 2022-02-19 14:44 1/2/
+drwxr-xr-x. 2 root root 4096 2022-02-19 14:45 x/y/2/2/
+[root@optimus ~]# clear
+[root@optimus ~]# 정상 / 오류 차이점
+-bash: 정상: command not found
+[root@optimus ~]# 실행 O / 실행 X 차이점
+-bash: 실행: command not found
+[root@optimus ~]# ls -ld /root/
+dr-xr-x---. 29 root root 4096 2022-02-19 14:44 /root/
+[root@optimus ~]# ls -ld /roo
+ls: cannot access /roo: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -ld /home/kgitbank/
+drwx------. 4 kgitbank kgitbank 1024 2022-02-12 16:41 /home/kgitbank/
+[root@optimus ~]# ls -ld /home/kgit
+ls: cannot access /home/kgit: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -ld /roo && ls -ld /home/kgit
+ls: cannot access /roo: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -ld /root/ && ls -ld /home/kgit
+dr-xr-x---. 29 root root 4096 2022-02-19 14:44 /root/
+ls: cannot access /home/kgit: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# clear
+[root@optimus ~]# ls -ld /roo && ls -ld /home/kgit
+ls: cannot access /roo: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -ld /roo && ls -ld /home/kgitbank/
+ls: cannot access /roo: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -ld /root/ && ls -ld /home/kgit
+dr-xr-x---. 29 root root 4096 2022-02-19 14:44 /root/
+ls: cannot access /home/kgit: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -ld /root/ && ls -ld /home/kgitbank/
+dr-xr-x---. 29 root root 4096 2022-02-19 14:44 /root/
+drwx------. 4 kgitbank kgitbank 1024 2022-02-12 16:41 /home/kgitbank/
+[root@optimus ~]# ls -ld /roo || ls -ld /home/kgit
+ls: cannot access /roo: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access /home/kgit: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -ld /roo || ls -ld /home/kgitbank/
+ls: cannot access /roo: 그런 파일이나 디렉터리가 없습니다
+drwx------. 4 kgitbank kgitbank 1024 2022-02-12 16:41 /home/kgitbank/
+[root@optimus ~]# ls -ld /root/ || ls -ld /home/kgit
+dr-xr-x---. 29 root root 4096 2022-02-19 14:44 /root/
+[root@optimus ~]# ls -ld /root/ || ls -ld /home/kgitbank/
+dr-xr-x---. 29 root root 4096 2022-02-19 14:44 /root/
+[root@optimus ~]# clear
+[root@optimus ~]# netstat -lntup
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name
+tcp        0      0 0.0.0.0:33615               0.0.0.0:*                   LISTEN      1495/rpc.statd
+tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      1438/rpcbind
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      1691/sshd
+tcp        0      0 127.0.0.1:631               0.0.0.0:*                   LISTEN      1533/cupsd
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      1788/master
+tcp        0      0 :::55564                    :::*                        LISTEN      1495/rpc.statd
+tcp        0      0 :::111                      :::*                        LISTEN      1438/rpcbind
+tcp        0      0 :::22                       :::*                        LISTEN      1691/sshd
+tcp        0      0 ::1:631                     :::*                        LISTEN      1533/cupsd
+tcp        0      0 ::1:25                      :::*                        LISTEN      1788/master
+udp        0      0 0.0.0.0:111                 0.0.0.0:*                               1438/rpcbind
+udp        0      0 0.0.0.0:631                 0.0.0.0:*                               1533/cupsd
+udp        0      0 0.0.0.0:765                 0.0.0.0:*                               1438/rpcbind
+udp        0      0 0.0.0.0:32809               0.0.0.0:*                               1495/rpc.statd
+udp        0      0 127.0.0.1:823               0.0.0.0:*                               1495/rpc.statd
+udp        0      0 0.0.0.0:68                  0.0.0.0:*                               2494/dhclient
+udp        0      0 :::111                      :::*                                    1438/rpcbind
+udp        0      0 :::765                      :::*                                    1438/rpcbind
+udp        0      0 :::54474                    :::*                                    1495/rpc.statd
+[root@optimus ~]# clear
+[root@optimus ~]# netstat -lntup |grep sshd
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      1691/sshd
+tcp        0      0 :::22                       :::*                        LISTEN      1691/sshd
+[root@optimus ~]# netstat -lntup |grep dhclient
+udp        0      0 0.0.0.0:68                  0.0.0.0:*                               2494/dhclient
+[root@optimus ~]# ls -ld /linux
+ls: cannot access /linux: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# mkdir /linux
+[root@optimus ~]# cd /li
+-bash: cd: /li: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# cd /linux/
+[root@optimus linux]# pwd
+/linux
+[root@optimus linux]# clear
+[root@optimus linux]# pwd
+/linux
+[root@optimus linux]# cat > aa
+1 2 3 4 5 6 7 8 9
+^C
+[root@optimus linux]# ls -l
+합계 4
+-rw-r--r--. 1 root root 18 2022-02-19 15:14 aa
+[root@optimus linux]# cat -n aa
+     1  1 2 3 4 5 6 7 8 9
+[root@optimus linux]# cat > bb
+1
+2
+3
+4
+5
+6
+7
+8
+9
+^C
+[root@optimus linux]# ls -l
+합계 8
+-rw-r--r--. 1 root root 18 2022-02-19 15:14 aa
+-rw-r--r--. 1 root root 18 2022-02-19 15:16 bb
+[root@optimus linux]# cat -n bb
+     1  1
+     2  2
+     3  3
+     4  4
+     5  5
+     6  6
+     7  7
+     8  8
+     9  9
+[root@optimus linux]# cat bb >> aa
+[root@optimus linux]# ls -l
+합계 8
+-rw-r--r--. 1 root root 36 2022-02-19 15:17 aa
+-rw-r--r--. 1 root root 18 2022-02-19 15:16 bb
+[root@optimus linux]# cat -n
+^C
+[root@optimus linux]# cat -n aa
+     1  1 2 3 4 5 6 7 8 9
+     2  1
+     3  2
+     4  3
+     5  4
+     6  5
+     7  6
+     8  7
+     9  8
+    10  9
+[root@optimus linux]# cat aa bb > cc
+[root@optimus linux]# ls -l
+합계 12
+-rw-r--r--. 1 root root 36 2022-02-19 15:17 aa
+-rw-r--r--. 1 root root 18 2022-02-19 15:16 bb
+-rw-r--r--. 1 root root 54 2022-02-19 15:18 cc
+[root@optimus linux]# cat -n cc
+     1  1 2 3 4 5 6 7 8 9
+     2  1
+     3  2
+     4  3
+     5  4
+     6  5
+     7  6
+     8  7
+     9  8
+    10  9
+    11  1
+    12  2
+    13  3
+    14  4
+    15  5
+    16  6
+    17  7
+    18  8
+    19  9
+[root@optimus linux]#
+[root@optimus linux]# clear
+[root@optimus linux]# 제가 전달해 드린 문제풀이
+-bash: 제가: command not found
+[root@optimus linux]#
+[root@optimus linux]# cd
+[root@optimus ~]# clear
+[root@optimus ~]# rm -rf /linux/
+[root@optimus ~]# ls -ld /linux
+ls: cannot access /linux: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# mkdir -p /test/test1/test2/test3
+[root@optimus ~]# cd /test/test1/test2/test3/
+[root@optimus test3]# pwd
+/test/test1/test2/test3
+[root@optimus test3]# touch a b c 1 2 3
+[root@optimus test3]# ll
+합계 0
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 1
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 2
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 3
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 a
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 b
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 c
+[root@optimus test3]# touch 11 22 33 aa bb cc
+[root@optimus test3]# ll
+합계 0
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 1
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 11
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 2
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 22
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 3
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 33
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 a
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 aa
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 b
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 bb
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 c
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 cc
+[root@optimus test3]# clear
+[root@optimus test3]# pwd
+/test/test1/test2/test3
+[root@optimus test3]# find . -name 1
+./1
+[root@optimus test3]# find . -name a
+./a
+[root@optimus test3]# clear
+[root@optimus test3]# ls -ld /iu
+ls: cannot access /iu: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test3]# mkdir /iu
+[root@optimus test3]# ls -l /iu/
+합계 0
+[root@optimus test3]# mv a /iu/suzi
+[root@optimus test3]# ls -l a
+ls: cannot access a: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test3]# ls -l /iu/
+합계 0
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 suzi
+[root@optimus test3]# clear
+[root@optimus test3]# ls -l /b
+ls: cannot access /b: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test3]# ls -l b
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 b
+[root@optimus test3]# 자리를 보고 다리를 뻗습니다
+-bash: 자리를: command not found
+[root@optimus test3]# mkdir -p /iu/suzi1/test && mv b /iu/suzi1/test
+[root@optimus test3]# ls -l /iu/suzi
+suzi   suzi1/
+[root@optimus test3]# ls -l /iu/suzi1/test/b
+1   11  2   22  3   33  aa  bb  c   cc
+[root@optimus test3]# ls -l /iu/suzi1/test/b
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 /iu/suzi1/test/b
+[root@optimus test3]# clear
+[root@optimus test3]# ls -l /iu/suzi1/test1
+ls: cannot access /iu/suzi1/test1: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test3]# ls -l c
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 c
+[root@optimus test3]# mv c /iu/suzi1/test1
+[root@optimus test3]# ls -l c
+ls: cannot access c: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test3]# ls -l /iu/suzi1/test1
+-rw-r--r--. 1 root root 0 2022-02-19 15:58 /iu/suzi1/test1
+[root@optimus test3]# clear
+[root@optimus test3]# cd
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# rm -rf /iu /test
+[root@optimus ~]# ls -ld /iu /test
+ls: cannot access /iu: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access /test: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# clear
+[root@optimus ~]# 여기서부터도 내드린 문제 풀이입니다.
+-bash: 여기서부터도: command not found
+[root@optimus ~]# ls -l /etc/login.defs /etc/inittab /boot/grub/grub.conf
+-rw-------. 1 root root  745 2022-02-12 16:27 /boot/grub/grub.conf
+-rw-r--r--. 1 root root  884 2022-02-12 16:27 /etc/inittab
+-rw-r--r--. 1 root root 1816 2016-02-09 18:55 /etc/login.defs
+[root@optimus ~]# find / -name login.defs -o -name inittab -o -name grub.conf
+/etc/login.defs
+/etc/inittab
+/etc/grub.conf
+/boot/grub/grub.conf
+/media/CentOS_6.8_Final/isolinux/grub.conf
+[root@optimus ~]# ls -l /boot/grub/grub.conf /etc/grub.conf
+-rw-------. 1 root root 745 2022-02-12 16:27 /boot/grub/grub.conf
+lrwxrwxrwx. 1 root root  22 2022-02-12 16:27 /etc/grub.conf -> ../boot/grub/grub.conf
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /boot/grub/grub.conf /etc/inittab /etc/login.defs
+-rw-------. 1 root root  745 2022-02-12 16:27 /boot/grub/grub.conf
+-rw-r--r--. 1 root root  884 2022-02-12 16:27 /etc/inittab
+-rw-r--r--. 1 root root 1816 2016-02-09 18:55 /etc/login.defs
+[root@optimus ~]# ls -ld /backup
+ls: cannot access /backup: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# mkdir /backup
+[root@optimus ~]# cp /boot/grub/grub.conf /etc/inittab /etc/login.defs /backup/
+[root@optimus ~]# ls -l /backup/
+합계 12
+-rw-------. 1 root root  745 2022-02-19 16:45 grub.conf
+-rw-r--r--. 1 root root  884 2022-02-19 16:45 inittab
+-rw-r--r--. 1 root root 1816 2022-02-19 16:45 login.defs
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir /backup/test
+[root@optimus ~]# ls -l /backup/
+합계 16
+-rw-------. 1 root root  745 2022-02-19 16:45 grub.conf
+-rw-r--r--. 1 root root  884 2022-02-19 16:45 inittab
+-rw-r--r--. 1 root root 1816 2022-02-19 16:45 login.defs
+drwxr-xr-x. 2 root root 4096 2022-02-19 16:46 test
+[root@optimus ~]# cd /backup/
+[root@optimus backup]# pwd
+/backup
+[root@optimus backup]# ll
+합계 16
+-rw-------. 1 root root  745 2022-02-19 16:45 grub.conf
+-rw-r--r--. 1 root root  884 2022-02-19 16:45 inittab
+-rw-r--r--. 1 root root 1816 2022-02-19 16:45 login.defs
+drwxr-xr-x. 2 root root 4096 2022-02-19 16:46 test
+[root@optimus backup]# cp login.defs test/login
+[root@optimus backup]# cp inittab test/init
+[root@optimus backup]# cp grub.conf test/grub
+[root@optimus backup]# ls -lR
+.:
+합계 16
+-rw-------. 1 root root  745 2022-02-19 16:45 grub.conf
+-rw-r--r--. 1 root root  884 2022-02-19 16:45 inittab
+-rw-r--r--. 1 root root 1816 2022-02-19 16:45 login.defs
+drwxr-xr-x. 2 root root 4096 2022-02-19 16:47 test
+
+./test:
+합계 12
+-rw-------. 1 root root  745 2022-02-19 16:47 grub
+-rw-r--r--. 1 root root  884 2022-02-19 16:47 init
+-rw-r--r--. 1 root root 1816 2022-02-19 16:47 login
+[root@optimus backup]# clear
+[root@optimus backup]# ls -l /backup/test1 /backup/test/test2
+ls: cannot access /backup/test1: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access /backup/test/test2: 그런 파일이나 디렉터리가 없습니다
+[root@optimus backup]# touch test1 test/test2
+[root@optimus backup]# ls -lR
+.:
+합계 16
+-rw-------. 1 root root  745 2022-02-19 16:45 grub.conf
+-rw-r--r--. 1 root root  884 2022-02-19 16:45 inittab
+-rw-r--r--. 1 root root 1816 2022-02-19 16:45 login.defs
+drwxr-xr-x. 2 root root 4096 2022-02-19 16:48 test
+-rw-r--r--. 1 root root    0 2022-02-19 16:48 test1
+
+./test:
+합계 12
+-rw-------. 1 root root  745 2022-02-19 16:47 grub
+-rw-r--r--. 1 root root  884 2022-02-19 16:47 init
+-rw-r--r--. 1 root root 1816 2022-02-19 16:47 login
+-rw-r--r--. 1 root root    0 2022-02-19 16:48 test2
+[root@optimus backup]# clear
+[root@optimus backup]# ls -l
+합계 16
+-rw-------. 1 root root  745 2022-02-19 16:45 grub.conf
+-rw-r--r--. 1 root root  884 2022-02-19 16:45 inittab
+-rw-r--r--. 1 root root 1816 2022-02-19 16:45 login.defs
+drwxr-xr-x. 2 root root 4096 2022-02-19 16:48 test
+-rw-r--r--. 1 root root    0 2022-02-19 16:48 test1
+[root@optimus backup]# mkdir -p /home/test/c/d && cp -rp test /home/test/c/d/kgitbank
+[root@optimus backup]# ls -ld /roo
+ls: cannot access /roo: 그런 파일이나 디렉터리가 없습니다
+[root@optimus backup]# ls -l /home/test/c/d/kgitbank/
+합계 8
+-rw-------. 1 root root  745 2022-02-19 16:47 grub
+-rw-r--r--. 1 root root  884 2022-02-19 16:47 init
+-rw-r--r--. 1 root root 1816 2022-02-19 16:47 login
+-rw-r--r--. 1 root root    0 2022-02-19 16:48 test2
+[root@optimus backup]# ls -l test
+합계 12
+-rw-------. 1 root root  745 2022-02-19 16:47 grub
+-rw-r--r--. 1 root root  884 2022-02-19 16:47 init
+-rw-r--r--. 1 root root 1816 2022-02-19 16:47 login
+-rw-r--r--. 1 root root    0 2022-02-19 16:48 test2
+[root@optimus backup]# date
+2022. 02. 19. (토) 16:50:19 KST
+[root@optimus backup]# clear
+[root@optimus backup]# cd /home/
+[root@optimus home]# pwd
+/home
+[root@optimus home]# cd명령어 금지
+-bash: cd명령어: command not found
+[root@optimus home]# pwd
+/home
+[root@optimus home]# ls -l /backup/
+합계 16
+-rw-------. 1 root root  745 2022-02-19 16:45 grub.conf
+-rw-r--r--. 1 root root  884 2022-02-19 16:45 inittab
+-rw-r--r--. 1 root root 1816 2022-02-19 16:45 login.defs
+drwxr-xr-x. 2 root root 4096 2022-02-19 16:48 test
+-rw-r--r--. 1 root root    0 2022-02-19 16:48 test1
+[root@optimus home]# clear
+[root@optimus home]# ls -ld /home/test/c/d/test
+ls: cannot access /home/test/c/d/test: 그런 파일이나 디렉터리가 없습니다
+[root@optimus home]# mkdir /home/test/c/d/test && cp -p /backup/* /home/test/c/d/test
+cp: omitting directory `/backup/test'
+[root@optimus home]# ls -l /home/test/c/d/test/
+합계 8
+-rw-------. 1 root root  745 2022-02-19 16:45 grub.conf
+-rw-r--r--. 1 root root  884 2022-02-19 16:45 inittab
+-rw-r--r--. 1 root root 1816 2022-02-19 16:45 login.defs
+-rw-r--r--. 1 root root    0 2022-02-19 16:48 test1
+[root@optimus home]# cd
+[root@optimus ~]# c.ear
+-bash: c.ear: command not found
+[root@optimus ~]# clear
+[root@optimus ~]# rm -rf /backup/ /home/test
+[root@optimus ~]# ls -ld /backup /home/test
+ls: cannot access /backup: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access /home/test: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# 문제 풀이 끝
+-bash: 문제: command not found
+[root@optimus ~]# 진도 나갑니다
+-bash: 진도: command not found
+[root@optimus ~]# 칟ㅁ
+-bash: 칟ㅁ: command not found
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /boot/grub/grub.conf
+     1  # grub.conf generated by anaconda
+     2  #
+     3  # Note that you do not have to rerun grub after making changes to this file
+     4  # NOTICE:  You have a /boot partition.  This means that
+     5  #          all kernel and initrd paths are relative to /boot/, eg.
+     6  #          root (hd0,0)
+     7  #          kernel /vmlinuz-version ro root=/dev/sda7
+     8  #          initrd /initrd-[generic-]version.img
+     9  #boot=/dev/sda
+    10  default=0
+    11  timeout=5
+    12  splashimage=(hd0,0)/grub/splash.xpm.gz
+    13  hiddenmenu
+    14  title CentOS 6 (2.6.32-642.el6.x86_64)
+    15          root (hd0,0)
+    16          kernel /vmlinuz-2.6.32-642.el6.x86_64 ro root=UUID=08863864-c559-44db-9f67-b1b37ae3329c rd_NO_LUKG=ko_KR.UTF-8 rd_NO_MD crashkernel=auto  KEYBOARDTYPE=pc KEYTABLE=ko rd_NO_LVM rd_NO_DM rhgb quiet
+    17          initrd /initramfs-2.6.32-642.el6.x86_64.img
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir /back
+[root@optimus ~]# rm -rf /back/
+[root@optimus ~]# mkdir /backup
+[root@optimus ~]# ls -l /backup/
+합계 0
+[root@optimus ~]# cp /boot/grub/grub.conf /backup/
+[root@optimus ~]# ls -l /backup/
+합계 4
+-rw-------. 1 root root 745 2022-02-19 17:02 grub.conf
+[root@optimus ~]# rm -rf /boot/grub/grub.conf
+[root@optimus ~]# ls -l /boot/grub/grub.conf
+ls: cannot access /boot/grub/grub.conf: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# init 6
+[root@optimus ~]#
+login as: root
+root@192.168.1.130's password:
+Last login: Sat Feb 19 14:35:00 2022 from 192.168.1.1
+[root@optimus ~]# clar
+-bash: clar: command not found
+[root@optimus ~]# clear
+[root@optimus ~]# netstat -lntup
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name
+tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      1412/rpcbind
+tcp        0      0 0.0.0.0:52913               0.0.0.0:*                   LISTEN      1472/rpc.statd
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      1665/sshd
+tcp        0      0 127.0.0.1:631               0.0.0.0:*                   LISTEN      1510/cupsd
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      1762/master
+tcp        0      0 :::41610                    :::*                        LISTEN      1472/rpc.statd
+tcp        0      0 :::111                      :::*                        LISTEN      1412/rpcbind
+tcp        0      0 :::22                       :::*                        LISTEN      1665/sshd
+tcp        0      0 ::1:631                     :::*                        LISTEN      1510/cupsd
+tcp        0      0 ::1:25                      :::*                        LISTEN      1762/master
+udp        0      0 0.0.0.0:739                 0.0.0.0:*                               1412/rpcbind
+udp        0      0 0.0.0.0:111                 0.0.0.0:*                               1412/rpcbind
+udp        0      0 0.0.0.0:631                 0.0.0.0:*                               1510/cupsd
+udp        0      0 127.0.0.1:802               0.0.0.0:*                               1472/rpc.statd
+udp        0      0 0.0.0.0:68                  0.0.0.0:*                               2469/dhclient
+udp        0      0 0.0.0.0:58835               0.0.0.0:*                               1472/rpc.statd
+udp        0      0 :::739                      :::*                                    1412/rpcbind
+udp        0      0 :::111                      :::*                                    1412/rpcbind
+udp        0      0 :::49370                    :::*                                    1472/rpc.statd
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n  /etc/inittab
+     1  # inittab is only used by upstart for the default runlevel.
+     2  #
+     3  # ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.
+     4  #
+     5  # System initialization is started by /etc/init/rcS.conf
+     6  #
+     7  # Individual runlevels are started by /etc/init/rc.conf
+     8  #
+     9  # Ctrl-Alt-Delete is handled by /etc/init/control-alt-delete.conf
+    10  #
+    11  # Terminal gettys are handled by /etc/init/tty.conf and /etc/init/serial.conf,
+    12  # with configuration in /etc/sysconfig/init.
+    13  #
+    14  # For information on how to write upstart event handlers, or how
+    15  # upstart works, see init(5), init(8), and initctl(8).
+    16  #
+    17  # Default runlevel. The runlevels used are:
+    18  #   0 - halt (Do NOT set initdefault to this)
+    19  #   1 - Single user mode
+    20  #   2 - Multiuser, without NFS (The same as 3, if you do not have networking)
+    21  #   3 - Full multiuser mode
+    22  #   4 - unused
+    23  #   5 - X11
+    24  #   6 - reboot (Do NOT set initdefault to this)
+    25  #
+    26  id:5:initdefault:
+[root@optimus ~]# clear
+[root@optimus ~]# runlevel
+N 5
+[root@optimus ~]# netstat -lntup
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name
+tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      1412/rpcbind
+tcp        0      0 0.0.0.0:52913               0.0.0.0:*                   LISTEN      1472/rpc.statd
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      1665/sshd
+tcp        0      0 127.0.0.1:631               0.0.0.0:*                   LISTEN      1510/cupsd
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      1762/master
+tcp        0      0 :::41610                    :::*                        LISTEN      1472/rpc.statd
+tcp        0      0 :::111                      :::*                        LISTEN      1412/rpcbind
+tcp        0      0 :::22                       :::*                        LISTEN      1665/sshd
+tcp        0      0 ::1:631                     :::*                        LISTEN      1510/cupsd
+tcp        0      0 ::1:25                      :::*                        LISTEN      1762/master
+udp        0      0 0.0.0.0:739                 0.0.0.0:*                               1412/rpcbind
+udp        0      0 0.0.0.0:111                 0.0.0.0:*                               1412/rpcbind
+udp        0      0 0.0.0.0:631                 0.0.0.0:*                               1510/cupsd
+udp        0      0 127.0.0.1:802               0.0.0.0:*                               1472/rpc.statd
+udp        0      0 0.0.0.0:68                  0.0.0.0:*                               2469/dhclient
+udp        0      0 0.0.0.0:58835               0.0.0.0:*                               1472/rpc.statd
+udp        0      0 :::739                      :::*                                    1412/rpcbind
+udp        0      0 :::111                      :::*                                    1412/rpcbind
+udp        0      0 :::49370                    :::*                                    1472/rpc.statd
+[root@optimus ~]# clear
+[root@optimus ~]# cd /etc/rc.d
+[root@optimus rc.d]# ll
+합계 60
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 init.d
+-rwxr-xr-x. 1 root root  2617 2016-05-12 04:34 rc
+-rwxr-xr-x. 1 root root   220 2016-05-12 04:34 rc.local
+-rwxr-xr-x. 1 root root 20199 2016-05-12 04:34 rc.sysinit
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc0.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc1.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc2.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc3.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc4.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc5.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc6.d
+[root@optimus rc.d]# cat -n rc.sysinit
+     1  #!/bin/bash
+     2  #
+     3  # /etc/rc.d/rc.sysinit - run once at boot time
+     4  #
+     5  # Taken in part from Miquel van Smoorenburg's bcheckrc.
+     6  #
+     7
+     8  HOSTNAME=$(/bin/hostname)
+     9
+    10  set -m
+    11
+    12  if [ -f /etc/sysconfig/network ]; then
+    13      . /etc/sysconfig/network
+    14  fi
+    15  if [ -z "$HOSTNAME" -o "$HOSTNAME" = "(none)" ]; then
+    16      HOSTNAME=localhost
+    17  fi
+    18
+    19  if [ ! -e /proc/mounts ]; then
+    20          mount -n -t proc /proc /proc
+    21          mount -n -t sysfs /sys /sys >/dev/null 2>&1
+    22  fi
+    23  if [ ! -d /proc/bus/usb ]; then
+    24          modprobe usbcore >/dev/null 2>&1 && mount -n -t usbfs /proc/bus/usb /proc/bus/usb
+    25  else
+    26          mount -n -t usbfs /proc/bus/usb /proc/bus/usb
+    27  fi
+    28
+    29  #remount /dev/shm to set attributes from fstab #669700
+    30  mount -n -o remount /dev/shm >/dev/null 2>&1
+    31  #remount /proc to set attributes from fstab #984003
+    32  mount -n -o remount /proc >/dev/null 2>&1
+    33
+    34  . /etc/init.d/functions
+    35
+    36  PLYMOUTH=
+    37  [ -x /bin/plymouth ] && PLYMOUTH=yes
+    38
+    39  # Check SELinux status
+    40  SELINUX_STATE=
+    41  if [ -e "/selinux/enforce" ] && [ "$(cat /proc/self/attr/current)" != "kernel" ]; then
+    42          if [ -r "/selinux/enforce" ] ; then
+    43                  SELINUX_STATE=$(cat "/selinux/enforce")
+    44          else
+    45                  # assume enforcing if you can't read it
+    46                  SELINUX_STATE=1
+    47          fi
+    48  fi
+    49
+    50  if [ -n "$SELINUX_STATE" -a -x /sbin/restorecon ] && __fgrep " /dev " /proc/mounts >/dev/null 2>&1 ; then
+    51          /sbin/restorecon -R -F /dev 2>/dev/null
+    52  fi
+    53
+    54  disable_selinux() {
+    55          echo $"*** Warning -- SELinux is active"
+    56          echo $"*** Disabling security enforcement for system recovery."
+    57          echo $"*** Run 'setenforce 1' to reenable."
+    58          echo "0" > "/selinux/enforce"
+    59  }
+    60
+    61  relabel_selinux() {
+    62      # if /sbin/init is not labeled correctly this process is running in the
+    63      # wrong context, so a reboot will be required after relabel
+    64      AUTORELABEL=
+    65      . /etc/selinux/config
+    66      echo "0" > /selinux/enforce
+    67      [ -n "$PLYMOUTH" ] && plymouth --hide-splash
+    68
+    69      if [ "$AUTORELABEL" = "0" ]; then
+    70          echo
+    71          echo $"*** Warning -- SELinux ${SELINUXTYPE} policy relabel is required. "
+    72          echo $"*** /etc/selinux/config indicates you want to manually fix labeling"
+    73          echo $"*** problems. Dropping you to a shell; the system will reboot"
+    74          echo $"*** when you leave the shell."
+    75          start rcS-emergency
+    76
+    77      else
+    78          echo
+    79          echo $"*** Warning -- SELinux ${SELINUXTYPE} policy relabel is required."
+    80          echo $"*** Relabeling could take a very long time, depending on file"
+    81          echo $"*** system size and speed of hard drives."
+    82
+    83          /sbin/fixfiles -F restore > /dev/null 2>&1
+    84      fi
+    85      rm -f  /.autorelabel
+    86      # at this point fsck was already executed see bz1236062
+    87      [ -f /forcefsck ] && rm -f /forcefsck
+    88
+    89      echo $"Unmounting file systems"
+    90      umount -a
+    91      mount -n -o remount,ro /
+    92      echo $"Automatic reboot in progress."
+    93      reboot -f
+    94  }
+    95
+    96  # Print a text banner.
+    97  echo -en $"\t\tWelcome to "
+    98  read -r system_release < /etc/system-release
+    99  if [[ "$system_release" == *"Red Hat"* ]]; then
+   100   [ "$BOOTUP" = "color" ] && echo -en "\\033[0;31m"
+   101   echo -en "Red Hat"
+   102   [ "$BOOTUP" = "color" ] && echo -en "\\033[0;39m"
+   103   PRODUCT=$(sed "s/Red Hat \(.*\) release.*/\1/" /etc/system-release)
+   104   echo " $PRODUCT"
+   105  elif [[ "$system_release" == *Fedora* ]]; then
+   106   [ "$BOOTUP" = "color" ] && echo -en "\\033[0;34m"
+   107   echo -en "Fedora"
+   108   [ "$BOOTUP" = "color" ] && echo -en "\\033[0;39m"
+   109   PRODUCT=$(sed "s/Fedora \(.*\) \?release.*/\1/" /etc/system-release)
+   110   echo " $PRODUCT"
+   111  elif [[ "$system_release" =~ "CentOS" ]]; then
+   112   [ "$BOOTUP" = "color" ] && echo -en "\\033[0;36m"
+   113   echo -en "CentOS"
+   114   [ "$BOOTUP" = "color" ] && echo -en "\\033[0;39m"
+   115   PRODUCT=$(sed "s/CentOS \(.*\) \?release.*/\1/" /etc/system-release)
+   116   echo " $PRODUCT"
+   117  else
+   118   PRODUCT=$(sed "s/ release.*//g" /etc/system-release)
+   119   echo "$PRODUCT"
+   120  fi
+   121
+   122  # Only read this once.
+   123  cmdline=$(cat /proc/cmdline)
+   124
+   125  # Initialize hardware
+   126  if [ -f /proc/sys/kernel/modprobe ]; then
+   127     if ! strstr "$cmdline" nomodules && [ -f /proc/modules ] ; then
+   128         sysctl -w kernel.modprobe="/sbin/modprobe" >/dev/null 2>&1
+   129     else
+   130         # We used to set this to NULL, but that causes 'failed to exec' messages"
+   131         sysctl -w kernel.modprobe="/bin/true" >/dev/null 2>&1
+   132     fi
+   133  fi
+   134
+   135  touch /dev/.in_sysinit >/dev/null 2>&1
+   136
+   137  # Set default affinity
+   138  if [ -x /bin/taskset ]; then
+   139     if strstr "$cmdline" default_affinity= ; then
+   140       for arg in $cmdline ; do
+   141           if [ "${arg##default_affinity=}" != "${arg}" ]; then
+   142               /bin/taskset -p ${arg##default_affinity=} 1
+   143               /bin/taskset -p ${arg##default_affinity=} $$
+   144           fi
+   145       done
+   146     fi
+   147  fi
+   148
+   149  nashpid=$(pidof nash 2>/dev/null)
+   150  [ -n "$nashpid" ] && kill $nashpid >/dev/null 2>&1
+   151  unset nashpid
+   152
+   153  apply_sysctl
+   154
+   155  /sbin/start_udev
+   156
+   157  # Load other user-defined modules
+   158  for file in /etc/sysconfig/modules/*.modules ; do
+   159    [ -x $file ] && $file
+   160  done
+   161
+   162  # Load modules (for backward compatibility with VARs)
+   163  if [ -f /etc/rc.modules ]; then
+   164          /etc/rc.modules
+   165  fi
+   166
+   167  mount -n /dev/pts >/dev/null 2>&1
+   168  [ -n "$SELINUX_STATE" ] && restorecon -F /dev/pts >/dev/null 2>&1
+   169
+   170  # Configure kernel parameters
+   171  update_boot_stage RCkernelparam
+   172  apply_sysctl
+   173
+   174  # Set the hostname.
+   175  update_boot_stage RChostname
+   176  action $"Setting hostname ${HOSTNAME}: " hostname ${HOSTNAME}
+   177  [ -n "${NISDOMAIN}" ] && domainname ${NISDOMAIN}
+   178
+   179  # Sync waiting for storage.
+   180  { rmmod scsi_wait_scan ; modprobe scsi_wait_scan ; rmmod scsi_wait_scan ; } >/dev/null 2>&1
+   181
+   182  # Device mapper & related initialization
+   183  if ! __fgrep "device-mapper" /proc/devices >/dev/null 2>&1 ; then
+   184         modprobe dm-mod >/dev/null 2>&1
+   185  fi
+   186
+   187  if [ -f /etc/crypttab ]; then
+   188      init_crypto 0
+   189  fi
+   190
+   191  if ! strstr "$cmdline" nompath && [ -f /etc/multipath.conf -a \
+   192                  -x /sbin/multipath ]; then
+   193          modprobe dm-multipath > /dev/null 2>&1
+   194          /sbin/multipath -v 0
+   195          if [ -x /sbin/kpartx ]; then
+   196                  action_silent $"Add partition mappings: " /sbin/dmsetup ls --target multipath --exec "/sbin/kpartx -a -p p"
+   197          fi
+   198  fi
+   199
+   200  if ! strstr "$cmdline" nodmraid && [ -x /sbin/dmraid ]; then
+   201          modprobe dm-mirror >/dev/null 2>&1
+   202          dmraidsets=$(LC_ALL=C /sbin/dmraid -s -c -i)
+   203          if [ "$?" = "0" ]; then
+   204                  for dmname in $dmraidsets; do
+   205                          if [[ "$dmname" == isw_* ]] && \
+   206                             ! strstr "$cmdline" noiswmd; then
+   207                                  continue
+   208                          fi
+   209                          action_silent $"Activate software (ATA)RAID: " /sbin/dmraid -ay -i --rm_partitions -p "$dmname"
+   210                          /sbin/kpartx -a -p p "/dev/mapper/$dmname"
+   211                  done
+   212          fi
+   213  fi
+   214
+   215  # Start any MD RAID arrays that haven't been started yet
+   216  [ -r /proc/mdstat -a -r /dev/md/md-device-map ] && action $"Run MD devices: " /sbin/mdadm -IRs
+   217
+   218  if [ -x /sbin/lvm ]; then
+   219          if [ ! -f /.nolvm ] && ! strstr "$cmdline" nolvm ; then
+   220                  action $"Setting up Logical Volume Management:" /sbin/lvm vgchange -a ay --sysinit --ignoreskippedcluster
+   221          else
+   222                  echo $"Logical Volume Management disabled at boot."
+   223          fi
+   224  fi
+   225
+   226  if [ -f /etc/crypttab ]; then
+   227      init_crypto 0
+   228  fi
+   229
+   230  if [ -f /fastboot ] || strstr "$cmdline" fastboot ; then
+   231          fastboot=yes
+   232  fi
+   233
+   234  if [ -f /fsckoptions ]; then
+   235          fsckoptions=$(cat /fsckoptions)
+   236  fi
+   237
+   238  if [ -f /forcefsck ] || strstr "$cmdline" forcefsck ; then
+   239          fsckoptions="-f $fsckoptions"
+   240  elif [ -f /.autofsck ]; then
+   241          [ -f /etc/sysconfig/autofsck ] && . /etc/sysconfig/autofsck
+   242          if [ "$AUTOFSCK_DEF_CHECK" = "yes" ]; then
+   243                  AUTOFSCK_OPT="$AUTOFSCK_OPT -f"
+   244          fi
+   245          if [ -n "$AUTOFSCK_SINGLEUSER" ]; then
+   246                  [ -n "$PLYMOUTH" ] && plymouth --hide-splash
+   247                  echo
+   248                  echo $"*** Warning -- the system did not shut down cleanly. "
+   249                  echo $"*** Dropping you to a shell; the system will continue"
+   250                  echo $"*** when you leave the shell."
+   251                  [ -n "$SELINUX_STATE" ] && echo "0" > /selinux/enforce
+   252                  start rcS-emergency
+   253                  [ -n "$SELINUX_STATE" ] && echo "1" > /selinux/enforce
+   254                  [ -n "$PLYMOUTH" ] && plymouth --show-splash
+   255          fi
+   256          fsckoptions="$AUTOFSCK_OPT $fsckoptions"
+   257  fi
+   258
+   259  if [ "$BOOTUP" = "color" ]; then
+   260          fsckoptions="-C $fsckoptions"
+   261  else
+   262          fsckoptions="-V $fsckoptions"
+   263  fi
+   264
+   265  READONLY=
+   266  if [ -f /etc/sysconfig/readonly-root ]; then
+   267          . /etc/sysconfig/readonly-root
+   268  fi
+   269  if strstr "$cmdline" readonlyroot ; then
+   270          READONLY=yes
+   271          [ -z "$RW_MOUNT" ] && RW_MOUNT=/var/lib/stateless/writable
+   272          [ -z "$STATE_MOUNT" ] && STATE_MOUNT=/var/lib/stateless/state
+   273  fi
+   274  if strstr "$cmdline" noreadonlyroot ; then
+   275          READONLY=no
+   276  fi
+   277
+   278  if [ "$READONLY" = "yes" -o "$TEMPORARY_STATE" = "yes" ]; then
+   279
+   280          mount_empty() {
+   281                  if [ -e "$1" ]; then
+   282                          echo "$1" | cpio -p -vd "$RW_MOUNT" &>/dev/null
+   283                          mount -n --bind "$RW_MOUNT$1" "$1"
+   284                  fi
+   285          }
+   286
+   287          mount_dirs() {
+   288                  if [ -e "$1" ]; then
+   289                          mkdir -p "$RW_MOUNT$1"
+   290                          find "$1" -type d -print0 | cpio -p -0vd "$RW_MOUNT" &>/dev/null
+   291                          mount -n --bind "$RW_MOUNT$1" "$1"
+   292                  fi
+   293          }
+   294
+   295          mount_files() {
+   296                  if [ -e "$1" ]; then
+   297                          cp -a --parents "$1" "$RW_MOUNT"
+   298                          mount -n --bind "$RW_MOUNT$1" "$1"
+   299                  fi
+   300          }
+   301
+   302          # Common mount options for scratch space regardless of
+   303          # type of backing store
+   304          mountopts=
+   305
+   306          # Scan partitions for local scratch storage
+   307          rw_mount_dev=$(blkid -t LABEL="$RW_LABEL" -l -o device)
+   308
+   309          # First try to mount scratch storage from /etc/fstab, then any
+   310          # partition with the proper label.  If either succeeds, be sure
+   311          # to wipe the scratch storage clean.  If both fail, then mount
+   312          # scratch storage via tmpfs.
+   313          if mount $mountopts "$RW_MOUNT" > /dev/null 2>&1 ; then
+   314                  rm -rf "$RW_MOUNT" > /dev/null 2>&1
+   315          elif [ x$rw_mount_dev != x ] && mount $rw_mount_dev $mountopts "$RW_MOUNT" > /dev/null 2>&1; then
+   316                  rm -rf "$RW_MOUNT"  > /dev/null 2>&1
+   317          else
+   318                  mount -n -t tmpfs $RW_OPTIONS $mountopts none "$RW_MOUNT"
+   319          fi
+   320
+   321          for file in /etc/rwtab /etc/rwtab.d/* /dev/.initramfs/rwtab ; do
+   322                  is_ignored_file "$file" && continue
+   323          [ -f $file ] && cat $file | while read type path ; do
+   324                          case "$type" in
+   325                                  empty)
+   326                                          mount_empty $path
+   327                                          ;;
+   328                                  files)
+   329                                          mount_files $path
+   330                                          ;;
+   331                                  dirs)
+   332                                          mount_dirs $path
+   333                                          ;;
+   334                                  *)
+   335                                          ;;
+   336                          esac
+   337                          [ -n "$SELINUX_STATE" -a -e "$path" ] && restorecon -R "$path"
+   338                  done
+   339          done
+   340
+   341          # Use any state passed by initramfs
+   342          [ -d /dev/.initramfs/state ] && cp -a /dev/.initramfs/state/* $RW_MOUNT
+   343
+   344          # In theory there should be no more than one network interface active
+   345          # this early in the boot process -- the one we're booting from.
+   346          # Use the network address to set the hostname of the client.  This
+   347          # must be done even if we have local storage.
+   348          ipaddr=
+   349          if [ "$HOSTNAME" = "localhost" -o "$HOSTNAME" = "localhost.localdomain" ]; then
+   350                  ipaddr=$(ip addr show to 0.0.0.0/0 scope global | awk '/[[:space:]]inet / { print gensub("/.*","","g",$2) }')
+   351                  for ip in $ipaddr ; do
+   352                          HOSTNAME=
+   353                          eval $(ipcalc -h $ip 2>/dev/null)
+   354                          [ -n "$HOSTNAME" ] && { hostname ${HOSTNAME} ; break; }
+   355                  done
+   356          fi
+   357
+   358          # Clients with read-only root filesystems may be provided with a
+   359          # place where they can place minimal amounts of persistent
+   360          # state.  SSH keys or puppet certificates for example.
+   361          #
+   362          # Ideally we'll use puppet to manage the state directory and to
+   363          # create the bind mounts.  However, until that's all ready this
+   364          # is sufficient to build a working system.
+   365
+   366          # First try to mount persistent data from /etc/fstab, then any
+   367          # partition with the proper label, then fallback to NFS
+   368          state_mount_dev=$(blkid -t LABEL="$STATE_LABEL" -l -o device)
+   369          if mount $mountopts $STATE_OPTIONS "$STATE_MOUNT" > /dev/null 2>&1 ; then
+   370                  /bin/true
+   371          elif [ x$state_mount_dev != x ] && mount $state_mount_dev $mountopts "$STATE_MOUNT" > /dev/null 2>&1;  then
+   372                  /bin/true
+   373          elif [ ! -z "$CLIENTSTATE" ]; then
+   374                  # No local storage was found.  Make a final attempt to find
+   375                  # state on an NFS server.
+   376
+   377                  mount -t nfs $CLIENTSTATE/$HOSTNAME $STATE_MOUNT -o rw,nolock
+   378          fi
+   379
+   380          if [ -w "$STATE_MOUNT" ]; then
+   381
+   382                  mount_state() {
+   383                          if [ -e "$1" ]; then
+   384                                  [ ! -e "$STATE_MOUNT$1" ] && cp -a --parents "$1" "$STATE_MOUNT"
+   385                                  mount -n --bind "$STATE_MOUNT$1" "$1"
+   386                          fi
+   387                  }
+   388
+   389                  for file in /etc/statetab /etc/statetab.d/* ; do
+   390                          is_ignored_file "$file" && continue
+   391                          [ ! -f "$file" ] && continue
+   392
+   393                          if [ -f "$STATE_MOUNT/$file" ] ; then
+   394                                  mount -n --bind "$STATE_MOUNT/$file" "$file"
+   395                          fi
+   396
+   397                          for path in $(grep -v "^#" "$file" 2>/dev/null); do
+   398                                  mount_state "$path"
+   399                                  [ -n "$SELINUX_STATE" -a -e "$path" ] && restorecon -R "$path"
+   400                          done
+   401                  done
+   402
+   403                  if [ -f "$STATE_MOUNT/files" ] ; then
+   404                          for path in $(grep -v "^#" "$STATE_MOUNT/files" 2>/dev/null); do
+   405                                  mount_state "$path"
+   406                                  [ -n "$SELINUX_STATE" -a -e "$path" ] && restorecon -R "$path"
+   407                          done
+   408                  fi
+   409          fi
+   410
+   411          if mount | grep -q /var/lib/nfs/rpc_pipefs ; then
+   412                  mount -t rpc_pipefs sunrpc /var/lib/nfs/rpc_pipefs && service rpcidmapd restart
+   413          fi
+   414  fi
+   415
+   416  if [[ " $fsckoptions" != *" -y"* ]]; then
+   417          fsckoptions="-a $fsckoptions"
+   418  fi
+   419
+   420  _RUN_QUOTACHECK=0
+   421  if [ -f /forcequotacheck ] || strstr "$cmdline" forcequotacheck ; then
+   422          _RUN_QUOTACHECK=1
+   423  fi
+   424  if [ -z "$fastboot" -a "$READONLY" != "yes" ]; then
+   425
+   426          STRING=$"Checking filesystems"
+   427          echo $STRING
+   428          fsck -T -t noopts=_netdev -A $fsckoptions
+   429          rc=$?
+   430
+   431          if [ "$rc" -eq "0" ]; then
+   432                  success "$STRING"
+   433                  echo
+   434          elif [ "$rc" -eq "1" ]; then
+   435                  passed "$STRING"
+   436                  echo
+   437          elif [ "$rc" -eq "2" -o "$rc" -eq "3" ]; then
+   438                  echo $"Unmounting file systems"
+   439                  umount -a
+   440                  mount -n -o remount,ro /
+   441                  echo $"Automatic reboot in progress."
+   442                  reboot -f
+   443          fi
+   444
+   445          # A return of 4 or higher means there were serious problems.
+   446          if [ $rc -gt 1 ]; then
+   447                  [ -n "$PLYMOUTH" ] && plymouth --hide-splash
+   448
+   449                  failure "$STRING"
+   450                  echo
+   451                  echo
+   452                  echo $"*** An error occurred during the file system check."
+   453                  echo $"*** Dropping you to a shell; the system will reboot"
+   454                  echo $"*** when you leave the shell."
+   455
+   456                  str=$"(Repair filesystem)"
+   457                  PS1="$str \# # "; export PS1
+   458                  [ "$SELINUX_STATE" = "1" ] && disable_selinux
+   459                  start rcS-emergency
+   460
+   461                  echo $"Unmounting file systems"
+   462                  umount -a
+   463                  mount -n -o remount,ro /
+   464                  echo $"Automatic reboot in progress."
+   465                  reboot -f
+   466          elif [ "$rc" -eq "1" ]; then
+   467                  _RUN_QUOTACHECK=1
+   468          fi
+   469  fi
+   470
+   471  remount_needed() {
+   472    local state oldifs
+   473    [ "$READONLY" = "yes" ] && return 1
+   474    state=$(LC_ALL=C awk '/ \/ / && ($3 !~ /rootfs/) { print $4 }' /proc/mounts)
+   475    oldifs=$IFS
+   476    IFS=","
+   477    for opt in $state ; do
+   478          if [ "$opt" = "rw" ]; then
+   479                  IFS=$oldifs
+   480                  return 1
+   481          fi
+   482    done
+   483    IFS=$oldifs
+   484    return 0
+   485  }
+   486
+   487  # Remount the root filesystem read-write.
+   488  update_boot_stage RCmountfs
+   489  if remount_needed ; then
+   490    action $"Remounting root filesystem in read-write mode: " mount -n -o remount,rw /
+   491  fi
+   492
+   493  # Clean up SELinux labels
+   494  if [ -n "$SELINUX_STATE" ]; then
+   495     restorecon /etc/mtab /etc/ld.so.cache /etc/blkid/blkid.tab /etc/resolv.conf >/dev/null 2>&1
+   496  fi
+   497
+   498  # If relabeling, relabel mount points.
+   499  if [ -n "$SELINUX_STATE" -a "$READONLY" != "yes" ]; then
+   500      if [ -f /.autorelabel ] || strstr "$cmdline" autorelabel ; then
+   501          restorecon $(awk '!/^#/ && $4 !~ /noauto/ && $2 ~ /^\// { print $2 }' /etc/fstab) >/dev/null 2>&1
+   502      fi
+   503  fi
+   504
+   505  if [ "$READONLY" != "yes" ] ; then
+   506          # Clear mtab
+   507          (> /etc/mtab) &> /dev/null
+   508
+   509          # Remove stale backups
+   510          rm -f /etc/mtab~ /etc/mtab~~
+   511
+   512          # Enter mounted filesystems into /etc/mtab
+   513          mount -f /
+   514          mount -f /proc >/dev/null 2>&1
+   515          mount -f /sys >/dev/null 2>&1
+   516          mount -f /dev/pts >/dev/null 2>&1
+   517          mount -f /dev/shm >/dev/null 2>&1
+   518          mount -f /proc/bus/usb >/dev/null 2>&1
+   519  fi
+   520
+   521  # Mount all other filesystems (except for NFS and /proc, which is already
+   522  # mounted). Contrary to standard usage,
+   523  # filesystems are NOT unmounted in single user mode.
+   524  # The 'no' applies to all listed filesystem types. See mount(8).
+   525  if [ "$READONLY" != "yes" ] ; then
+   526          action $"Mounting local filesystems: " mount -a -t nonfs,nfs4,smbfs,ncpfs,cifs,gfs,gfs2,glusterfs -O no_netdev
+   527  else
+   528          action $"Mounting local filesystems: " mount -a -n -t nonfs,nfs4,smbfs,ncpfs,cifs,gfs,gfs2,glusterfs -O no_netdev
+   529  fi
+   530
+   531  # Check to see if a full relabel is needed
+   532  if [ -n "$SELINUX_STATE" -a "$READONLY" != "yes" ]; then
+   533      if [ -f /.autorelabel ] || strstr "$cmdline" autorelabel ; then
+   534          relabel_selinux
+   535      fi
+   536  else
+   537      if [ -d /etc/selinux -a "$READONLY" != "yes" ]; then
+   538          [ -f /.autorelabel ] || touch /.autorelabel
+   539      fi
+   540  fi
+   541
+   542  # Update quotas if necessary
+   543  if [ X"$_RUN_QUOTACHECK" = X1 -a -x /sbin/quotacheck ]; then
+   544          action $"Checking local filesystem quotas: " /sbin/quotacheck -anug
+   545  fi
+   546
+   547  if [ -x /sbin/quotaon ]; then
+   548      action $"Enabling local filesystem quotas: " /sbin/quotaon -aug
+   549  fi
+   550
+   551  # Initialize pseudo-random number generator
+   552  if [ -f "/var/lib/random-seed" ]; then
+   553          cat /var/lib/random-seed > /dev/urandom
+   554  else
+   555          [ "$READONLY" != "yes" ] && touch /var/lib/random-seed
+   556  fi
+   557  if [ "$READONLY" != "yes" ]; then
+   558          chmod 600 /var/lib/random-seed
+   559          dd if=/dev/urandom of=/var/lib/random-seed count=1 bs=4096 2>/dev/null
+   560  fi
+   561
+   562  if [ -f /etc/crypttab ]; then
+   563      init_crypto 1
+   564  fi
+   565
+   566  # Configure machine if necessary.
+   567  if [ -f /.unconfigured ]; then
+   568
+   569      if [ -x /bin/plymouth ]; then
+   570          /bin/plymouth quit
+   571      fi
+   572
+   573      if [ -x /usr/bin/system-config-keyboard ]; then
+   574          /usr/bin/system-config-keyboard
+   575      fi
+   576      if [ -x /usr/bin/passwd ]; then
+   577          /usr/bin/passwd root
+   578      fi
+   579      if [ -x /usr/sbin/system-config-network-tui ]; then
+   580          /usr/sbin/system-config-network-tui
+   581      fi
+   582      if [ -x /usr/sbin/timeconfig ]; then
+   583          /usr/sbin/timeconfig
+   584      fi
+   585      if [ -x /usr/sbin/authconfig-tui ]; then
+   586          /usr/sbin/authconfig-tui --nostart
+   587      fi
+   588      if [ -x /usr/sbin/ntsysv ]; then
+   589          /usr/sbin/ntsysv --level 35
+   590      fi
+   591
+   592      # Reread in network configuration data.
+   593      if [ -f /etc/sysconfig/network ]; then
+   594          . /etc/sysconfig/network
+   595
+   596          # Reset the hostname.
+   597          action $"Resetting hostname ${HOSTNAME}: " hostname ${HOSTNAME}
+   598      fi
+   599
+   600      rm -f /.unconfigured
+   601  fi
+   602
+   603  # Clean out /.
+   604  rm -f /fastboot /fsckoptions /forcefsck /.autofsck /forcequotacheck /halt \
+   605          /poweroff /.suspended &> /dev/null
+   606
+   607  # Do we need (w|u)tmpx files? We don't set them up, but the sysadmin might...
+   608  _NEED_XFILES=
+   609  [ -f /var/run/utmpx -o -f /var/log/wtmpx ] && _NEED_XFILES=1
+   610
+   611  # Clean up /var.
+   612  rm -rf /var/lock/cvs/* /var/run/screen/*
+   613  find /var/lock /var/run ! -type d -exec rm -f {} \;
+   614  rm -f /var/lib/rpm/__db* &> /dev/null
+   615  rm -f /var/gdm/.gdmfifo &> /dev/null
+   616
+   617  [ "$PROMPT" != no ] && plymouth watch-keystroke --command "touch /var/run/confirm" --keys=Ii &
+   618
+   619  # Clean up utmp/wtmp
+   620  > /var/run/utmp
+   621  touch /var/log/wtmp
+   622  chgrp utmp /var/run/utmp /var/log/wtmp
+   623  chmod 0664 /var/run/utmp /var/log/wtmp
+   624  if [ -n "$_NEED_XFILES" ]; then
+   625    > /var/run/utmpx
+   626    touch /var/log/wtmpx
+   627    chgrp utmp /var/run/utmpx /var/log/wtmpx
+   628    chmod 0664 /var/run/utmpx /var/log/wtmpx
+   629  fi
+   630  [ -n "$SELINUX_STATE" ] && restorecon /var/run/utmp* /var/log/wtmp* >/dev/null 2>&1
+   631
+   632  # Clean up various /tmp bits
+   633  [ -n "$SELINUX_STATE" ] && restorecon /tmp
+   634  rm -f /tmp/.X*-lock /tmp/.lock.* /tmp/.gdm_socket /tmp/.s.PGSQL.*
+   635  rm -rf /tmp/.X*-unix /tmp/.ICE-unix /tmp/.font-unix /tmp/hsperfdata_* \
+   636         /tmp/kde-* /tmp/ksocket-* /tmp/mc-* /tmp/mcop-* /tmp/orbit-*  \
+   637         /tmp/scrollkeeper-*  /tmp/ssh-* \
+   638         /dev/.in_sysinit
+   639
+   640  # Make ICE directory
+   641  mkdir -m 1777 -p /tmp/.ICE-unix >/dev/null 2>&1
+   642  chown root:root /tmp/.ICE-unix
+   643  [ -n "$SELINUX_STATE" ] && restorecon /tmp/.ICE-unix >/dev/null 2>&1
+   644
+   645  # Start up swapping.
+   646  update_boot_stage RCswap
+   647  action $"Enabling /etc/fstab swaps: " swapon -a -e
+   648  if [ "$AUTOSWAP" = "yes" ]; then
+   649          curswap=$(awk '/^\/dev/ { print $1 }' /proc/swaps | while read x; do get_numeric_dev dec $x ; echo -n " "; done)
+   650          swappartitions=$(blkid -t TYPE=swap -o device)
+   651          if [ x"$swappartitions" != x ]; then
+   652                  for partition in $swappartitions ; do
+   653                          [ ! -e $partition ] && continue
+   654                          majmin=$(get_numeric_dev dec $partition)
+   655                          echo $curswap | grep -qw "$majmin" || action $"Enabling local swap partitions: " swapon $partition
+   656                  done
+   657          fi
+   658  fi
+   659
+   660  # Set up binfmt_misc
+   661  /bin/mount -t binfmt_misc none /proc/sys/fs/binfmt_misc > /dev/null 2>&1
+   662
+   663  # Boot time profiles. Yes, this should be somewhere else.
+   664  if [ -x /usr/sbin/system-config-network-cmd ]; then
+   665    if strstr "$cmdline" netprofile= ; then
+   666      for arg in $cmdline ; do
+   667          if [ "${arg##netprofile=}" != "${arg}" ]; then
+   668              /usr/sbin/system-config-network-cmd --profile ${arg##netprofile=}
+   669          fi
+   670      done
+   671    fi
+   672  fi
+   673
+   674  # Now that we have all of our basic modules loaded and the kernel going,
+   675  # let's dump the syslog ring somewhere so we can find it later
+   676  [ -f /var/log/dmesg ] && mv -f /var/log/dmesg /var/log/dmesg.old
+   677  dmesg -s 131072 > /var/log/dmesg
+   678
+   679  # create the crash indicator flag to warn on crashes, offer fsck with timeout
+   680  touch /.autofsck &> /dev/null
+   681
+   682  [ "$PROMPT" != no ] && plymouth --ignore-keystroke=Ii
+   683  if strstr "$cmdline" confirm ; then
+   684          touch /var/run/confirm
+   685  fi
+   686
+   687  # Let rhgb know that we're leaving rc.sysinit
+   688  if [ -x /bin/plymouth ]; then
+   689      /bin/plymouth --sysinit
+   690  fi
+   691
+[root@optimus rc.d]#
+[root@optimus rc.d]#
+[root@optimus rc.d]#
+[root@optimus rc.d]# clear
+[root@optimus rc.d]# ll
+합계 60
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 init.d
+-rwxr-xr-x. 1 root root  2617 2016-05-12 04:34 rc
+-rwxr-xr-x. 1 root root   220 2016-05-12 04:34 rc.local
+-rwxr-xr-x. 1 root root 20199 2016-05-12 04:34 rc.sysinit
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc0.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc1.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc2.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc3.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc4.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc5.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc6.d
+[root@optimus rc.d]# ls -l rc5.d/
+합계 0
+lrwxrwxrwx. 1 root root 16 2022-02-12 16:24 K01smartd -> ../init.d/smartd
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:22 K02oddjobd -> ../init.d/oddjobd
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:25 K05wdaemon -> ../init.d/wdaemon
+lrwxrwxrwx. 1 root root 16 2022-02-12 16:24 K10psacct -> ../init.d/psacct
+lrwxrwxrwx. 1 root root 19 2022-02-12 16:22 K10saslauthd -> ../init.d/saslauthd
+lrwxrwxrwx. 1 root root 22 2022-02-12 16:22 K15htcacheclean -> ../init.d/htcacheclean
+lrwxrwxrwx. 1 root root 15 2022-02-12 16:22 K15httpd -> ../init.d/httpd
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:22 K50dnsmasq -> ../init.d/dnsmasq
+lrwxrwxrwx. 1 root root 15 2022-02-12 16:42 K50kdump -> ../init.d/kdump
+lrwxrwxrwx. 1 root root 16 2022-02-12 16:24 K50vsftpd -> ../init.d/vsftpd
+lrwxrwxrwx. 1 root root 13 2022-02-12 16:22 K60nfs -> ../init.d/nfs
+lrwxrwxrwx. 1 root root 18 2022-02-12 16:24 K61nfs-rdma -> ../init.d/nfs-rdma
+lrwxrwxrwx. 1 root root 20 2022-02-12 16:22 K69rpcsvcgssd -> ../init.d/rpcsvcgssd
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:22 K73winbind -> ../init.d/winbind
+lrwxrwxrwx. 1 root root 14 2022-02-12 16:41 K74ntpd -> ../init.d/ntpd
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:22 K75ntpdate -> ../init.d/ntpdate
+lrwxrwxrwx. 1 root root 19 2022-02-12 16:24 K75quota_nld -> ../init.d/quota_nld
+lrwxrwxrwx. 1 root root 16 2022-02-12 16:22 K76ypbind -> ../init.d/ypbind
+lrwxrwxrwx. 1 root root 24 2022-02-12 16:22 K84wpa_supplicant -> ../init.d/wpa_supplicant
+lrwxrwxrwx. 1 root root 21 2022-02-12 16:21 K87restorecond -> ../init.d/restorecond
+lrwxrwxrwx. 1 root root 14 2022-02-12 16:22 K88sssd -> ../init.d/sssd
+lrwxrwxrwx. 1 root root 20 2022-02-12 16:21 K89netconsole -> ../init.d/netconsole
+lrwxrwxrwx. 1 root root 15 2022-02-12 16:21 K89rdisc -> ../init.d/rdisc
+lrwxrwxrwx. 1 root root 22 2022-02-12 16:22 K92pppoe-server -> ../init.d/pppoe-server
+lrwxrwxrwx. 1 root root 19 2022-02-12 16:42 K95firstboot -> ../init.d/firstboot
+lrwxrwxrwx. 1 root root 14 2022-02-12 16:24 K95rdma -> ../init.d/rdma
+lrwxrwxrwx. 1 root root 14 2022-02-12 16:24 K99rngd -> ../init.d/rngd
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:23 S01sysstat -> ../init.d/sysstat
+lrwxrwxrwx. 1 root root 22 2022-02-12 16:24 S02lvm2-monitor -> ../init.d/lvm2-monitor
+lrwxrwxrwx. 1 root root 19 2022-02-12 16:22 S08ip6tables -> ../init.d/ip6tables
+lrwxrwxrwx. 1 root root 18 2022-02-12 16:21 S08iptables -> ../init.d/iptables
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:21 S10network -> ../init.d/network
+lrwxrwxrwx. 1 root root 16 2022-02-12 16:24 S11auditd -> ../init.d/auditd
+lrwxrwxrwx. 1 root root 21 2022-02-12 16:19 S11portreserve -> ../init.d/portreserve
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:22 S12rsyslog -> ../init.d/rsyslog
+lrwxrwxrwx. 1 root root 18 2022-02-12 16:24 S13cpuspeed -> ../init.d/cpuspeed
+lrwxrwxrwx. 1 root root 20 2022-02-12 16:23 S13irqbalance -> ../init.d/irqbalance
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:20 S13rpcbind -> ../init.d/rpcbind
+lrwxrwxrwx. 1 root root 19 2022-02-12 16:22 S15mdmonitor -> ../init.d/mdmonitor
+lrwxrwxrwx. 1 root root 20 2022-02-12 16:20 S22messagebus -> ../init.d/messagebus
+lrwxrwxrwx. 1 root root 24 2022-02-12 16:23 S23NetworkManager -> ../init.d/NetworkManager
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:23 S24nfslock -> ../init.d/nfslock
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:23 S24rpcgssd -> ../init.d/rpcgssd
+lrwxrwxrwx. 1 root root 26 2022-02-12 16:24 S25blk-availability -> ../init.d/blk-availability
+lrwxrwxrwx. 1 root root 14 2022-02-12 16:22 S25cups -> ../init.d/cups
+lrwxrwxrwx. 1 root root 15 2022-02-12 16:21 S25netfs -> ../init.d/netfs
+lrwxrwxrwx. 1 root root 15 2022-02-12 16:24 S26acpid -> ../init.d/acpid
+lrwxrwxrwx. 1 root root 19 2022-02-12 16:22 S26haldaemon -> ../init.d/haldaemon
+lrwxrwxrwx. 1 root root 19 2022-02-12 16:21 S26udev-post -> ../init.d/udev-post
+lrwxrwxrwx. 1 root root 16 2022-02-12 16:23 S28autofs -> ../init.d/autofs
+lrwxrwxrwx. 1 root root 19 2022-02-12 16:23 S50bluetooth -> ../init.d/bluetooth
+lrwxrwxrwx. 1 root root 14 2022-02-12 16:24 S55sshd -> ../init.d/sshd
+lrwxrwxrwx. 1 root root 16 2022-02-12 16:24 S56xinetd -> ../init.d/xinetd
+lrwxrwxrwx. 1 root root 24 2022-02-12 16:24 S70spice-vdagentd -> ../init.d/spice-vdagentd
+lrwxrwxrwx. 1 root root 17 2022-02-12 16:22 S80postfix -> ../init.d/postfix
+lrwxrwxrwx. 1 root root 19 2022-02-12 16:20 S82abrt-ccpp -> ../init.d/abrt-ccpp
+lrwxrwxrwx. 1 root root 15 2022-02-12 16:20 S82abrtd -> ../init.d/abrtd
+lrwxrwxrwx. 1 root root 15 2022-02-12 16:22 S90crond -> ../init.d/crond
+lrwxrwxrwx. 1 root root 13 2022-02-12 16:22 S95atd -> ../init.d/atd
+lrwxrwxrwx. 1 root root 20 2022-02-12 16:22 S99certmonger -> ../init.d/certmonger
+lrwxrwxrwx. 1 root root 11 2022-02-12 16:21 S99local -> ../rc.local
+[root@optimus rc.d]# clear
+[root@optimus rc.d]# ll
+합계 60
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 init.d
+-rwxr-xr-x. 1 root root  2617 2016-05-12 04:34 rc
+-rwxr-xr-x. 1 root root   220 2016-05-12 04:34 rc.local
+-rwxr-xr-x. 1 root root 20199 2016-05-12 04:34 rc.sysinit
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc0.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc1.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc2.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc3.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc4.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc5.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc6.d
+[root@optimus rc.d]# ls -l init.d/
+합계 376
+-rwxr-xr-x. 1 root root  2188 2016-05-11 09:05 NetworkManager
+-rwxr-xr-x. 1 root root  1288 2016-05-12 05:43 abrt-ccpp
+-rwxr-xr-x. 1 root root  1642 2016-05-12 05:43 abrt-oops
+-rwxr-xr-x. 1 root root  1628 2016-05-12 05:43 abrtd
+-rwxr-xr-x. 1 root root  1818 2016-02-17 06:21 acpid
+-rwxr-xr-x. 1 root root  2062 2015-02-20 01:23 atd
+-rwxr-xr-x. 1 root root  3580 2016-05-11 15:17 auditd
+-rwxr-xr-x. 1 root root  4040 2016-05-11 16:23 autofs
+-r-xr-xr-x. 1 root root  1343 2016-05-11 19:18 blk-availability
+-rwxr-xr-x. 1 root root   710 2010-11-11 09:32 bluetooth
+-rwxr-xr-x. 1 root root  2094 2016-05-10 00:09 certmonger
+-rwxr-xr-x. 1 root root 11864 2015-07-24 20:32 cpuspeed
+-rwxr-xr-x. 1 root root  2826 2015-11-10 19:14 crond
+-rwxr-xr-x. 1 root root  3034 2016-05-11 14:00 cups
+-rwxr-xr-x. 1 root root  1734 2016-05-11 07:46 dnsmasq
+-rwxr-xr-x. 1 root root  3245 2013-07-09 20:48 firstboot
+-rw-r--r--. 1 root root 25419 2016-04-12 18:14 functions
+-rwxr-xr-x. 1 root root  1801 2014-10-15 19:49 haldaemon
+-rwxr-xr-x. 1 root root  5985 2016-04-12 18:14 halt
+-rwxr-xr-x. 1 root root  2001 2016-05-12 04:29 htcacheclean
+-rwxr-xr-x. 1 root root  3488 2016-05-12 04:29 httpd
+-rwxr-xr-x. 1 root root 11169 2015-07-24 11:10 ip6tables
+-rwxr-xr-x. 1 root root 11048 2015-07-24 11:10 iptables
+-rwxr-xr-x. 1 root root  1938 2016-02-02 23:06 irqbalance
+-rwxr-xr-x. 1 root root 20634 2016-05-11 08:55 kdump
+-rwxr-xr-x. 1 root root   652 2016-04-12 18:14 killall
+-r-xr-xr-x. 1 root root  2137 2016-05-11 19:18 lvm2-lvmetad
+-r-xr-xr-x. 1 root root  3045 2016-05-11 19:18 lvm2-monitor
+-rwxr-xr-x. 1 root root  2571 2015-12-11 10:47 mdmonitor
+-rwxr-xr-x. 1 root root  2200 2015-04-22 19:52 messagebus
+-rwxr-xr-x. 1 root root  2989 2016-04-12 18:14 netconsole
+-rwxr-xr-x. 1 root root  5309 2016-04-12 18:14 netfs
+-rwxr-xr-x. 1 root root  6406 2016-04-12 18:14 network
+-rwxr-xr-x. 1 root root  6878 2016-05-11 15:22 nfs
+-rwxr-xr-x. 1 root root  3570 2016-05-11 15:32 nfs-rdma
+-rwxr-xr-x. 1 root root  3526 2016-05-11 15:22 nfslock
+-rwxr-xr-x. 1 root root  1923 2016-01-26 22:45 ntpd
+-rwxr-xr-x. 1 root root  2043 2016-01-26 22:45 ntpdate
+-rwxr-xr-x. 1 root root  2261 2016-05-11 03:37 oddjobd
+-rwxr-xr-x. 1 root root  2023 2016-05-11 08:01 portreserve
+-rwxr-xr-x. 1 root root  3912 2015-11-10 18:59 postfix
+-rwxr-xr-x. 1 root root  1738 2016-05-11 06:40 pppoe-server
+-rwxr-xr-x. 1 root root  1556 2012-07-17 17:02 psacct
+-rwxr-xr-x. 1 root root  2034 2015-01-07 20:37 quota_nld
+-rwxr-xr-x. 1 root root  1513 2015-11-13 21:13 rdisc
+-rwxr-xr-x. 1 root root 12709 2016-05-11 15:32 rdma
+-rwxr-xr-x. 1 root root  1822 2016-05-11 07:57 restorecond
+-rwxr-xr-x. 1 root root  1808 2015-09-22 23:21 rngd
+-rwxr-xr-x. 1 root root  2073 2016-05-11 14:05 rpcbind
+-rwxr-xr-x. 1 root root  2518 2016-05-11 15:22 rpcgssd
+-rwxr-xr-x. 1 root root  2305 2016-05-11 15:22 rpcidmapd
+-rwxr-xr-x. 1 root root  2464 2016-05-11 15:22 rpcsvcgssd
+-rwxr-xr-x. 1 root root  2011 2014-12-10 19:05 rsyslog
+-rwxr-xr-x. 1 root root  1698 2016-05-11 07:57 sandbox
+-rwxr-xr-x. 1 root root  2056 2015-02-28 00:57 saslauthd
+-rwxr-xr-x. 1 root root   647 2016-04-12 18:14 single
+-rwxr-xr-x. 1 root root  3002 2013-02-22 07:26 smartd
+-rwxr-xr-x. 1 root root  2472 2016-05-11 07:10 spice-vdagentd
+-rwxr-xr-x. 1 root root  4621 2016-05-11 08:10 sshd
+-rwxr-xr-x. 1 root root  2690 2016-05-11 17:04 sssd
+-rwxr-xr-x. 1 root root  1144 2016-05-11 11:02 sysstat
+-rwxr-xr-x. 1 root root  2294 2016-05-11 17:55 udev-post
+-rwxr-xr-x. 1 root root  3478 2016-05-11 15:17 vsftpd
+-rwxr-xr-x. 1 root root  1674 2013-02-22 05:45 wdaemon
+-rwxr-xr-x. 1 root root  1598 2016-05-11 18:19 winbind
+-rwxr-xr-x. 1 root root  1914 2016-05-11 13:38 wpa_supplicant
+-rwxr-xr-x. 1 root root  3555 2016-05-11 03:36 xinetd
+-rwxr-xr-x. 1 root root  5071 2016-05-11 07:33 ypbind
+[root@optimus rc.d]#
+[root@optimus rc.d]#
+[root@optimus rc.d]# clear
+[root@optimus rc.d]# ll
+합계 60
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 init.d
+-rwxr-xr-x. 1 root root  2617 2016-05-12 04:34 rc
+-rwxr-xr-x. 1 root root   220 2016-05-12 04:34 rc.local
+-rwxr-xr-x. 1 root root 20199 2016-05-12 04:34 rc.sysinit
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc0.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc1.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc2.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc3.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc4.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:42 rc5.d
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:25 rc6.d
+[root@optimus rc.d]# cat -n rc.local
+     1  #!/bin/sh
+     2  #
+     3  # This script will be executed *after* all the other init scripts.
+     4  # You can put your own initialization stuff in here if you don't
+     5  # want to do the full Sys V style init stuff.
+     6
+     7  touch /var/lock/subsys/local
+[root@optimus rc.d]# clear
+[root@optimus rc.d]# cd
+[root@optimus ~]# c.ear
+-bash: c.ear: command not found
+[root@optimus ~]# clear
+[root@optimus ~]# alias ccc='clear'
+[root@optimus ~]# ccc
+[root@optimus ~]# alias c='ccc'
+[root@optimus ~]# c
+[root@optimus ~]# ccc
+[root@optimus ~]# clear
+[root@optimus ~]# c
+[root@optimus ~]# ccc
+[root@optimus ~]# clear
+[root@optimus ~]# c
+[root@optimus ~]# ccc
+[root@optimus ~]# alias
+alias c='ccc'
+alias ccc='clear'
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus ~]# unalias c ccc
+[root@optimus ~]# alias
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus ~]# ls
+1                install.log         x     다운로드  바탕화면  사진  템플릿
+anaconda-ks.cfg  install.log.syslog  공개  문서      비디오    음악
+[root@optimus ~]# clear
+[root@optimus ~]# ls
+1  anaconda-ks.cfg  install.log  install.log.syslog  x  공개  다운로드  문서  바탕화면  비디오  사진  음악  템플릿
+[root@optimus ~]# dir
+1  anaconda-ks.cfg  install.log  install.log.syslog  x  공개  다운로드  문서  바탕화면  비디오  사진  음악  템플릿
+[root@optimus ~]# unalias ls
+[root@optimus ~]# ls
+1  anaconda-ks.cfg  install.log  install.log.syslog  x  공개  다운로드  문서  바탕화면  비디오  사진  음악  템플릿
+[root@optimus ~]# alias ls='ls --color=auto'
+[root@optimus ~]# ls
+1  anaconda-ks.cfg  install.log  install.log.syslog  x  공개  다운로드  문서  바탕화면  비디오  사진  음악  템플릿
+[root@optimus ~]# clear
+[root@optimus ~]# alias
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus ~]# ll
+합계 108
+drwxr-xr-x. 3 root root  4096 2022-02-19 14:44 1
+-rw-------. 1 root root  1561 2022-02-12 16:27 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2022-02-12 16:27 install.log
+-rw-r--r--. 1 root root 10033 2022-02-12 16:24 install.log.syslog
+drwxr-xr-x. 3 root root  4096 2022-02-19 14:44 x
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 공개
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 다운로드
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 문서
+drwxr-xr-x. 2 root root  4096 2022-02-12 19:14 바탕화면
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 비디오
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 사진
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 음악
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 템플릿
+[root@optimus ~]# rm -rf 1 x
+[root@optimus ~]# ll
+합계 100
+-rw-------. 1 root root  1561 2022-02-12 16:27 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2022-02-12 16:27 install.log
+-rw-r--r--. 1 root root 10033 2022-02-12 16:24 install.log.syslog
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 공개
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 다운로드
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 문서
+drwxr-xr-x. 2 root root  4096 2022-02-12 19:14 바탕화면
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 비디오
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 사진
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 음악
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 템플릿
+[root@optimus ~]# clear
+[root@optimus ~]# alias a1='mkdir /kgitbank'
+[root@optimus ~]# alias
+alias a1='mkdir /kgitbank'
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus ~]# ls -ld /kgitbank
+ls: cannot access /kgitbank: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# a1
+[root@optimus ~]# ls -ld /kgitbank
+drwxr-xr-x. 2 root root 4096 2022-02-19 17:50 /kgitbank
+[root@optimus ~]# alias a2='touch /kgitbank/test1 && mkdir /kgitbank/test2'
+[root@optimus ~]# alias
+alias a1='mkdir /kgitbank'
+alias a2='touch /kgitbank/test1 && mkdir /kgitbank/test2'
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus ~]#
+[root@optimus ~]# a2
+[root@optimus ~]# ls -l /kgitbank/
+합계 4
+-rw-r--r--. 1 root root    0 2022-02-19 18:00 test1
+drwxr-xr-x. 2 root root 4096 2022-02-19 18:00 test2
+[root@optimus ~]# alias a3='rm -rf /kgitbank'
+[root@optimus ~]# alias
+alias a1='mkdir /kgitbank'
+alias a2='touch /kgitbank/test1 && mkdir /kgitbank/test2'
+alias a3='rm -rf /kgitbank'
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus ~]#
+[root@optimus ~]# a3
+[root@optimus ~]# ls -ld /kgitbank
+ls: cannot access /kgitbank: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# alias a4='a1 && a2'
+[root@optimus ~]# alias
+alias a1='mkdir /kgitbank'
+alias a2='touch /kgitbank/test1 && mkdir /kgitbank/test2'
+alias a3='rm -rf /kgitbank'
+alias a4='a1 && a2'
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus ~]# a4
+[root@optimus ~]# ls -ld /kgitbank/
+drwxr-xr-x. 3 root root 4096 2022-02-19 18:01 /kgitbank/
+[root@optimus ~]# ls -l /kgitbank/
+합계 4
+-rw-r--r--. 1 root root    0 2022-02-19 18:01 test1
+drwxr-xr-x. 2 root root 4096 2022-02-19 18:01 test2
+[root@optimus ~]# clear
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# whoami
+root
+[root@optimus ~]# find / -name grub.conf -o -name inittab -o -name login.defs
+/etc/login.defs
+/etc/inittab
+/etc/grub.conf
+/media/CentOS_6.8_Final/isolinux/grub.conf
+/backup/grub.conf
+[root@optimus ~]# clear
+[root@optimus ~]# find / -name kgitbank
+/var/spool/mail/kgitbank
+/home/kgitbank
+/kgitbank
+[root@optimus ~]# find / -name kgitbank -type d
+/home/kgitbank
+/kgitbank
+[root@optimus ~]# find / -name kgitbank -type f
+/var/spool/mail/kgitbank
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir test
+[root@optimus ~]# cd test
+[root@optimus test]# pwd
+/root/test
+[root@optimus test]# touch 1
+[root@optimus test]# touch 2
+[root@optimus test]# touch 3
+[root@optimus test]# ll
+합계 0
+-rw-r--r--. 1 root root 0 2022-02-19 18:07 1
+-rw-r--r--. 1 root root 0 2022-02-19 18:07 2
+-rw-r--r--. 1 root root 0 2022-02-19 18:07 3
+[root@optimus test]# find . -cmin -1
+.
+./1
+./3
+./2
+[root@optimus test]# find . -cmin +1
+[root@optimus test]# find . -cmin -1
+.
+./3
+./2
+[root@optimus test]# find . -cmin -1
+.
+./3
+[root@optimus test]# find . -cmin -1
+.
+./3
+[root@optimus test]# find . -cmin -1
+[root@optimus test]# find . -cmin +1
+.
+./1
+./3
+./2
+[root@optimus test]# ll
+합계 0
+-rw-r--r--. 1 root root 0 2022-02-19 18:07 1
+-rw-r--r--. 1 root root 0 2022-02-19 18:07 2
+-rw-r--r--. 1 root root 0 2022-02-19 18:07 3
+[root@optimus test]# date
+2022. 02. 19. (토) 18:09:09 KST
+[root@optimus test]# find . -cmin +1
+.
+./1
+./3
+./2
+[root@optimus test]# find . -cmin -1
+[root@optimus test]# find . -newer 1
+.
+./3
+./2
+[root@optimus test]# find . -newer 2
+.
+./3
+[root@optimus test]# find . -newer 3
+[root@optimus test]# clear
+[root@optimus test]# cd ..
+[root@optimus ~]# rm -rf test
+[root@optimus ~]# ls -ld test
+ls: cannot access test: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# whoami
+root
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# ls -l
+합계 100
+-rw-------. 1 root root  1561 2022-02-12 16:27 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2022-02-12 16:27 install.log
+-rw-r--r--. 1 root root 10033 2022-02-12 16:24 install.log.syslog
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 공개
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 다운로드
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 문서
+drwxr-xr-x. 2 root root  4096 2022-02-12 19:14 바탕화면
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 비디오
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 사진
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 음악
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 템플릿
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /backup/grub.conf
+     1  # grub.conf generated by anaconda
+     2  #
+     3  # Note that you do not have to rerun grub after making changes to this file
+     4  # NOTICE:  You have a /boot partition.  This means that
+     5  #          all kernel and initrd paths are relative to /boot/, eg.
+     6  #          root (hd0,0)
+     7  #          kernel /vmlinuz-version ro root=/dev/sda7
+     8  #          initrd /initrd-[generic-]version.img
+     9  #boot=/dev/sda
+    10  default=0
+    11  timeout=5
+    12  splashimage=(hd0,0)/grub/splash.xpm.gz
+    13  hiddenmenu
+    14  title CentOS 6 (2.6.32-642.el6.x86_64)
+    15          root (hd0,0)
+    16          kernel /vmlinuz-2.6.32-642.el6.x86_64 ro root=UUID=08863864-c559-44db-9f67-b1b37ae3329c rd_NO_LUKG=ko_KR.UTF-8 rd_NO_MD crashkernel=auto  KEYBOARDTYPE=pc KEYTABLE=ko rd_NO_LVM rd_NO_DM rhgb quiet
+    17          initrd /initramfs-2.6.32-642.el6.x86_64.img
+[root@optimus ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# clear
+[root@optimus ~]# head /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+[root@optimus ~]# head /etc/passwd | cat -n
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+[root@optimus ~]# cat -n /etc/passwd | head
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+[root@optimus ~]# cat -n /etc/passwd | head -3
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+[root@optimus ~]# cat -n /etc/passwd | head -7
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+[root@optimus ~]# cat -n /etc/passwd | head -13
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+[root@optimus ~]# clear
+[root@optimus ~]# cat - /etc/passwd
+^C
+[root@optimus ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# clear
+[root@optimus ~]# tail /etc/passwd
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# tail /etc/passwd | cat -n
+     1  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+     2  ntp:x:38:38::/etc/ntp:/sbin/nologin
+     3  apache:x:48:48:Apache:/var/www:/sbin/nologin
+     4  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+     5  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+     6  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+     7  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+     8  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+     9  tcpdump:x:72:72::/:/sbin/nologin
+    10  kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# cat -n /etc/passwd | tail
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /etc/passwd | tail -3
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# cat -n /etc/passwd | tail -2
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# cat -n /etc/passwd | tail -13
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# clear
+[root@optimus ~]# more /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+abrt:x:173:173::/etc/abrt:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:500:500:kgitbank:/home/kgitbank:/bin/bash
+[root@optimus ~]# clear
+[root@optimus ~]# more -2 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+[root@optimus ~]# cat -n /etc/passwd | more -2
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+[root@optimus ~]# clear
+[root@optimus ~]# less /etc/passwd
+[root@optimus ~]# clear
+[root@optimus ~]# date
+2022. 02. 19. (토) 18:23:15 KST
+[root@optimus ~]# rdate -p time.bora.net
+rdate: [time.bora.net]  Sat Feb 19 18:23:54 2022
+
+[root@optimus ~]# rdate -s zero.bora.net
+[root@optimus ~]# date
+2022. 02. 19. (토) 18:24:12 KST
+[root@optimus ~]# cal
+      2월 2022
+일 월 화 수 목 금 토
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28
+
+[root@optimus ~]# cal 3 2022
+      3월 2022
+일 월 화 수 목 금 토
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31
+
+[root@optimus ~]# cal 3
+                                 3
+
+         1월                    2월                    3월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+    1  2  3  4  5  6                1  2  3                1  2  3
+ 7  8  9 10 11 12 13    4  5  6  7  8  9 10    4  5  6  7  8  9 10
+14 15 16 17 18 19 20   11 12 13 14 15 16 17   11 12 13 14 15 16 17
+21 22 23 24 25 26 27   18 19 20 21 22 23 24   18 19 20 21 22 23 24
+28 29 30 31            25 26 27 28            25 26 27 28 29 30 31
+
+         4월                    5월                    6월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+ 1  2  3  4  5  6  7          1  2  3  4  5                   1  2
+ 8  9 10 11 12 13 14    6  7  8  9 10 11 12    3  4  5  6  7  8  9
+15 16 17 18 19 20 21   13 14 15 16 17 18 19   10 11 12 13 14 15 16
+22 23 24 25 26 27 28   20 21 22 23 24 25 26   17 18 19 20 21 22 23
+29 30                  27 28 29 30 31         24 25 26 27 28 29 30
+
+         7월                    8월                    9월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+ 1  2  3  4  5  6  7             1  2  3  4                      1
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    2  3  4  5  6  7  8
+15 16 17 18 19 20 21   12 13 14 15 16 17 18    9 10 11 12 13 14 15
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   16 17 18 19 20 21 22
+29 30 31               26 27 28 29 30 31      23 24 25 26 27 28 29
+                                              30
+        10월                   11월                   12월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+    1  2  3  4  5  6                1  2  3                      1
+ 7  8  9 10 11 12 13    4  5  6  7  8  9 10    2  3  4  5  6  7  8
+14 15 16 17 18 19 20   11 12 13 14 15 16 17    9 10 11 12 13 14 15
+21 22 23 24 25 26 27   18 19 20 21 22 23 24   16 17 18 19 20 21 22
+28 29 30 31            25 26 27 28 29 30      23 24 25 26 27 28 29
+                                              30 31
+
+[root@optimus ~]#
+[root@optimus ~]# clear
+[root@optimus ~]# cal 3 2022
+      3월 2022
+일 월 화 수 목 금 토
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31
+
+[root@optimus ~]# cal 2022
+                               2022
+
+         1월                    2월                    3월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+                   1          1  2  3  4  5          1  2  3  4  5
+ 2  3  4  5  6  7  8    6  7  8  9 10 11 12    6  7  8  9 10 11 12
+ 9 10 11 12 13 14 15   13 14 15 16 17 18 19   13 14 15 16 17 18 19
+16 17 18 19 20 21 22   20 21 22 23 24 25 26   20 21 22 23 24 25 26
+23 24 25 26 27 28 29   27 28                  27 28 29 30 31
+30 31
+         4월                    5월                    6월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+                1  2    1  2  3  4  5  6  7             1  2  3  4
+ 3  4  5  6  7  8  9    8  9 10 11 12 13 14    5  6  7  8  9 10 11
+10 11 12 13 14 15 16   15 16 17 18 19 20 21   12 13 14 15 16 17 18
+17 18 19 20 21 22 23   22 23 24 25 26 27 28   19 20 21 22 23 24 25
+24 25 26 27 28 29 30   29 30 31               26 27 28 29 30
+
+         7월                    8월                    9월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+                1  2       1  2  3  4  5  6                1  2  3
+ 3  4  5  6  7  8  9    7  8  9 10 11 12 13    4  5  6  7  8  9 10
+10 11 12 13 14 15 16   14 15 16 17 18 19 20   11 12 13 14 15 16 17
+17 18 19 20 21 22 23   21 22 23 24 25 26 27   18 19 20 21 22 23 24
+24 25 26 27 28 29 30   28 29 30 31            25 26 27 28 29 30
+31
+        10월                   11월                   12월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+                   1          1  2  3  4  5                1  2  3
+ 2  3  4  5  6  7  8    6  7  8  9 10 11 12    4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15   13 14 15 16 17 18 19   11 12 13 14 15 16 17
+16 17 18 19 20 21 22   20 21 22 23 24 25 26   18 19 20 21 22 23 24
+23 24 25 26 27 28 29   27 28 29 30            25 26 27 28 29 30 31
+30 31
+
+[root@optimus ~]# clear
+[root@optimus ~]# cal 2023
+                               2023
+
+         1월                    2월                    3월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+ 1  2  3  4  5  6  7             1  2  3  4             1  2  3  4
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    5  6  7  8  9 10 11
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   12 13 14 15 16 17 18
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   19 20 21 22 23 24 25
+29 30 31               26 27 28               26 27 28 29 30 31
+
+         4월                    5월                    6월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+                   1       1  2  3  4  5  6                1  2  3
+ 2  3  4  5  6  7  8    7  8  9 10 11 12 13    4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15   14 15 16 17 18 19 20   11 12 13 14 15 16 17
+16 17 18 19 20 21 22   21 22 23 24 25 26 27   18 19 20 21 22 23 24
+23 24 25 26 27 28 29   28 29 30 31            25 26 27 28 29 30
+30
+         7월                    8월                    9월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+                   1          1  2  3  4  5                   1  2
+ 2  3  4  5  6  7  8    6  7  8  9 10 11 12    3  4  5  6  7  8  9
+ 9 10 11 12 13 14 15   13 14 15 16 17 18 19   10 11 12 13 14 15 16
+16 17 18 19 20 21 22   20 21 22 23 24 25 26   17 18 19 20 21 22 23
+23 24 25 26 27 28 29   27 28 29 30 31         24 25 26 27 28 29 30
+30 31
+        10월                   11월                   12월
+일 월 화 수 목 금 토   일 월 화 수 목 금 토   일 월 화 수 목 금 토
+ 1  2  3  4  5  6  7             1  2  3  4                   1  2
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    3  4  5  6  7  8  9
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   10 11 12 13 14 15 16
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   17 18 19 20 21 22 23
+29 30 31               26 27 28 29 30         24 25 26 27 28 29 30
+                                              31
+
+[root@optimus ~]# clear
+[root@optimus ~]# cal 28 2 1981
+      2월 1981
+일 월 화 수 목 금 토
+ 1  2  3  4  5  6  7
+ 8  9 10 11 12 13 14
+15 16 17 18 19 20 21
+22 23 24 25 26 27 28
+
+
+[root@optimus ~]# cal 16 5 1993
+      5월 1993
+일 월 화 수 목 금 토
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+[root@optimus ~]# clear
+[root@optimus ~]# cal 1 1 1991
+      1월 1991
+일 월 화 수 목 금 토
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31
+
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /dev/
+합계 0
+lrwxrwxrwx. 1 root root          13 2022-02-20 02:09 MAKEDEV -> /sbin/MAKEDEV
+crw-rw----. 1 root video    10, 175 2022-02-19 17:09 agpgart
+crw-rw----. 1 root root     10,  57 2022-02-19 17:09 autofs
+drwxr-xr-x. 2 root root         700 2022-02-19 17:09 block
+drwxr-xr-x. 2 root root          80 2022-02-20 02:09 bsg
+crw-------. 1 root root     10, 234 2022-02-20 02:09 btrfs-control
+drwxr-xr-x. 3 root root          60 2022-02-20 02:09 bus
+lrwxrwxrwx. 1 root root           3 2022-02-19 17:09 cdrom -> sr0
+lrwxrwxrwx. 1 root root           3 2022-02-19 17:09 cdrw -> sr0
+drwxr-xr-x. 2 root root        2980 2022-02-19 17:09 char
+crw-------. 1 root root      5,   1 2022-02-19 17:09 console
+lrwxrwxrwx. 1 root root          11 2022-02-20 02:09 core -> /proc/kcore
+drwxr-xr-x. 3 root root          80 2022-02-19 17:09 cpu
+crw-rw----. 1 root root     10,  61 2022-02-19 17:09 cpu_dma_latency
+crw-rw----. 1 root root     10,  62 2022-02-19 17:09 crash
+drwxr-xr-x. 6 root root         120 2022-02-20 02:09 disk
+crw-rw----+ 1 root audio    14,   9 2022-02-19 17:09 dmmidi
+drwxr-xr-x. 2 root root         100 2022-02-20 02:09 dri
+lrwxrwxrwx. 1 root root           3 2022-02-19 17:09 dvd -> sr0
+lrwxrwxrwx. 1 root root           3 2022-02-19 17:09 dvdrw -> sr0
+lrwxrwxrwx. 1 root root           3 2022-02-20 02:09 fb -> fb0
+crw-rw----. 1 root video    29,   0 2022-02-20 02:09 fb0
+lrwxrwxrwx. 1 root root          13 2022-02-20 02:09 fd -> /proc/self/fd
+crw-rw-rw-. 1 root root      1,   7 2022-02-19 17:09 full
+crw-rw-rw-. 1 root root     10, 229 2022-02-19 17:09 fuse
+crw-rw----. 1 root root    248,   0 2022-02-19 17:09 hidraw0
+crw-rw----. 1 root root     10, 228 2022-02-19 17:09 hpet
+drwxr-xr-x. 2 root root          40 2022-02-20 02:09 hugepages
+crw-------. 1 root root    229,   0 2022-02-20 02:09 hvc0
+drwxr-xr-x. 4 root root         260 2022-02-19 17:09 input
+crw-rw----. 1 root root      1,  11 2022-02-19 17:09 kmsg
+srw-rw-rw-. 1 root root           0 2022-02-19 17:09 log
+brw-rw----. 1 root disk      7,   0 2022-02-19 17:09 loop0
+brw-rw----. 1 root disk      7,   1 2022-02-19 17:09 loop1
+brw-rw----. 1 root disk      7,   2 2022-02-19 17:09 loop2
+brw-rw----. 1 root disk      7,   3 2022-02-19 17:09 loop3
+brw-rw----. 1 root disk      7,   4 2022-02-19 17:09 loop4
+brw-rw----. 1 root disk      7,   5 2022-02-19 17:09 loop5
+brw-rw----. 1 root disk      7,   6 2022-02-19 17:09 loop6
+brw-rw----. 1 root disk      7,   7 2022-02-19 17:09 loop7
+crw-rw----. 1 root lp        6,   0 2022-02-20 02:09 lp0
+crw-rw----. 1 root lp        6,   1 2022-02-20 02:09 lp1
+crw-rw----. 1 root lp        6,   2 2022-02-20 02:09 lp2
+crw-rw----. 1 root lp        6,   3 2022-02-20 02:09 lp3
+drwxr-xr-x. 2 root root          60 2022-02-20 02:09 mapper
+crw-rw----. 1 root root     10, 227 2022-02-19 17:09 mcelog
+crw-r-----. 1 root kmem      1,   1 2022-02-19 17:09 mem
+crw-rw----+ 1 root audio    14,   2 2022-02-19 17:09 midi
+drwxr-xr-x. 2 root root          60 2022-02-20 02:09 net
+crw-rw----. 1 root root     10,  60 2022-02-19 17:09 network_latency
+crw-rw----. 1 root root     10,  59 2022-02-19 17:09 network_throughput
+crw-rw-rw-. 1 root root      1,   3 2022-02-19 17:09 null
+crw-r-----. 1 root kmem     10, 144 2022-02-19 17:09 nvram
+crw-rw----. 1 root root      1,  12 2022-02-19 17:09 oldmem
+crw-r-----. 1 root kmem      1,   4 2022-02-19 17:09 port
+crw-------. 1 root root    108,   0 2022-02-20 02:09 ppp
+crw-rw-rw-. 1 root tty       5,   2 2022-02-19 18:28 ptmx
+drwxr-xr-x. 2 root root           0 2022-02-20 02:09 pts
+brw-rw----. 1 root disk      1,   0 2022-02-19 17:09 ram0
+brw-rw----. 1 root disk      1,   1 2022-02-19 17:09 ram1
+brw-rw----. 1 root disk      1,  10 2022-02-19 17:09 ram10
+brw-rw----. 1 root disk      1,  11 2022-02-19 17:09 ram11
+brw-rw----. 1 root disk      1,  12 2022-02-19 17:09 ram12
+brw-rw----. 1 root disk      1,  13 2022-02-19 17:09 ram13
+brw-rw----. 1 root disk      1,  14 2022-02-19 17:09 ram14
+brw-rw----. 1 root disk      1,  15 2022-02-19 17:09 ram15
+brw-rw----. 1 root disk      1,   2 2022-02-19 17:09 ram2
+brw-rw----. 1 root disk      1,   3 2022-02-19 17:09 ram3
+brw-rw----. 1 root disk      1,   4 2022-02-19 17:09 ram4
+brw-rw----. 1 root disk      1,   5 2022-02-19 17:09 ram5
+brw-rw----. 1 root disk      1,   6 2022-02-19 17:09 ram6
+brw-rw----. 1 root disk      1,   7 2022-02-19 17:09 ram7
+brw-rw----. 1 root disk      1,   8 2022-02-19 17:09 ram8
+brw-rw----. 1 root disk      1,   9 2022-02-19 17:09 ram9
+crw-rw-rw-. 1 root root      1,   8 2022-02-19 17:09 random
+drwxr-xr-x. 2 root root          60 2022-02-20 02:09 raw
+lrwxrwxrwx. 1 root root           4 2022-02-19 17:09 root -> sda7
+lrwxrwxrwx. 1 root root           4 2022-02-20 02:09 rtc -> rtc0
+crw-rw----. 1 root root    253,   0 2022-02-20 02:09 rtc0
+lrwxrwxrwx. 1 root root           3 2022-02-19 17:09 scd0 -> sr0
+brw-rw----. 1 root disk      8,   0 2022-02-19 17:09 sda
+brw-rw----. 1 root disk      8,   1 2022-02-19 17:09 sda1
+brw-rw----. 1 root disk      8,   2 2022-02-19 17:09 sda2
+brw-rw----. 1 root disk      8,   3 2022-02-19 17:09 sda3
+brw-rw----. 1 root disk      8,   4 2022-02-19 17:09 sda4
+brw-rw----. 1 root disk      8,   5 2022-02-19 17:09 sda5
+brw-rw----. 1 root disk      8,   6 2022-02-19 17:09 sda6
+brw-rw----. 1 root disk      8,   7 2022-02-19 17:09 sda7
+crw-rw----. 1 root cdrom    21,   0 2022-02-19 17:09 sg0
+crw-rw----. 1 root disk     21,   1 2022-02-19 17:09 sg1
+drwxrwxrwt. 2 root root         100 2022-02-19 17:10 shm
+crw-rw----. 1 root root     10, 231 2022-02-19 17:09 snapshot
+drwxr-xr-x. 3 root root         200 2022-02-19 17:09 snd
+brw-rw----+ 1 root cdrom    11,   0 2022-02-19 17:09 sr0
+lrwxrwxrwx. 1 root root          15 2022-02-20 02:09 stderr -> /proc/self/fd/2
+lrwxrwxrwx. 1 root root          15 2022-02-20 02:09 stdin -> /proc/self/fd/0
+lrwxrwxrwx. 1 root root          15 2022-02-20 02:09 stdout -> /proc/self/fd/1
+lrwxrwxrwx. 1 root root           4 2022-02-20 02:09 systty -> tty0
+crw-rw-rw-. 1 root tty       5,   0 2022-02-19 17:09 tty
+crw--w----. 1 root tty       4,   0 2022-02-19 17:09 tty0
+crw--w----. 1 root tty       4,   1 2022-02-19 17:09 tty1
+crw--w----. 1 root tty       4,  10 2022-02-19 17:09 tty10
+crw--w----. 1 root tty       4,  11 2022-02-19 17:09 tty11
+crw--w----. 1 root tty       4,  12 2022-02-19 17:09 tty12
+crw--w----. 1 root tty       4,  13 2022-02-19 17:09 tty13
+crw--w----. 1 root tty       4,  14 2022-02-19 17:09 tty14
+crw--w----. 1 root tty       4,  15 2022-02-19 17:09 tty15
+crw--w----. 1 root tty       4,  16 2022-02-19 17:09 tty16
+crw--w----. 1 root tty       4,  17 2022-02-19 17:09 tty17
+crw--w----. 1 root tty       4,  18 2022-02-19 17:09 tty18
+crw--w----. 1 root tty       4,  19 2022-02-19 17:09 tty19
+crw-------. 1 root root      4,   2 2022-02-19 17:09 tty2
+crw--w----. 1 root tty       4,  20 2022-02-19 17:09 tty20
+crw--w----. 1 root tty       4,  21 2022-02-19 17:09 tty21
+crw--w----. 1 root tty       4,  22 2022-02-19 17:09 tty22
+crw--w----. 1 root tty       4,  23 2022-02-19 17:09 tty23
+crw--w----. 1 root tty       4,  24 2022-02-19 17:09 tty24
+crw--w----. 1 root tty       4,  25 2022-02-19 17:09 tty25
+crw--w----. 1 root tty       4,  26 2022-02-19 17:09 tty26
+crw--w----. 1 root tty       4,  27 2022-02-19 17:09 tty27
+crw--w----. 1 root tty       4,  28 2022-02-19 17:09 tty28
+crw--w----. 1 root tty       4,  29 2022-02-19 17:09 tty29
+crw-------. 1 root root      4,   3 2022-02-19 17:09 tty3
+crw--w----. 1 root tty       4,  30 2022-02-19 17:09 tty30
+crw--w----. 1 root tty       4,  31 2022-02-19 17:09 tty31
+crw--w----. 1 root tty       4,  32 2022-02-19 17:09 tty32
+crw--w----. 1 root tty       4,  33 2022-02-19 17:09 tty33
+crw--w----. 1 root tty       4,  34 2022-02-19 17:09 tty34
+crw--w----. 1 root tty       4,  35 2022-02-19 17:09 tty35
+crw--w----. 1 root tty       4,  36 2022-02-19 17:09 tty36
+crw--w----. 1 root tty       4,  37 2022-02-19 17:09 tty37
+crw--w----. 1 root tty       4,  38 2022-02-19 17:09 tty38
+crw--w----. 1 root tty       4,  39 2022-02-19 17:09 tty39
+crw-------. 1 root root      4,   4 2022-02-19 17:09 tty4
+crw--w----. 1 root tty       4,  40 2022-02-19 17:09 tty40
+crw--w----. 1 root tty       4,  41 2022-02-19 17:09 tty41
+crw--w----. 1 root tty       4,  42 2022-02-19 17:09 tty42
+crw--w----. 1 root tty       4,  43 2022-02-19 17:09 tty43
+crw--w----. 1 root tty       4,  44 2022-02-19 17:09 tty44
+crw--w----. 1 root tty       4,  45 2022-02-19 17:09 tty45
+crw--w----. 1 root tty       4,  46 2022-02-19 17:09 tty46
+crw--w----. 1 root tty       4,  47 2022-02-19 17:09 tty47
+crw--w----. 1 root tty       4,  48 2022-02-19 17:09 tty48
+crw--w----. 1 root tty       4,  49 2022-02-19 17:09 tty49
+crw-------. 1 root root      4,   5 2022-02-19 17:09 tty5
+crw--w----. 1 root tty       4,  50 2022-02-19 17:09 tty50
+crw--w----. 1 root tty       4,  51 2022-02-19 17:09 tty51
+crw--w----. 1 root tty       4,  52 2022-02-19 17:09 tty52
+crw--w----. 1 root tty       4,  53 2022-02-19 17:09 tty53
+crw--w----. 1 root tty       4,  54 2022-02-19 17:09 tty54
+crw--w----. 1 root tty       4,  55 2022-02-19 17:09 tty55
+crw--w----. 1 root tty       4,  56 2022-02-19 17:09 tty56
+crw--w----. 1 root tty       4,  57 2022-02-19 17:09 tty57
+crw--w----. 1 root tty       4,  58 2022-02-19 17:09 tty58
+crw--w----. 1 root tty       4,  59 2022-02-19 17:09 tty59
+crw-------. 1 root root      4,   6 2022-02-19 17:09 tty6
+crw--w----. 1 root tty       4,  60 2022-02-19 17:09 tty60
+crw--w----. 1 root tty       4,  61 2022-02-19 17:09 tty61
+crw--w----. 1 root tty       4,  62 2022-02-19 17:09 tty62
+crw--w----. 1 root tty       4,  63 2022-02-19 17:09 tty63
+crw--w----. 1 root tty       4,   7 2022-02-19 17:09 tty7
+crw--w----. 1 root tty       4,   8 2022-02-19 17:09 tty8
+crw--w----. 1 root tty       4,   9 2022-02-19 17:09 tty9
+crw-rw----. 1 root dialout   4,  64 2022-02-20 02:09 ttyS0
+crw-rw----. 1 root dialout   4,  65 2022-02-20 02:09 ttyS1
+crw-rw----. 1 root dialout   4,  66 2022-02-20 02:09 ttyS2
+crw-rw----. 1 root dialout   4,  67 2022-02-20 02:09 ttyS3
+crw-r-----. 1 root root     10, 223 2022-02-19 17:09 uinput
+crw-rw-rw-. 1 root root      1,   9 2022-02-19 17:09 urandom
+crw-rw----. 1 root root    249,   0 2022-02-19 17:09 usbmon0
+crw-rw----. 1 root root    249,   1 2022-02-19 17:09 usbmon1
+crw-rw----. 1 root root    249,   2 2022-02-19 17:09 usbmon2
+crw-rw----. 1 vcsa tty       7,   0 2022-02-19 17:09 vcs
+crw-rw----. 1 vcsa tty       7,   1 2022-02-19 17:09 vcs1
+crw-rw----. 1 vcsa tty       7,   2 2022-02-19 17:09 vcs2
+crw-rw----. 1 vcsa tty       7,   3 2022-02-19 17:09 vcs3
+crw-rw----. 1 vcsa tty       7,   4 2022-02-19 17:09 vcs4
+crw-rw----. 1 vcsa tty       7,   5 2022-02-19 17:09 vcs5
+crw-rw----. 1 vcsa tty       7,   6 2022-02-19 17:09 vcs6
+crw-rw----. 1 vcsa tty       7, 128 2022-02-19 17:09 vcsa
+crw-rw----. 1 vcsa tty       7, 129 2022-02-19 17:09 vcsa1
+crw-rw----. 1 vcsa tty       7, 130 2022-02-19 17:09 vcsa2
+crw-rw----. 1 vcsa tty       7, 131 2022-02-19 17:09 vcsa3
+crw-rw----. 1 vcsa tty       7, 132 2022-02-19 17:09 vcsa4
+crw-rw----. 1 vcsa tty       7, 133 2022-02-19 17:09 vcsa5
+crw-rw----. 1 vcsa tty       7, 134 2022-02-19 17:09 vcsa6
+crw-rw----. 1 root root     10,  63 2022-02-19 17:09 vga_arbiter
+crw-rw-rw-. 1 root root      1,   5 2022-02-19 17:09 zero
+[root@optimus ~]#
+[root@optimus ~]#       1월 1991
+-bash: 1월: command not found
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]# clear
+[root@optimus ~]# ls -ld /roo
+ls: cannot access /roo: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# ls -ld /root/
+dr-xr-x---. 27 root root 4096 2022-02-19 18:10 /root/
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir test
+[root@optimus ~]# cd test
+[root@optimus test]# pwd
+/root/test
+[root@optimus test]# cat > 1
+aaa
+^C
+[root@optimus test]# cat > 2
+bbb
+^C
+[root@optimus test]# cat > 3
+ccc
+^C
+[root@optimus test]# ls -l
+합계 12
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 3
+[root@optimus test]# cat -n 1
+     1  aaa
+[root@optimus test]# cat -n 2
+     1  bbb
+[root@optimus test]# cat -n 3
+     1  ccc
+[root@optimus test]# cat -n 1 2 3
+     1  aaa
+     2  bbb
+     3  ccc
+[root@optimus test]# cat -n 3 2 1
+     1  ccc
+     2  bbb
+     3  aaa
+[root@optimus test]# cat -n 2 3 1
+     1  bbb
+     2  ccc
+     3  aaa
+[root@optimus test]# cat 1 2 3 > 4
+[root@optimus test]# ll
+합계 16
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 3
+-rw-r--r--. 1 root root 12 2022-02-19 18:44 4
+[root@optimus test]# cat -n 4
+     1  aaa
+     2  bbb
+     3  ccc
+[root@optimus test]# rm -f 4
+[root@optimus test]# ll
+합계 12
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 3
+[root@optimus test]# cat 1 2 3 4 > 5
+cat: 4: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test]# clear
+[root@optimus test]# ll
+합계 16
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 3
+-rw-r--r--. 1 root root 12 2022-02-19 18:45 5
+[root@optimus test]# rm -f 5
+[root@optimus test]# ll
+합계 12
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 3
+[root@optimus test]# cat 1 2 3 4 1> 5
+cat: 4: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test]# ll
+합계 16
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 3
+-rw-r--r--. 1 root root 12 2022-02-19 18:47 5
+[root@optimus test]# cat -n 5
+     1  aaa
+     2  bbb
+     3  ccc
+[root@optimus test]# rm -f 5
+[root@optimus test]# ll
+합계 12
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 3
+[root@optimus test]# cat 1 2 3 4 2> 5
+aaa
+bbb
+ccc
+[root@optimus test]# ll
+합계 16
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 3
+-rw-r--r--. 1 root root 57 2022-02-19 18:49 5
+[root@optimus test]# cat -n 5
+     1  cat: 4: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test]# rm -f 5
+[root@optimus test]# ll
+합계 12
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 3
+[root@optimus test]# clear
+[root@optimus test]# cat 1 2 3 4 > 5 1>&2
+aaa
+bbb
+ccc
+cat: 4: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test]# ll
+합계 12
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root 4 2022-02-19 18:42 3
+-rw-r--r--. 1 root root 0 2022-02-19 18:52 5
+[root@optimus test]# rm -f 5
+[root@optimus test]# cat 1 2 3 4 > 5 2>&1
+[root@optimus test]# ls -l
+합계 16
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 1
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 2
+-rw-r--r--. 1 root root  4 2022-02-19 18:42 3
+-rw-r--r--. 1 root root 69 2022-02-19 18:53 5
+[root@optimus test]# cat -n 5
+     1  aaa
+     2  bbb
+     3  ccc
+     4  cat: 4: 그런 파일이나 디렉터리가 없습니다
+[root@optimus test]# clear
+[root@optimus test]# 지금부터는 마지막 챕터 6에 있는 기본명령어_마지막문제 풀어주세요
+-bash: 지금부터는: command not found
+[root@optimus test]# history
+    1  init 0
+    2  ifconfig
+    3  clear
+    4  ifup eth0
+    5  clear
+    6  ifconfig
+    7  clear
+    8  ifconfig eth0\
+    9  ifconfig eth0
+   10  clear
+   11  ping 192.168.1.1
+   12  cls
+   13  clear
+   14  ping 192.168.1.1
+   15  exit
+   16  ifconfig eth0
+   17  clear
+   18  netstat -lntup
+   19  1
+   20  clear
+   21  ifconfig eth0
+   22  exit
+   23  runlevel
+   24  init 5
+   25  whoami
+   26  pwd
+   27  runlevel
+   28  ifconfig
+   29  clear
+   30  netstat -lntup
+   31  clear
+   32  runlevel
+   33  init 3
+   34  hostname
+   35  runlevel
+   36  clear
+   37  dir
+   38  ls
+   39  ls -l
+   40  clear
+   41  whoami
+   42  hostname
+   43  init 0
+   44  exit
+   45  ifconfig eth0
+   46  clear
+   47  ping 192.168.1.1
+   48  ifup eth0
+   49  ifconfig eth0
+   50  ping 192.168.1.1
+   51  clear
+   52  ifdown eth0
+   53  ifconfig eth0
+   54  ping 192.168.1.1\
+   55  ping 192.168.1.1
+   56  clear
+   57  netstat -lntup
+   58  ifup eth0
+   59  ifconfig eth0
+   60  netstat -lntup
+   61  clear
+   62  exit
+   63  init 6
+   64  whoami
+   65  pwd
+   66  runlevel
+   67  netstat -lntup
+   68  ifup eth0
+   69  ifconfig eth0
+   70  netstat -lntup
+   71  clear
+   72  whoami
+   73  pwd
+   74  runlevel
+   75  netstat -lntup
+   76  clear
+   77  ifconfig
+   78  ifconfig eth0
+   79  clear
+   80  ifconfig
+   81  clear
+   82  netstat -lntup
+   83  netstat -antup
+   84  clear
+   85  service sshd start
+   86  netstat -lntup
+   87  clear
+   88  service sshd stop
+   89  netstat -lntup
+   90  clear
+   91  service sshd start
+   92  netstat -lntup
+   93  clear
+   94  service sshd restart
+   95  clear
+   96  pwd
+   97  ls
+   98  dir
+   99  clear
+  100  ls
+  101  cler
+  102  clear
+  103  clear
+  104  ifconfig
+  105  cleawr
+  106  clear
+  107  ls
+  108  man ls
+  109  ls -l
+  110  ls -l -a
+  111  clear
+  112  ls -l -a -R
+  113  clear
+  114  ls -la
+  115  clear
+  116  .은 홀로 쓰이면 현재
+  117  .은 file/dir 앞에 붙게 되면 숨김
+  118  cd .
+  119  pwd
+  120  ls -al
+  121  clear
+  122  ls -al
+  123   ..
+  124  clear
+  125  pwd
+  126  ls -alR /
+  127  clear
+  128  ls -alR /
+  129  clear
+  130  man ls
+  131  ls -l /
+  132  clear
+  133  pwd
+  134  cd /
+  135  cd
+  136  pwd
+  137  cd ..
+  138  pwd
+  139  cd
+  140  clear
+  141  pwd
+  142  cd /home/kgitbank/
+  143  pwd
+  144  cd
+  145  pwd
+  146  cd ../home/kgitbank/
+  147  pwd
+  148  clear
+  149  cd
+  150  pwd
+  151  cd /media/CentOS_6.8_Final/Packages/
+  152  pwd
+  153  cd
+  154  pwd
+  155  cd ../media/CentOS_6.8_Final/Packages/
+  156  pwd
+  157  cd
+  158  c;ear
+  159  clear
+  160  ls -l /
+  161  clear
+  162  ls -ld /
+  163  ls -ld / /home/ /var/ /usr/ /boot/
+  164  clear
+  165  ls -hhl
+  166  clear
+  167  ls -ld /roo
+  168  ls -ld /roo /root/
+  169  clear
+  170  pwd
+  171  mkdir test
+  172  ll
+  173  clear
+  174  ll
+  175  pwd
+  176  cd test
+  177  pwd
+  178  clear
+  179  pwd
+  180  touch suzi.txt-_-.123.abc
+  181  ll
+  182  touch IU_suzi-11.txt
+  183  ll
+  184  clear
+  185  touch &kgitbank
+  186  ll
+  187  clear
+  188  touch a b c d e
+  189  ll
+  190  clear
+  191  touch 1|
+  192  ll
+  193  touch 1"
+  194  ll
+  195  touch 1'
+  196  ll
+  197  clear
+  198  pwd
+  199  ll
+  200  touch .1
+  201  ll
+  202  ls -al
+  203  mkdir .2
+  204  ll
+  205  ls -al
+  206  clear
+  207  touch test/
+  208  clear
+  209  cd ..
+  210  pwd
+  211  rm -rf test
+  212  ls -ld test
+  213  clear
+  214  ls -l /
+  215  clear
+  216  ls -l /boot/
+  217  clear
+  218  ls -l /bin
+  219  clear
+  220  ls -l /usr/bin/whoami
+  221  clear
+  222  ls -l /sbin/
+  223  clear
+  224  ls -l /home/
+  225  ls -l /etc
+  226  clear
+  227  ls -l /dev/
+  228  ls -l /lib
+  229  ls -l /mnt
+  230  clear
+  231  ls -l /media/
+  232  ls -l /media/CentOS_6.8_Final/
+  233  ls -l /usr
+  234  clear
+  235  ls -l /proc/
+  236  clear
+  237  ps -A
+  238  clear
+  239  ls -l /proc
+  240  2164
+  241  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2166
+  242  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2172
+  243  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:24 2183
+  244  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:24 2198
+  245  dr-xr-xr-x.  8 root      root         0 2022-02-14 01:23 22
+  246  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2243
+  247  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2251
+  248  dr-xr-xr-x.  8 root      root         0 2022-02-13 16:23 2290
+  249  clear
+  250  ls -l /tmp
+  251  log = 흔적남긴다
+  252  clear
+  253  ls -l /opt/
+  254  ls -l /opt/rh/
+  255  ls -l /sys/
+  256  ls -l /lost+found/
+  257  ls -l /srv/
+  258  clear
+  259  mkdir a
+  260  mkdir a/b
+  261  mkdir a/b/c
+  262  ls -ld a/b/c/
+  263  rm -rf a
+  264  ls -ld a
+  265  mkdir -p a/b/c
+  266  ls -ld a/b/c/
+  267  man mkdir
+  268  clear
+  269  rm -rf a
+  270  ls -ld a
+  271  clear
+  272  mkdir -p 1/2/3 x/y/z
+  273  ls -ld 1/2/3/ x/y/z/
+  274  clear
+  275  mv 1/2/3/ 1/2/iu
+  276  ls -l 1/2/
+  277  mv 1/2/iu/ x/y/z/
+  278  ls -l 1/2/
+  279  ls -l x/y/z/
+  280  clear
+  281  mv x/y/z/iu/ 1/2/z
+  282  ls -ld x/y/z/iu
+  283  ls -ld 1/2/z/
+  284  mv x/y/z/ 1/2/z/
+  285  ls -ld x/y/z
+  286  ls -ld 1/2/z/z/
+  287  clear
+  288  ls -l
+  289  clear
+  290  rmdir 1
+  291  ls -ld 1/2/z/z/
+  292  rmdir 1/2/
+  293  rmdir 1/2/z/
+  294  rmdir 1/2/z/z/
+  295  rmdir 1/2/z/
+  296  rmdir 1/2/
+  297  rmdir 1/
+  298  ls -ld 1
+  299  clear
+  300  man rm
+  301  rmdir x
+  302  ls -ld x/y/
+  303  rm x
+  304  rm -r x
+  305  ls -ld x
+  306  clear
+  307  man rm
+  308  mkdir -p 1/2/3/4/5
+  309  rmdir 1
+  310  rm -r 1
+  311  rm -rf 1
+  312  ls -ld 1
+  313  clear
+  314  touch 1
+  315  ls -l ?
+  316  ls -l
+  317  clear
+  318  touch 2  3 4
+  319  ll
+  320  clear
+  321  ls -l ?
+  322  touch 11 22 33 44
+  323  ls -l ??
+  324  clear
+  325  ls -l 1*
+  326  ls -l *1
+  327  rm -f 11 22 33 44
+  328  ls -l ??
+  329  clear
+  330  ls -l ?
+  331  rm -f ?
+  332  ls -l ?
+  333  clear
+  334  touch 1
+  335  ls -l ?
+  336  touch 1
+  337  ls -l ?
+  338  clear
+  339  ls -l ?
+  340  cat > 1
+  341  ls -l ?
+  342  cat > 1
+  343  ls -l ?
+  344  cat > 2
+  345  ls -l ?
+  346  cat < 1
+  347  cat < 2
+  348  cat 1
+  349  cat 2
+  350  cat -n 1
+  351  cat -n 1 2
+  352  cat 1 > 2
+  353  cat -n 1
+  354  cat -n 2
+  355  cat > 2
+  356  cat -n 2
+  357  cat -n 1
+  358  cat > 2
+  359  ls -l ?
+  360  clear
+  361  cat -n 1
+  362  cat -n 2
+  363  cat 1 > 2
+  364  cat -n 2
+  365  cat > 2
+  366  cat -n 2
+  367  ls -l ?
+  368  cat -n 1
+  369  cat >> 1
+  370  cat -n 1
+  371  ls -l ?
+  372  cat >> 3
+  373  ls -l ?
+  374  cat  1 2 3 > 4
+  375  ls -l ?
+  376  cat -n 4
+  377  cat 3 2 1 > 5
+  378  cat -n 5
+  379  병합
+  380  칟ㅁㄱ
+  381  clear
+  382  find / -name kgitbank
+  383  ls -ld /var/spool/mail/kgitbank /home/kgitbank/
+  384  find / -name kgitbank -type d
+  385  find / -name kgitbank -type f
+  386  clear
+  387  find / -name gifup eth0
+  388  netstat -lntup
+  389  clear
+  390  ifconfig eth0
+  391  ping 192.168.1.1
+  392  whoami
+  393  pwd
+  394  runlevel
+  395  history
+  396  clear
+  397  whoami
+  398  pwd
+  399  ls -l
+  400  rm -rf 1 x
+  401  ls -l
+  402  clear
+  403  touch 1
+  404  ll ?
+  405  cp 1 a
+  406  ll ?
+  407  ls -l ??
+  408  ls -l ???
+  409  ls -l ????
+  410  ls -l ?????
+  411  ls -l ??????
+  412  clear
+  413  ls -l 1*
+  414  ls -l ?
+  415  cp 1 /iu
+  416  ls -l ?
+  417  ls -l /??
+  418  rm -f /iu
+  419  ls -l /??
+  420  rm -f ?
+  421  ls -l ?
+  422  mkdir -p 1/2 x/y
+  423  ls -ld 1/2/ x/y/
+  424  cp -r 1/2/ x/y/
+  425  ls -ld 1/2/ x/y/2/
+  426  cp -r 1/2/ x/y/2/
+  427  ls -ld 1/2/ x/y/2/2/
+  428  clear
+  429  정상 / 오류 차이점
+  430  실행 O / 실행 X 차이점
+  431  ls -ld /root/
+  432  ls -ld /roo
+  433  ls -ld /home/kgitbank/
+  434  ls -ld /home/kgit
+  435  ls -ld /roo && ls -ld /home/kgit
+  436  ls -ld /root/ && ls -ld /home/kgit
+  437  clear
+  438  ls -ld /roo && ls -ld /home/kgit
+  439  ls -ld /roo && ls -ld /home/kgitbank/
+  440  ls -ld /root/ && ls -ld /home/kgit
+  441  ls -ld /root/ && ls -ld /home/kgitbank/
+  442  ls -ld /roo || ls -ld /home/kgit
+  443  ls -ld /roo || ls -ld /home/kgitbank/
+  444  ls -ld /root/ || ls -ld /home/kgit
+  445  ls -ld /root/ || ls -ld /home/kgitbank/
+  446  clear
+  447  netstat -lntup
+  448  clear
+  449  netstat -lntup |grep sshd
+  450  netstat -lntup |grep dhclient
+  451  ls -ld /linux
+  452  mkdir /linux
+  453  cd /li
+  454  cd /linux/
+  455  pwd
+  456  clear
+  457  pwd
+  458  cat > aa
+  459  ls -l
+  460  cat -n aa
+  461  cat > bb
+  462  ls -l
+  463  cat -n bb
+  464  cat bb >> aa
+  465  ls -l
+  466  cat -n
+  467  cat -n aa
+  468  cat aa bb > cc
+  469  ls -l
+  470  cat -n cc
+  471  clear
+  472  제가 전달해 드린 문제풀이
+  473  cd
+  474  clear
+  475  rm -rf /linux/
+  476  ls -ld /linux
+  477  mkdir -p /test/test1/test2/test3
+  478  cd /test/test1/test2/test3/
+  479  pwd
+  480  touch a b c 1 2 3
+  481  ll
+  482  touch 11 22 33 aa bb cc
+  483  ll
+  484  clear
+  485  pwd
+  486  find . -name 1
+  487  find . -name a
+  488  clear
+  489  ls -ld /iu
+  490  mkdir /iu
+  491  ls -l /iu/
+  492  mv a /iu/suzi
+  493  ls -l a
+  494  ls -l /iu/
+  495  clear
+  496  ls -l /b
+  497  ls -l b
+  498  자리를 보고 다리를 뻗습니다
+  499  mkdir -p /iu/suzi1/test && mv b /iu/suzi1/test
+  500  ls -l /iu/suzi1/test/b
+  501  clear
+  502  ls -l /iu/suzi1/test1
+  503  ls -l c
+  504  mv c /iu/suzi1/test1
+  505  ls -l c
+  506  ls -l /iu/suzi1/test1
+  507  clear
+  508  cd
+  509  pwd
+  510  rm -rf /iu /test
+  511  ls -ld /iu /test
+  512  pwd
+  513  clear
+  514  여기서부터도 내드린 문제 풀이입니다.
+  515  ls -l /etc/login.defs /etc/inittab /boot/grub/grub.conf
+  516  find / -name login.defs -o -name inittab -o -name grub.conf
+  517  ls -l /boot/grub/grub.conf /etc/grub.conf
+  518  clear
+  519  ls -l /boot/grub/grub.conf /etc/inittab /etc/login.defs
+  520  ls -ld /backup
+  521  mkdir /backup
+  522  cp /boot/grub/grub.conf /etc/inittab /etc/login.defs /backup/
+  523  ls -l /backup/
+  524  clear
+  525  mkdir /backup/test
+  526  ls -l /backup/
+  527  cd /backup/
+  528  pwd
+  529  ll
+  530  cp login.defs test/login
+  531  cp inittab test/init
+  532  cp grub.conf test/grub
+  533  ls -lR
+  534  clear
+  535  ls -l /backup/test1 /backup/test/test2
+  536  touch test1 test/test2
+  537  ls -lR
+  538  clear
+  539  ls -l
+  540  mkdir -p /home/test/c/d && cp -rp test /home/test/c/d/kgitbank
+  541  ls -ld /roo
+  542  ls -l /home/test/c/d/kgitbank/
+  543  ls -l test
+  544  date
+  545  clear
+  546  cd /home/
+  547  pwd
+  548  cd명령어 금지
+  549  pwd
+  550  ls -l /backup/
+  551  clear
+  552  ls -ld /home/test/c/d/test
+  553  mkdir /home/test/c/d/test && cp -p /backup/* /home/test/c/d/test
+  554  ls -l /home/test/c/d/test/
+  555  cd
+  556  c.ear
+  557  clear
+  558  rm -rf /backup/ /home/test
+  559  ls -ld /backup /home/test
+  560  문제 풀이 끝
+  561  진도 나갑니다
+  562  칟ㅁ
+  563  clear
+  564  cat -n /boot/grub/grub.conf
+  565  clear
+  566  mkdir /back
+  567  rm -rf /back/
+  568  mkdir /backup
+  569  ls -l /backup/
+  570  cp /boot/grub/grub.conf /backup/
+  571  ls -l /backup/
+  572  rm -rf /boot/grub/grub.conf
+  573  ls -l /boot/grub/grub.conf
+  574  init 6
+  575  clar
+  576  clear
+  577  netstat -lntup
+  578  clear
+  579  cat -n  /etc/inittab
+  580  clear
+  581  runlevel
+  582  netstat -lntup
+  583  clear
+  584  cd /etc/rc.d
+  585  ll
+  586  cat -n rc.sysinit
+  587  clear
+  588  ll
+  589  ls -l rc5.d/
+  590  clear
+  591  ll
+  592  ls -l init.d/
+  593  clear
+  594  ll
+  595  cat -n rc.local
+  596  clear
+  597  cd
+  598  c.ear
+  599  clear
+  600  alias ccc='clear'
+  601  ccc
+  602  alias c='ccc'
+  603  c
+  604  ccc
+  605  clear
+  606  c
+  607  ccc
+  608  clear
+  609  c
+  610  ccc
+  611  alias
+  612  unalias c ccc
+  613  alias
+  614  ls
+  615  clear
+  616  ls
+  617  dir
+  618  unalias ls
+  619  ls
+  620  alias ls='ls --color=auto'
+  621  ls
+  622  clear
+  623  alias
+  624  ll
+  625  rm -rf 1 x
+  626  ll
+  627  clear
+  628  alias a1='mkdir /kgitbank'
+  629  alias
+  630  ls -ld /kgitbank
+  631  a1
+  632  ls -ld /kgitbank
+  633  alias a2='touch /kgitbank/test1 && mkdir /kgitbank/test2'
+  634  alias
+  635  a2
+  636  ls -l /kgitbank/
+  637  alias a3='rm -rf /kgitbank'
+  638  alias
+  639  a3
+  640  ls -ld /kgitbank
+  641  alias a4='a1 && a2'
+  642  alias
+  643  a4
+  644  ls -ld /kgitbank/
+  645  ls -l /kgitbank/
+  646  clear
+  647  pwd
+  648  whoami
+  649  find / -name grub.conf -o -name inittab -o -name login.defs
+  650  clear
+  651  find / -name kgitbank
+  652  find / -name kgitbank -type d
+  653  find / -name kgitbank -type f
+  654  clear
+  655  mkdir test
+  656  cd test
+  657  pwd
+  658  touch 1
+  659  touch 2
+  660  touch 3
+  661  ll
+  662  find . -cmin -1
+  663  find . -cmin +1
+  664  find . -cmin -1
+  665  find . -cmin +1
+  666  ll
+  667  date
+  668  find . -cmin +1
+  669  find . -cmin -1
+  670  find . -newer 1
+  671  find . -newer 2
+  672  find . -newer 3
+  673  clear
+  674  cd ..
+  675  rm -rf test
+  676  ls -ld test
+  677  whoami
+  678  pwd
+  679  ls -l
+  680  clear
+  681  cat -n /backup/grub.conf
+  682  cat -n /etc/passwd
+  683  clear
+  684  cat -n /etc/passwd
+  685  clear
+  686  head /etc/passwd
+  687  head /etc/passwd | cat -n
+  688  cat -n /etc/passwd | head
+  689  cat -n /etc/passwd | head -3
+  690  cat -n /etc/passwd | head -7
+  691  cat -n /etc/passwd | head -13
+  692  clear
+  693  cat - /etc/passwd
+  694  cat -n /etc/passwd
+  695  clear
+  696  tail /etc/passwd
+  697  tail /etc/passwd | cat -n
+  698  cat -n /etc/passwd | tail
+  699  clear
+  700  cat -n /etc/passwd | tail -3
+  701  cat -n /etc/passwd | tail -2
+  702  cat -n /etc/passwd | tail -13
+  703  clear
+  704  more /etc/passwd
+  705  clear
+  706  more -2 /etc/passwd
+  707  cat -n /etc/passwd | more -2
+  708  clear
+  709  less /etc/passwd
+  710  clear
+  711  date
+  712  rdate -p time.bora.net
+  713  rdate -s zero.bora.net
+  714  date
+  715  cal
+  716  cal 3 2022
+  717  cal 3
+  718  clear
+  719  cal 3 2022
+  720  cal 2022
+  721  clear
+  722  cal 2023
+  723  clear
+  724  cal 28 2 1981
+  725  cal 16 5 1993
+  726  clear
+  727  cal 1 1 1991
+  728  clear
+  729  ls -l /dev/
+  730        1월 1991
+  731  clear
+  732  ls -ld /roo
+  733  ls -ld /root/
+  734  clear
+  735  mkdir test
+  736  cd test
+  737  pwd
+  738  cat > 1
+  739  cat > 2
+  740  cat > 3
+  741  ls -l
+  742  cat -n 1
+  743  cat -n 2
+  744  cat -n 3
+  745  cat -n 1 2 3
+  746  cat -n 3 2 1
+  747  cat -n 2 3 1
+  748  cat 1 2 3 > 4
+  749  ll
+  750  cat -n 4
+  751  rm -f 4
+  752  ll
+  753  cat 1 2 3 4 > 5
+  754  clear
+  755  ll
+  756  rm -f 5
+  757  ll
+  758  cat 1 2 3 4 1> 5
+  759  ll
+  760  cat -n 5
+  761  rm -f 5
+  762  ll
+  763  cat 1 2 3 4 2> 5
+  764  ll
+  765  cat -n 5
+  766  rm -f 5
+  767  ll
+  768  clear
+  769  cat 1 2 3 4 > 5 1>&2
+  770  ll
+  771  rm -f 5
+  772  cat 1 2 3 4 > 5 2>&1
+  773  ls -l
+  774  cat -n 5
+  775  clear
+  776  지금부터는 마지막 챕터 6에 있는 기본명령어_마지막문제 풀어주세요
+  777  history
+[root@optimus test]#

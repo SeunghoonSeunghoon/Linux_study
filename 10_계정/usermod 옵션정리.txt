@@ -1,0 +1,54 @@
+1970	Unix
+1981	Windows
+1991	Linux
+-----------------------------
+3대 OS 공통점 = 연봉킹왕짱
+
+1.Account	계정
+2.Permission	권한
+3.Domain	영역
+4.Policy	정책
+-----------------------------
+사용자 충돌 / 그룹 충돌시 결론
+1. UID <-- GID
+2. 증감식
+-----------------------------
+usermod 옵션 정리
+
+grep user7 /etc/passwd 의 6번째 필드값	= 서류상의 홈디렉토리 = 주민등록등본 초본 => 주소지 ,이사했던곳 다 나옵니다
+ls -ld ~user7 				= 실제 홈디렉토리
+-----------------------------
+이사갈꺼에요 ~ user7이
+이사전				이사후				명령어
+서류홈디 = /home/user7		/export/sdb/home/user7		usermod -d /export/sdb/home/user7 user7 = 서류만
+실제홈디 = /home/user7		/export/sdb/home/user7		mv /home/user7 /export/sdb/home/	= 실제만
+
+좀더 쉽게 2가지가 동시에 옮길 수 있는 옵션 = -md
+usermod -md /export/sdb/home/user7 user7
+
+그러나,!! 전제조건
+1. 목적지에 내 이름으로 된 디렉토리가 있으면 안된다
+2. 이동 전 서류홈디 = 실제홈디는 같은 계정만 옮겨진다
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

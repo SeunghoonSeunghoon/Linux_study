@@ -1,0 +1,135 @@
+grub보안
+
+**sha512** 6.x
+grub-crypt
+비번설정후 알고리즘 드레그
+vi /boot/grub/grub.conf
+#boot 아래에
+password --encrypted 알고리즘 붙여넣기
+
+or
+
+:9r! grub-crypt
+ 한뒤 수정
+
+**md5** 5.8
+grub-md5-crypt
+비번설정후 알고리즘 드레그
+vi /boot/grub/grub.conf
+#boot 아래에 
+password --md5 알고리즘 붙여넣기
+---------------------------------------------------
+# grub-crypt
+Password:
+Retype password:
+$6$26fxe/iy/Cpb1rmP$Ajjx1S.Pl.C3Q7wb9MuidcbZaH.2NS3ZtS3J4rXcXOsu.uLc/T1qysl4AimplDPJAvLYnv/RPfaFP7T0fArwf/
+# grub-md5-crypt
+Password:
+Retype password:
+$1$/xPf9$jQ28yZwm2v1pQn6QDDamD/
+vi /boot/grub/grub.conf
+
+----------------변경전 -----------------------------------
+#boot=/dev/sda
+default=0 (기본 구동순서)
+timeout=5 (count시간)
+
+----------------------변경후 sha512------------------
+#boot=/dev/sda
+password --encrypted $6$26fxe/iy/Cpb1rmP$Ajjx1S.Pl.C3Q7wb9MuidcbZaH.2NS3ZtS3J4rXcXOsu.uLc/T1qysl4AimplDPJAvLYnv/RPfaFP7T0fArwf/
+default=0
+timeout=5
+----------------------변경후 md5------------------
+
+#boot=/dev/sda
+password --md5 $1$/xPf9$jQ28yZwm2v1pQn6QDDamD/
+default=0
+timeout=5
+
+==============================================================================
+
+locale 수정
+
+
+ Locale
+Locale(로케일은) 프로그램을 언어와 국가에 최적화하기 위한 "지역/언어"정보다. 
+프로그램은  locale에 따라서,  입/출력 인코딩을 적용해서 메시지 출력한다.
+
+locale -a로 모든 사용가능한 로케일 확인
+
+1.locale -a
+
+C             # ASCII 인코딩
+C.UTF-8
+POSIX
+en_AG
+en_DE.utf8    # 독일어,    독일,      UTF-8 encoding 
+en_CA.utf8    # 캐나다어,  캐나다,    UTF-8 encoding 
+en_US.utf8    # 영어,      미국,      UTF-8 encoding
+ko_KR.utf8    # 한국어,    대한민국,  UTF-8 encoding
+
+2. 현재 로케일 정보 확인
+locale
+LANG=ko_KR.UTF-8		기본표현값
+LC_CTYPE="ko_KR.UTF-8"		대문자, 소문자간의 변환 형식
+LC_NUMERIC="ko_KR.UTF-8"	숫자표현
+LC_TIME="ko_KR.UTF-8"		시간 출력 
+LC_COLLATE="ko_KR.UTF-8"	알파벳의 정렬
+LC_MONETARY="ko_KR.UTF-8"
+LC_MESSAGES="ko_KR.UTF-8"	시스템 메시지 출력
+LC_PAPER="ko_KR.UTF-8"		종이의 크기 형식
+LC_NAME="ko_KR.UTF-8"		이름 표기
+LC_ADDRESS="ko_KR.UTF-8"	ip주소
+LC_TELEPHONE="ko_KR.UTF-8"	전화번호
+LC_MEASUREMENT="ko_KR.UTF-8"
+LC_IDENTIFICATION="ko_KR.UTF-8"
+LC_ALL=				LC override될 형식
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3로케일 설정 변경
+시스템 기본 로케일 설정은 /etc/default/locale을 수정하면 된다.
+# cat /etc/default/locale
+or /etc/sysconfig/i18n  =>> centos
+
+LANG="ko_KR.UTF-8"
+
+4로케일 생성
+locale-gen ko_KR.UTF-8
+Generating locales...
+  ko_KR.UTF-8... done
+
+
+5쉘에 로케일 지정
+# cat ~/.bash_profile
+export LANG=ko_KR.utf8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

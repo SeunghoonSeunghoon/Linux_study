@@ -1,0 +1,53 @@
+FTP(File Transfer Protocol) 설정
+
+1. 패키지 확인 	= rpm -qa |grep vsftpd
+			vsftpd-2.2.2-21.el6.x86_64 <-- 존재시 이렇게 출력됨
+
+2. 패키지 설치 	= 패키지 존재시 설치 X
+		= 패키지 미존재시 설치 = rpm -ivh /media/CentOS_6.8_Final/Packages/vsftpd-2.2.2-21.el6.x86_64.rpm
+		
+3. 데몬 스타트  	= /etc/rc.d/init.d/vsftpd start/stop/restart  => 포트를 개방시켜줘요
+		= netstat -lntup |grep vsftpd => 포트 개방 확인 명령어
+			tcp 0 0 0.0.0.0:21 0.0.0.0:* LISTEN 5836/vsftpd => 이렇게 출력이 되어야 합니다
+
+4. 방화벽		= system-config-firewall => 신뢰하는 포트 FTP 개방해주세요  => 저장하시고 나오시면 됩니다
+		= 보안강화 리눅스 => vi /etc/selinux/config => 아래와 같이 수정후에 반드시 !!! 재부팅 !!! 
+		= sestatus => selinux 상태보기 명령어
+
+			** 수정하세요 **
+		      7 #SELINUX=enforcing 	=> yy p 하셔서 한줄 복사 
+		      8 SELINUX=disabled	=> 수정하세요
+			** 수정하세요 **
+
+5.메인설정 파일	= vi /etc/vsftpd/vsftpd.conf
+
+6.데몬 재실행 	= /etc/rc.d/init.d/vsftpd restart
+==================================================================================================
+** 윈도우 설정 
+내컴퓨터 => alt => 도구 => 폴더옵션 => 보기 =>알려진파일형식 확장자명 숨기기 체크해제
+
+** FTP 사용
+
+1.윈도우키 + r 
+2.cmd
+3.ping 192.168.1.134  // 리눅스랑 통신 확인 
+  => 당연히 리눅스에서도 ping 192.168.1.1(Windows)로 통신확인
+4.ftp 리눅스IP (ex: ftp 192.168.1.134)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

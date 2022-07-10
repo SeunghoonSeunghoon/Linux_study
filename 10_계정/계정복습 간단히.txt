@@ -1,0 +1,75 @@
+Account 
+
+/etc/login.defs		= 계정 기본값 참고
+
+useradd			= /etc/default/useradd  = useradd 명령어 기본값 파일 참고
+usermod
+userdel
+
+groupadd
+groupmod
+groupdel
+-------------------------------------------------------------------------------
+useradd user1 엔터를 쳤을때 , 컴퓨터는 5가지 일을 합니다.
+
+1. /etc/passwd			사용자계정정보 
+2. /etc/shadow			사용자 pw를 암호화(SHA512=>/etc/login.defs)
+3. /etc/group			사용자 이름과 같은 그룹 생성
+4. /home/user1			사용자 이름과 같은 홈디렉토리 생성(/etc/skel=계정생성시 딱 한번만 참조)
+5. /var/spool/mail/user1	사용자 이름과 같은 메일함 파일 생성
+-------------------------------------------------------------------------------
+독특하게 생성하고 싶다 = 옵션을 외우셔라~
+
+useradd 옵션들...
+-u	UID 지정
+-g	GID 지정 = 기본그룹(지정될 그룹은 미리 생성되어 있는 그룹만 해당)
+-G	GID 추가지정 = 추가그룹(지정될 그룹은 미리 생성되어 있는 그룹만 해당)
+-c	Comment = 주석,설명
+-d	Home Directory 경로 지정
+-s 	Sheel 종류 지정
+-mk	SKEL경로 지정
+
+usermod 옵션들...
+-u	UID 변경
+-g	GID 기본그룹 변경
+-G	GID 추가그룹 변경
+-c	Comment 변경
+-d	Home Directory = 서류상의 홈디만 변경 = /etc/passwd 6번째 필드값만 수정
+-md	서류와 실제 홈디를 같이 옮김 (전제조건 2가지 만족하는 경우만)
+-s	Shell 변경
+
+userdel 옵션들..
+옵션 X	일반 삭제 (/etc/passwd /etc/shadow /etc/group)	H.D / Mailbox 
+-r	영구 삭제 (5가지 모두 삭제)
+-------------------------------------------------------------------------------
+/etc/shadow 가셔서 필드값 해석 보시고
+/etc/group 가셔서 필드값 해석 보셔야 해요
+-------------------------------------------------------------------------------
+vi /etc/dafault/useradd => 옵션들 보셔야 해요
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

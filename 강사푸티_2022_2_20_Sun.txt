@@ -1,0 +1,1063 @@
+login as: root
+root@192.168.1.130's password:
+Last login: Sat Feb 19 19:35:48 2022 from 192.168.1.1
+[root@optimus ~]# 진도나가기~ 시작~
+-bash: 진도나가기~: command not found
+[root@optimus ~]# cat -n /etc/shells
+     1  /bin/sh
+     2  /bin/bash
+     3  /sbin/nologin
+     4  /bin/dash
+     5  /bin/tcsh
+     6  /bin/csh
+     7  /bin/ksh
+[root@optimus ~]# clear
+[root@optimus ~]# ksh
+#
+#
+#
+# alias
+2d='set -f;_2d'
+autoload='typeset -fu'
+command='command '
+compound='typeset -C'
+fc=hist
+float='typeset -lE'
+functions='typeset -f'
+hash='alias -t --'
+history='hist -l'
+integer='typeset -li'
+nameref='typeset -n'
+nohup='nohup '
+r='hist -s'
+redirect='command exec'
+source='command .'
+stop='kill -s STOP'
+suspend='kill -s STOP $$'
+times='{ { time;} 2>&1;}'
+type='whence -v'
+# exit
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]# clear
+[root@optimus ~]# alias
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-ti
+[root@optimus ~]# alias
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus ~]# clear
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# whoami
+root
+[root@optimus ~]# ls -al
+합계 232
+dr-xr-x---. 28 root root  4096 2022-02-19 20:00 .
+dr-xr-xr-x. 28 root root  4096 2022-02-19 19:40 ..
+-rw-------.  1 root root  3414 2022-02-19 19:27 .ICEauthority
+drwxr-xr-x.  2 root root  4096 2022-02-12 16:51 .abrt
+-rw-------.  1 root root 10415 2022-02-19 19:45 .bash_history
+-rw-r--r--.  1 root root    18 2009-05-20 19:45 .bash_logout
+-rw-r--r--.  1 root root   176 2009-05-20 19:45 .bash_profile
+-rw-r--r--.  1 root root   176 2004-09-23 12:59 .bashrc
+drwxr-xr-x.  4 root root  4096 2022-02-12 17:55 .cache
+drwx------.  5 root root  4096 2022-02-12 16:51 .config
+-rw-r--r--.  1 root root   100 2004-09-23 12:59 .cshrc
+drwx------.  3 root root  4096 2022-02-12 16:51 .dbus
+-rw-------.  1 root root    16 2022-02-12 16:51 .esd_auth
+drwx------.  4 root root  4096 2022-02-19 19:27 .gconf
+drwx------.  2 root root  4096 2022-02-19 19:48 .gconfd
+drwx------.  6 root root  4096 2022-02-12 17:55 .gnome2
+drwx------.  2 root root  4096 2022-02-12 17:55 .gnome2_private
+drwxr-xr-x.  3 root root  4096 2022-02-12 17:47 .gnote
+drwx------.  2 root root  4096 2022-02-19 19:27 .gnupg
+drwxr-xr-x.  2 root root  4096 2022-02-12 19:14 .gstreamer-0.10
+-rw-r--r--.  1 root root   187 2022-02-19 19:27 .gtk-bookmarks
+dr-x------.  2 root root     0 2022-02-19 19:27 .gvfs
+-rw-r--r--.  1 root root   781 2022-02-19 19:27 .imsettings.log
+drwxr-xr-x.  3 root root  4096 2022-02-12 16:51 .local
+drwxr-xr-x.  4 root root  4096 2022-02-12 17:55 .mozilla
+drwxr-xr-x.  2 root root  4096 2022-02-12 16:51 .nautilus
+drwx------.  2 root root  4096 2022-02-12 16:51 .pulse
+-rw-------.  1 root root   256 2022-02-12 16:51 .pulse-cookie
+-rw-------.  1 root root    16 2022-02-19 20:00 .sh_history
+drwx------.  2 root root  4096 2022-02-12 16:51 .ssh
+-rw-r--r--.  1 root root   129 2004-12-04 06:42 .tcshrc
+-rw-------.  1 root root  1561 2022-02-12 16:27 anaconda-ks.cfg
+-rw-r--r--.  1 root root 46676 2022-02-12 16:27 install.log
+-rw-r--r--.  1 root root 10033 2022-02-12 16:24 install.log.syslog
+drwxr-xr-x.  2 root root  4096 2022-02-19 18:53 test
+drwxr-xr-x.  2 root root  4096 2022-02-12 16:51 공개
+drwxr-xr-x.  2 root root  4096 2022-02-12 16:51 다운로드
+drwxr-xr-x.  2 root root  4096 2022-02-12 16:51 문서
+drwxr-xr-x.  2 root root  4096 2022-02-12 19:14 바탕화면
+drwxr-xr-x.  2 root root  4096 2022-02-12 16:51 비디오
+drwxr-xr-x.  2 root root  4096 2022-02-12 16:51 사진
+drwxr-xr-x.  2 root root  4096 2022-02-12 16:51 음악
+drwxr-xr-x.  2 root root  4096 2022-02-12 16:51 템플릿
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n .bashrc
+     1  # .bashrc
+     2
+     3  # User specific aliases and functions
+     4
+     5  alias rm='rm -i'
+     6  alias cp='cp -i'
+     7  alias mv='mv -i'
+     8
+     9  # Source global definitions
+    10  if [ -f /etc/bashrc ]; then
+    11          . /etc/bashrc
+    12  fi
+[root@optimus ~]# cat >> .bashrc
+alias c='clear'
+^C
+[root@optimus ~]# cat -n .bashrc
+     1  # .bashrc
+     2
+     3  # User specific aliases and functions
+     4
+     5  alias rm='rm -i'
+     6  alias cp='cp -i'
+     7  alias mv='mv -i'
+     8
+     9  # Source global definitions
+    10  if [ -f /etc/bashrc ]; then
+    11          . /etc/bashrc
+    12  fi
+    13  alias c='clear'
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /etc/skel/.bash
+cat: /etc/skel/.bash: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# cat -n /etc/skel/.bashrc
+     1  # .bashrc
+     2
+     3  # Source global definitions
+     4  if [ -f /etc/bashrc ]; then
+     5          . /etc/bashrc
+     6  fi
+     7
+     8  # User specific aliases and functions
+[root@optimus ~]# cat -n .bashrc
+     1  # .bashrc
+     2
+     3  # User specific aliases and functions
+     4
+     5  alias rm='rm -i'
+     6  alias cp='cp -i'
+     7  alias mv='mv -i'
+     8
+     9  # Source global definitions
+    10  if [ -f /etc/bashrc ]; then
+    11          . /etc/bashrc
+    12  fi
+    13  alias c='clear'
+[root@optimus ~]# clear
+[root@optimus ~]# c
+-bash: c: command not found
+[root@optimus ~]# c
+-bash: c: command not found
+[root@optimus ~]# alias
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /etc/bashrc
+     1  # /etc/bashrc
+     2
+     3  # System wide functions and aliases
+     4  # Environment stuff goes in /etc/profile
+     5
+     6  # It's NOT a good idea to change this file unless you know what you
+     7  # are doing. It's much better to create a custom.sh shell script in
+     8  # /etc/profile.d/ to make custom changes to your environment, as this
+     9  # will prevent the need for merging in future updates.
+    10
+    11  # are we an interactive shell?
+    12  if [ "$PS1" ]; then
+    13    if [ -z "$PROMPT_COMMAND" ]; then
+    14      case $TERM in
+    15      xterm*)
+    16          if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
+    17              PROMPT_COMMAND=/etc/sysconfig/bash-prompt-xterm
+    18          else
+    19              PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
+    20          fi
+    21          ;;
+    22      screen)
+    23          if [ -e /etc/sysconfig/bash-prompt-screen ]; then
+    24              PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
+    25          else
+    26              PROMPT_COMMAND='printf "\033]0;%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
+    27          fi
+    28          ;;
+    29      *)
+    30          [ -e /etc/sysconfig/bash-prompt-default ] && PROMPT_COMMAND=/etc/sysconfig/bash-prompt-default
+    31          ;;
+    32        esac
+    33    fi
+    34    # Turn on checkwinsize
+    35    shopt -s checkwinsize
+    36    [ "$PS1" = "\\s-\\v\\\$ " ] && PS1="[\u@\h \W]\\$ "
+    37    # You might want to have e.g. tty in prompt (e.g. more virtual machines)
+    38    # and console windows
+    39    # If you want to do so, just add e.g.
+    40    # if [ "$PS1" ]; then
+    41    #   PS1="[\u@\h:\l \W]\\$ "
+    42    # fi
+    43    # to your custom modification shell script in /etc/profile.d/ directory
+    44  fi
+    45
+    46  if ! shopt -q login_shell ; then # We're not a login shell
+    47      # Need to redefine pathmunge, it get's undefined at the end of /etc/profile
+    48      pathmunge () {
+    49          case ":${PATH}:" in
+    50              *:"$1":*)
+    51                  ;;
+    52              *)
+    53                  if [ "$2" = "after" ] ; then
+    54                      PATH=$PATH:$1
+    55                  else
+    56                      PATH=$1:$PATH
+    57                  fi
+    58          esac
+    59      }
+    60
+    61      # By default, we want umask to get set. This sets it for non-login shell.
+    62      # Current threshold for system reserved uid/gids is 200
+    63      # You could check uidgid reservation validity in
+    64      # /usr/share/doc/setup-*/uidgid file
+    65      if [ $UID -gt 199 ] && [ "`id -gn`" = "`id -un`" ]; then
+    66         umask 002
+    67      else
+    68         umask 022
+    69      fi
+    70
+    71      # Only display echos from profile.d scripts if we are no login shell
+    72      # and interactive - otherwise just process them to set envvars
+    73      for i in /etc/profile.d/*.sh; do
+    74          if [ -r "$i" ]; then
+    75              if [ "$PS1" ]; then
+    76                  . "$i"
+    77              else
+    78                  . "$i" >/dev/null 2>&1
+    79              fi
+    80          fi
+    81      done
+    82
+    83      unset i
+    84      unset pathmunge
+    85  fi
+    86  # vim:ts=4:sw=4
+[root@optimus ~]# clear
+[root@optimus ~]# cat >> /etc/bashrc
+alias ccc='clear'
+^C
+[root@optimus ~]# cat -n /etc/bashrc | tail
+    78                  . "$i" >/dev/null 2>&1
+    79              fi
+    80          fi
+    81      done
+    82
+    83      unset i
+    84      unset pathmunge
+    85  fi
+    86  # vim:ts=4:sw=4
+    87  alias ccc='clear'
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /etc/profile
+     1  # /etc/profile
+     2
+     3  # System wide environment and startup programs, for login setup
+     4  # Functions and aliases go in /etc/bashrc
+     5
+     6  # It's NOT a good idea to change this file unless you know what you
+     7  # are doing. It's much better to create a custom.sh shell script in
+     8  # /etc/profile.d/ to make custom changes to your environment, as this
+     9  # will prevent the need for merging in future updates.
+    10
+    11  pathmunge () {
+    12      case ":${PATH}:" in
+    13          *:"$1":*)
+    14              ;;
+    15          *)
+    16              if [ "$2" = "after" ] ; then
+    17                  PATH=$PATH:$1
+    18              else
+    19                  PATH=$1:$PATH
+    20              fi
+    21      esac
+    22  }
+    23
+    24
+    25  if [ -x /usr/bin/id ]; then
+    26      if [ -z "$EUID" ]; then
+    27          # ksh workaround
+    28          EUID=`id -u`
+    29          UID=`id -ru`
+    30      fi
+    31      USER="`id -un`"
+    32      LOGNAME=$USER
+    33      MAIL="/var/spool/mail/$USER"
+    34  fi
+    35
+    36  # Path manipulation
+    37  if [ "$EUID" = "0" ]; then
+    38      pathmunge /sbin
+    39      pathmunge /usr/sbin
+    40      pathmunge /usr/local/sbin
+    41  else
+    42      pathmunge /usr/local/sbin after
+    43      pathmunge /usr/sbin after
+    44      pathmunge /sbin after
+    45  fi
+    46
+    47  HOSTNAME=`/bin/hostname 2>/dev/null`
+    48  HISTSIZE=1000
+    49  if [ "$HISTCONTROL" = "ignorespace" ] ; then
+    50      export HISTCONTROL=ignoreboth
+    51  else
+    52      export HISTCONTROL=ignoredups
+    53  fi
+    54
+    55  export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL
+    56
+    57  # By default, we want umask to get set. This sets it for login shell
+    58  # Current threshold for system reserved uid/gids is 200
+    59  # You could check uidgid reservation validity in
+    60  # /usr/share/doc/setup-*/uidgid file
+    61  if [ $UID -gt 199 ] && [ "`id -gn`" = "`id -un`" ]; then
+    62      umask 002
+    63  else
+    64      umask 022
+    65  fi
+    66
+    67  for i in /etc/profile.d/*.sh ; do
+    68      if [ -r "$i" ]; then
+    69          if [ "${-#*i}" != "$-" ]; then
+    70              . "$i"
+    71          else
+    72              . "$i" >/dev/null 2>&1
+    73          fi
+    74      fi
+    75  done
+    76
+    77  unset i
+    78  unset -f pathmunge
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]# clear
+[root@optimus ~]# ls -al .bash_profile
+-rw-r--r--. 1 root root 176 2009-05-20 19:45 .bash_profile
+[root@optimus ~]# cat -n .bash_profile
+     1  # .bash_profile
+     2
+     3  # Get the aliases and functions
+     4  if [ -f ~/.bashrc ]; then
+     5          . ~/.bashrc
+     6  fi
+     7
+     8  # User specific environment and startup programs
+     9
+    10  PATH=$PATH:$HOME/bin
+    11
+    12  export PATH
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n .bahsrc
+cat: .bahsrc: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# cat -n .bashrc
+     1  # .bashrc
+     2
+     3  # User specific aliases and functions
+     4
+     5  alias rm='rm -i'
+     6  alias cp='cp -i'
+     7  alias mv='mv -i'
+     8
+     9  # Source global definitions
+    10  if [ -f /etc/bashrc ]; then
+    11          . /etc/bashrc
+    12  fi
+    13  alias c='clear'
+[root@optimus ~]# cat -n /etc/bashrc
+     1  # /etc/bashrc
+     2
+     3  # System wide functions and aliases
+     4  # Environment stuff goes in /etc/profile
+     5
+     6  # It's NOT a good idea to change this file unless you know what you
+     7  # are doing. It's much better to create a custom.sh shell script in
+     8  # /etc/profile.d/ to make custom changes to your environment, as this
+     9  # will prevent the need for merging in future updates.
+    10
+    11  # are we an interactive shell?
+    12  if [ "$PS1" ]; then
+    13    if [ -z "$PROMPT_COMMAND" ]; then
+    14      case $TERM in
+    15      xterm*)
+    16          if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
+    17              PROMPT_COMMAND=/etc/sysconfig/bash-prompt-xterm
+    18          else
+    19              PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOM          E/~}"'
+    20          fi
+    21          ;;
+    22      screen)
+    23          if [ -e /etc/sysconfig/bash-prompt-screen ]; then
+    24              PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
+    25          else
+    26              PROMPT_COMMAND='printf "\033]0;%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$H          OME/~}"'
+    27          fi
+    28          ;;
+    29      *)
+    30          [ -e /etc/sysconfig/bash-prompt-default ] && PROMPT_COMMAND=/etc/sysconfig/bash-prompt-de          fault
+    31          ;;
+    32        esac
+    33    fi
+    34    # Turn on checkwinsize
+    35    shopt -s checkwinsize
+    36    [ "$PS1" = "\\s-\\v\\\$ " ] && PS1="[\u@\h \W]\\$ "
+    37    # You might want to have e.g. tty in prompt (e.g. more virtual machines)
+    38    # and console windows
+    39    # If you want to do so, just add e.g.
+    40    # if [ "$PS1" ]; then
+    41    #   PS1="[\u@\h:\l \W]\\$ "
+    42    # fi
+    43    # to your custom modification shell script in /etc/profile.d/ directory
+    44  fi
+    45
+    46  if ! shopt -q login_shell ; then # We're not a login shell
+    47      # Need to redefine pathmunge, it get's undefined at the end of /etc/profile
+    48      pathmunge () {
+    49          case ":${PATH}:" in
+    50              *:"$1":*)
+    51                  ;;
+    52              *)
+    53                  if [ "$2" = "after" ] ; then
+    54                      PATH=$PATH:$1
+    55                  else
+    56                      PATH=$1:$PATH
+    57                  fi
+    58          esac
+    59      }
+    60
+    61      # By default, we want umask to get set. This sets it for non-login shell.
+    62      # Current threshold for system reserved uid/gids is 200
+    63      # You could check uidgid reservation validity in
+    64      # /usr/share/doc/setup-*/uidgid file
+    65      if [ $UID -gt 199 ] && [ "`id -gn`" = "`id -un`" ]; then
+    66         umask 002
+    67      else
+    68         umask 022
+    69      fi
+    70
+    71      # Only display echos from profile.d scripts if we are no login shell
+    72      # and interactive - otherwise just process them to set envvars
+    73      for i in /etc/profile.d/*.sh; do
+    74          if [ -r "$i" ]; then
+    75              if [ "$PS1" ]; then
+    76                  . "$i"
+    77              else
+    78                  . "$i" >/dev/null 2>&1
+    79              fi
+    80          fi
+    81      done
+    82
+    83      unset i
+    84      unset pathmunge
+    85  fi
+    86  # vim:ts=4:sw=4
+    87  alias ccc='clear'
+[root@optimus ~]# clear
+[root@optimus ~]# itbank="
+> ^C
+[root@optimus ~]# itbank="kgitbank"
+[root@optimus ~]# echo $itbank
+kgitbank
+[root@optimus ~]# itbank=10
+[root@optimus ~]# echo $itbank
+10
+[root@optimus ~]# set | grep itbank
+itbank=10
+[root@optimus ~]# ksh
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# alias
+2d='set -f;_2d'
+autoload='typeset -fu'
+command='command '
+compound='typeset -C'
+fc=hist
+float='typeset -lE'
+functions='typeset -f'
+hash='alias -t --'
+history='hist -l'
+integer='typeset -li'
+nameref='typeset -n'
+nohup='nohup '
+r='hist -s'
+redirect='command exec'
+source='command .'
+stop='kill -s STOP'
+suspend='kill -s STOP $$'
+times='{ { time;} 2>&1;}'
+type='whence -v'
+# clear
+# set |grep itbank
+# echo $itbank
+
+# exit
+[root@optimus ~]# echo $itbank
+10
+[root@optimus ~]# unset itbank
+[root@optimus ~]# echo $itbank
+
+[root@optimus ~]# set |grep itbank
+[root@optimus ~]# export itbank="suzilove"
+[root@optimus ~]# echo $itbank
+suzilove
+[root@optimus ~]# export |grep itbank
+declare -x itbank="suzilove"
+[root@optimus ~]# ksh
+#
+#
+#
+# echo $itbank
+suzilove
+# exit
+[root@optimus ~]# echo $itbank
+suzilove
+[root@optimus ~]# unset itbank
+[root@optimus ~]# echo $itbank
+
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /bin/pwd
+-rwxr-xr-x. 1 root root 31656 2016-05-11 17:59 /bin/pwd
+[root@optimus ~]# ls -l /bin/ls
+-rwxr-xr-x. 1 root root 117048 2016-05-11 17:59 /bin/ls
+[root@optimus ~]# ls -l /bin/mkdir
+-rwxr-xr-x. 1 root root 50056 2016-05-11 17:59 /bin/mkdir
+[root@optimus ~]# ls -l /bin/rmdir
+-rwxr-xr-x. 1 root root 40480 2016-05-11 17:59 /bin/rmdir
+[root@optimus ~]# ls -l /bin/touch
+-rwxr-xr-x. 1 root root 52560 2016-05-11 17:59 /bin/touch
+[root@optimus ~]# ls -l /bin/rm
+-rwxr-xr-x. 1 root root 57440 2016-05-11 17:59 /bin/rm
+[root@optimus ~]# clear
+[root@optimus ~]# cd /bin
+[root@optimus bin]# pwd
+/bin
+[root@optimus bin]# cd /
+[root@optimus /]#
+[root@optimus /]# pwd
+/
+[root@optimus /]# ls -l /pwd
+ls: cannot access /pwd: 그런 파일이나 디렉터리가 없습니다
+[root@optimus /]# pwd
+/
+[root@optimus /]# clear
+[root@optimus /]# ls -l /bin/pwd
+-rwxr-xr-x. 1 root root 31656 2016-05-11 17:59 /bin/pwd
+[root@optimus /]# cd /bin
+[root@optimus bin]# pwd
+/bin
+[root@optimus bin]# ll
+합계 9368
+-rwxr-xr-x. 1 root root     123 2016-03-24 02:03 alsaunmute
+-rwxr-xr-x. 1 root root   27776 2016-05-11 17:59 arch
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:19 awk -> gawk
+-rwxr-xr-x. 1 root root   26264 2016-05-11 17:59 basename
+-rwxr-xr-x. 1 root root  941880 2016-05-11 08:21 bash
+-rwxr-xr-x. 1 root root   48568 2016-05-11 17:59 cat
+-rwxr-xr-x. 1 root root   55472 2016-05-11 17:59 chgrp
+-rwxr-xr-x. 1 root root   52472 2016-05-11 17:59 chmod
+-rwxr-xr-x. 1 root root   57464 2016-05-11 17:59 chown
+-rwxr-xr-x. 1 root root  122896 2016-05-11 17:59 cp
+-rwxr-xr-x. 1 root root  135808 2014-09-04 20:07 cpio
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:24 csh -> tcsh
+-rwxr-xr-x. 1 root root   45536 2016-05-11 17:59 cut
+-rwxr-xr-x. 1 root root  109672 2012-10-17 16:48 dash
+-rwxr-xr-x. 1 root root   59392 2016-05-11 17:59 date
+-rwxr-xr-x. 1 root root   12600 2015-04-22 19:52 dbus-cleanup-sockets
+-rwxr-xr-x. 1 root root  339080 2015-04-22 19:52 dbus-daemon
+-rwxr-xr-x. 1 root root   18560 2015-04-22 19:52 dbus-monitor
+-rwxr-xr-x. 1 root root   22456 2015-04-22 19:52 dbus-send
+-rwxr-xr-x. 1 root root   11008 2015-04-22 19:52 dbus-uuidgen
+-rwxr-xr-x. 1 root root   55256 2016-05-11 17:59 dd
+-rwxr-xr-x. 1 root root   94224 2016-05-11 17:59 df
+-rwxr-xr-x. 1 root root    9944 2016-05-11 07:58 dmesg
+lrwxrwxrwx. 1 root root       8 2022-02-12 16:19 dnsdomainname -> hostname
+lrwxrwxrwx. 1 root root       8 2022-02-12 16:19 domainname -> hostname
+-rwxr-xr-x. 1 root root   81120 2010-11-12 05:45 dumpkeys
+-rwxr-xr-x. 1 root root   28176 2016-05-11 17:59 echo
+-rwxr-xr-x. 2 root root   53400 2010-11-11 15:28 ed
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:19 egrep -> grep
+-rwxr-xr-x. 1 root root   26368 2016-05-11 17:59 env
+lrwxrwxrwx. 1 root root       2 2022-02-12 16:19 ex -> vi
+-rwxr-xr-x. 1 root root   25120 2016-05-11 17:59 false
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:19 fgrep -> grep
+-rwxr-xr-x. 1 root root  239000 2016-03-01 21:25 find
+-rwxr-xr-x. 1 root root   41896 2016-05-11 07:58 findmnt
+-rwsr-x---. 1 root fuse   32368 2016-05-11 16:38 fusermount
+-rwxr-xr-x. 1 root root  382752 2015-11-10 18:31 gawk
+-rwxr-xr-x. 1 root root   33488 2014-06-02 17:00 gettext
+-rwxr-xr-x. 1 root root  167744 2015-11-10 18:52 grep
+lrwxrwxrwx. 1 root root       3 2022-02-12 16:19 gtar -> tar
+-rwxr-xr-x. 1 root root      61 2014-03-18 05:00 gunzip
+-rwxr-xr-x. 1 root root   68704 2014-03-18 05:00 gzip
+-rwxr-xr-x. 1 root root   17872 2012-05-10 17:17 hostname
+-rwxr-xr-x. 1 root root   15320 2016-05-12 04:34 ipcalc
+lrwxrwxrwx. 1 root root      41 2022-02-12 16:21 iptables-xml -> /etc/alternatives/bin-iptables-xml.x86_64
+lrwxrwxrwx. 1 root root      20 2022-02-12 16:21 iptables-xml-1.4.7 -> /sbin/iptables-multi
+-rwxr-xr-x. 1 root root   11296 2010-11-12 05:45 kbd_mode
+-rwxr-xr-x. 1 root root   25560 2014-10-15 20:08 keyctl
+-rwxr-xr-x. 1 root root   15240 2016-05-11 07:58 kill
+lrwxrwxrwx. 1 root root      21 2022-02-12 16:24 ksh -> /etc/alternatives/ksh
+-rwxr-xr-x. 1 root root 1507840 2016-05-11 08:36 ksh93
+-rwxr-xr-x. 1 root root   26256 2016-05-11 17:59 link
+-rwxr-xr-x. 1 root root   49504 2016-05-11 17:59 ln
+-rwxr-xr-x. 1 root root  112208 2010-11-12 05:45 loadkeys
+-rwxr-xr-x. 1 root root   15048 2016-05-11 07:58 logger
+-rwxr-xr-x. 1 root root   31552 2016-05-11 07:58 login
+-rwxr-xr-x. 1 root root  117048 2016-05-11 17:59 ls
+-rwxr-xr-x. 1 root root   62656 2016-05-11 07:58 lsblk
+lrwxrwxrwx. 1 root root      22 2022-02-12 16:20 mail -> /etc/alternatives/mail
+-rwxr-xr-x. 1 root root  390744 2014-12-17 03:57 mailx
+-rwxr-xr-x. 1 root root   50056 2016-05-11 17:59 mkdir
+-rwxr-xr-x. 1 root root   33144 2016-05-11 17:59 mknod
+-rwxr-xr-x. 1 root root   38048 2016-05-11 17:59 mktemp
+-rwxr-xr-x. 1 root root   41216 2016-05-11 07:58 more
+-rwsr-xr-x. 1 root root   77336 2016-05-11 07:58 mount
+-rwxr-xr-x. 1 root root    9848 2015-07-24 07:21 mountpoint
+-rwxr-xr-x. 1 root root  113392 2016-05-11 17:59 mv
+-rwxr-xr-x. 1 root root  178896 2010-11-12 16:18 nano
+-rwxr-xr-x. 1 root root  128216 2012-05-10 17:17 netstat
+-rwxr-xr-x. 1 root root   28784 2016-05-11 17:59 nice
+lrwxrwxrwx. 1 root root       8 2022-02-12 16:19 nisdomainname -> hostname
+-rwsr-xr-x. 1 root root   38264 2016-05-11 03:32 ping
+-rwsr-xr-x. 1 root root   36488 2016-05-11 03:32 ping6
+-rwxr-xr-x. 1 root root   36808 2014-08-12 02:59 plymouth
+-rwxr-xr-x. 1 root root   89504 2016-05-11 08:23 ps
+-rwxr-xr-x. 1 root root   31656 2016-05-11 17:59 pwd
+-rwxr-xr-x. 1 root root   11576 2016-05-11 07:58 raw
+-rwxr-xr-x. 1 root root   40056 2016-05-11 17:59 readlink
+-rwxr-xr-x. 2 root root   53400 2010-11-11 15:28 red
+-rwxr-xr-x. 1 root root     576 2008-04-17 02:50 redhat_lsb_init
+-rwxr-xr-x. 1 root root   57440 2016-05-11 17:59 rm
+-rwxr-xr-x. 1 root root   40480 2016-05-11 17:59 rmdir
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:25 rnano -> nano
+-rwxr-xr-x. 1 root root   30648 2016-05-11 08:49 rpm
+lrwxrwxrwx. 1 root root       2 2022-02-12 16:19 rvi -> vi
+lrwxrwxrwx. 1 root root       2 2022-02-12 16:19 rview -> vi
+-rwxr-xr-x. 1 root root   72248 2012-06-22 22:41 sed
+-rwxr-xr-x. 1 root root   42384 2010-11-12 05:45 setfont
+-rwxr-xr-x. 1 root root   23672 2010-08-23 08:06 setserial
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:19 sh -> bash
+-rwxr-xr-x. 1 root root   27848 2016-05-11 17:59 sleep
+-rwxr-xr-x. 1 root root   98872 2016-05-11 17:59 sort
+-rwxr-xr-x. 1 root root   65032 2016-05-11 17:59 stty
+-rwsr-xr-x. 1 root root   34904 2016-05-11 17:59 su
+-rwxr-xr-x. 1 root root   25432 2016-05-11 17:59 sync
+-rwxr-xr-x. 1 root root  395496 2016-05-11 03:33 tar
+-rwxr-xr-x. 1 root root   14880 2016-05-11 07:58 taskset
+-rwxr-xr-x. 1 root root  388064 2016-05-11 09:30 tcsh
+-rwxr-xr-x. 1 root root   52560 2016-05-11 17:59 touch
+-rwxr-xr-x. 1 root root   11440 2016-05-11 03:32 tracepath
+-rwxr-xr-x. 1 root root   12304 2016-05-11 03:32 tracepath6
+-rwxr-xr-x. 1 root root   57480 2010-11-12 00:30 traceroute
+lrwxrwxrwx. 1 root root      10 2022-02-12 16:26 traceroute6 -> traceroute
+-rwxr-xr-x. 1 root root   25120 2016-05-11 17:59 true
+-rwxr-xr-x. 1 root root   15008 2016-05-11 16:38 ulockmgr_server
+-rwsr-xr-x. 1 root root   53472 2016-05-11 07:58 umount
+-rwxr-xr-x. 1 root root   27776 2016-05-11 17:59 uname
+-rwxr-xr-x. 1 root root    2555 2010-11-12 05:45 unicode_start
+-rwxr-xr-x. 1 root root     363 2010-11-12 05:45 unicode_stop
+-rwxr-xr-x. 1 root root   25760 2016-05-11 17:59 unlink
+-rwxr-xr-x. 1 root root   10256 2016-05-12 04:34 usleep
+-rwxr-xr-x. 1 root root  913080 2015-07-24 11:23 vi
+lrwxrwxrwx. 1 root root       2 2022-02-12 16:19 view -> vi
+lrwxrwxrwx. 1 root root       8 2022-02-12 16:19 ypdomainname -> hostname
+-rwxr-xr-x. 1 root root      62 2014-03-18 05:00 zcat
+[root@optimus bin]# clear
+[root@optimus bin]# pwd
+/bin
+[root@optimus bin]# cd /
+[root@optimus /]# pwd
+/
+[root@optimus /]# ls -l pwd
+ls: cannot access pwd: 그런 파일이나 디렉터리가 없습니다
+[root@optimus /]# pwd
+/
+[root@optimus /]# cd /bin
+[root@optimus bin]# ls -l pwd
+-rwxr-xr-x. 1 root root 31656 2016-05-11 17:59 pwd
+[root@optimus bin]# pwd
+/bin
+[root@optimus bin]# ./pwd
+/bin
+[root@optimus bin]# cd /bin
+[root@optimus bin]# clear
+[root@optimus bin]# ./ls -l
+합계 9368
+-rwxr-xr-x. 1 root root     123 2016-03-24 02:03 alsaunmute
+-rwxr-xr-x. 1 root root   27776 2016-05-11 17:59 arch
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:19 awk -> gawk
+-rwxr-xr-x. 1 root root   26264 2016-05-11 17:59 basename
+-rwxr-xr-x. 1 root root  941880 2016-05-11 08:21 bash
+-rwxr-xr-x. 1 root root   48568 2016-05-11 17:59 cat
+-rwxr-xr-x. 1 root root   55472 2016-05-11 17:59 chgrp
+-rwxr-xr-x. 1 root root   52472 2016-05-11 17:59 chmod
+-rwxr-xr-x. 1 root root   57464 2016-05-11 17:59 chown
+-rwxr-xr-x. 1 root root  122896 2016-05-11 17:59 cp
+-rwxr-xr-x. 1 root root  135808 2014-09-04 20:07 cpio
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:24 csh -> tcsh
+-rwxr-xr-x. 1 root root   45536 2016-05-11 17:59 cut
+-rwxr-xr-x. 1 root root  109672 2012-10-17 16:48 dash
+-rwxr-xr-x. 1 root root   59392 2016-05-11 17:59 date
+-rwxr-xr-x. 1 root root   12600 2015-04-22 19:52 dbus-cleanup-sockets
+-rwxr-xr-x. 1 root root  339080 2015-04-22 19:52 dbus-daemon
+-rwxr-xr-x. 1 root root   18560 2015-04-22 19:52 dbus-monitor
+-rwxr-xr-x. 1 root root   22456 2015-04-22 19:52 dbus-send
+-rwxr-xr-x. 1 root root   11008 2015-04-22 19:52 dbus-uuidgen
+-rwxr-xr-x. 1 root root   55256 2016-05-11 17:59 dd
+-rwxr-xr-x. 1 root root   94224 2016-05-11 17:59 df
+-rwxr-xr-x. 1 root root    9944 2016-05-11 07:58 dmesg
+lrwxrwxrwx. 1 root root       8 2022-02-12 16:19 dnsdomainname -> hostname
+lrwxrwxrwx. 1 root root       8 2022-02-12 16:19 domainname -> hostname
+-rwxr-xr-x. 1 root root   81120 2010-11-12 05:45 dumpkeys
+-rwxr-xr-x. 1 root root   28176 2016-05-11 17:59 echo
+-rwxr-xr-x. 2 root root   53400 2010-11-11 15:28 ed
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:19 egrep -> grep
+-rwxr-xr-x. 1 root root   26368 2016-05-11 17:59 env
+lrwxrwxrwx. 1 root root       2 2022-02-12 16:19 ex -> vi
+-rwxr-xr-x. 1 root root   25120 2016-05-11 17:59 false
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:19 fgrep -> grep
+-rwxr-xr-x. 1 root root  239000 2016-03-01 21:25 find
+-rwxr-xr-x. 1 root root   41896 2016-05-11 07:58 findmnt
+-rwsr-x---. 1 root fuse   32368 2016-05-11 16:38 fusermount
+-rwxr-xr-x. 1 root root  382752 2015-11-10 18:31 gawk
+-rwxr-xr-x. 1 root root   33488 2014-06-02 17:00 gettext
+-rwxr-xr-x. 1 root root  167744 2015-11-10 18:52 grep
+lrwxrwxrwx. 1 root root       3 2022-02-12 16:19 gtar -> tar
+-rwxr-xr-x. 1 root root      61 2014-03-18 05:00 gunzip
+-rwxr-xr-x. 1 root root   68704 2014-03-18 05:00 gzip
+-rwxr-xr-x. 1 root root   17872 2012-05-10 17:17 hostname
+-rwxr-xr-x. 1 root root   15320 2016-05-12 04:34 ipcalc
+lrwxrwxrwx. 1 root root      41 2022-02-12 16:21 iptables-xml -> /etc/alternatives/bin-iptables-xml.x86_64
+lrwxrwxrwx. 1 root root      20 2022-02-12 16:21 iptables-xml-1.4.7 -> /sbin/iptables-multi
+-rwxr-xr-x. 1 root root   11296 2010-11-12 05:45 kbd_mode
+-rwxr-xr-x. 1 root root   25560 2014-10-15 20:08 keyctl
+-rwxr-xr-x. 1 root root   15240 2016-05-11 07:58 kill
+lrwxrwxrwx. 1 root root      21 2022-02-12 16:24 ksh -> /etc/alternatives/ksh
+-rwxr-xr-x. 1 root root 1507840 2016-05-11 08:36 ksh93
+-rwxr-xr-x. 1 root root   26256 2016-05-11 17:59 link
+-rwxr-xr-x. 1 root root   49504 2016-05-11 17:59 ln
+-rwxr-xr-x. 1 root root  112208 2010-11-12 05:45 loadkeys
+-rwxr-xr-x. 1 root root   15048 2016-05-11 07:58 logger
+-rwxr-xr-x. 1 root root   31552 2016-05-11 07:58 login
+-rwxr-xr-x. 1 root root  117048 2016-05-11 17:59 ls
+-rwxr-xr-x. 1 root root   62656 2016-05-11 07:58 lsblk
+lrwxrwxrwx. 1 root root      22 2022-02-12 16:20 mail -> /etc/alternatives/mail
+-rwxr-xr-x. 1 root root  390744 2014-12-17 03:57 mailx
+-rwxr-xr-x. 1 root root   50056 2016-05-11 17:59 mkdir
+-rwxr-xr-x. 1 root root   33144 2016-05-11 17:59 mknod
+-rwxr-xr-x. 1 root root   38048 2016-05-11 17:59 mktemp
+-rwxr-xr-x. 1 root root   41216 2016-05-11 07:58 more
+-rwsr-xr-x. 1 root root   77336 2016-05-11 07:58 mount
+-rwxr-xr-x. 1 root root    9848 2015-07-24 07:21 mountpoint
+-rwxr-xr-x. 1 root root  113392 2016-05-11 17:59 mv
+-rwxr-xr-x. 1 root root  178896 2010-11-12 16:18 nano
+-rwxr-xr-x. 1 root root  128216 2012-05-10 17:17 netstat
+-rwxr-xr-x. 1 root root   28784 2016-05-11 17:59 nice
+lrwxrwxrwx. 1 root root       8 2022-02-12 16:19 nisdomainname -> hostname
+-rwsr-xr-x. 1 root root   38264 2016-05-11 03:32 ping
+-rwsr-xr-x. 1 root root   36488 2016-05-11 03:32 ping6
+-rwxr-xr-x. 1 root root   36808 2014-08-12 02:59 plymouth
+-rwxr-xr-x. 1 root root   89504 2016-05-11 08:23 ps
+-rwxr-xr-x. 1 root root   31656 2016-05-11 17:59 pwd
+-rwxr-xr-x. 1 root root   11576 2016-05-11 07:58 raw
+-rwxr-xr-x. 1 root root   40056 2016-05-11 17:59 readlink
+-rwxr-xr-x. 2 root root   53400 2010-11-11 15:28 red
+-rwxr-xr-x. 1 root root     576 2008-04-17 02:50 redhat_lsb_init
+-rwxr-xr-x. 1 root root   57440 2016-05-11 17:59 rm
+-rwxr-xr-x. 1 root root   40480 2016-05-11 17:59 rmdir
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:25 rnano -> nano
+-rwxr-xr-x. 1 root root   30648 2016-05-11 08:49 rpm
+lrwxrwxrwx. 1 root root       2 2022-02-12 16:19 rvi -> vi
+lrwxrwxrwx. 1 root root       2 2022-02-12 16:19 rview -> vi
+-rwxr-xr-x. 1 root root   72248 2012-06-22 22:41 sed
+-rwxr-xr-x. 1 root root   42384 2010-11-12 05:45 setfont
+-rwxr-xr-x. 1 root root   23672 2010-08-23 08:06 setserial
+lrwxrwxrwx. 1 root root       4 2022-02-12 16:19 sh -> bash
+-rwxr-xr-x. 1 root root   27848 2016-05-11 17:59 sleep
+-rwxr-xr-x. 1 root root   98872 2016-05-11 17:59 sort
+-rwxr-xr-x. 1 root root   65032 2016-05-11 17:59 stty
+-rwsr-xr-x. 1 root root   34904 2016-05-11 17:59 su
+-rwxr-xr-x. 1 root root   25432 2016-05-11 17:59 sync
+-rwxr-xr-x. 1 root root  395496 2016-05-11 03:33 tar
+-rwxr-xr-x. 1 root root   14880 2016-05-11 07:58 taskset
+-rwxr-xr-x. 1 root root  388064 2016-05-11 09:30 tcsh
+-rwxr-xr-x. 1 root root   52560 2016-05-11 17:59 touch
+-rwxr-xr-x. 1 root root   11440 2016-05-11 03:32 tracepath
+-rwxr-xr-x. 1 root root   12304 2016-05-11 03:32 tracepath6
+-rwxr-xr-x. 1 root root   57480 2010-11-12 00:30 traceroute
+lrwxrwxrwx. 1 root root      10 2022-02-12 16:26 traceroute6 -> traceroute
+-rwxr-xr-x. 1 root root   25120 2016-05-11 17:59 true
+-rwxr-xr-x. 1 root root   15008 2016-05-11 16:38 ulockmgr_server
+-rwsr-xr-x. 1 root root   53472 2016-05-11 07:58 umount
+-rwxr-xr-x. 1 root root   27776 2016-05-11 17:59 uname
+-rwxr-xr-x. 1 root root    2555 2010-11-12 05:45 unicode_start
+-rwxr-xr-x. 1 root root     363 2010-11-12 05:45 unicode_stop
+-rwxr-xr-x. 1 root root   25760 2016-05-11 17:59 unlink
+-rwxr-xr-x. 1 root root   10256 2016-05-12 04:34 usleep
+-rwxr-xr-x. 1 root root  913080 2015-07-24 11:23 vi
+lrwxrwxrwx. 1 root root       2 2022-02-12 16:19 view -> vi
+lrwxrwxrwx. 1 root root       8 2022-02-12 16:19 ypdomainname -> hostname
+-rwxr-xr-x. 1 root root      62 2014-03-18 05:00 zcat
+[root@optimus bin]# clear
+[root@optimus bin]# .pwd
+-bash: .pwd: command not found
+[root@optimus bin]# ./pwd
+/bin
+[root@optimus bin]# ./cd /
+-bash: ./cd: 그런 파일이나 디렉터리가 없습니다
+[root@optimus bin]# ./ls /root
+anaconda-ks.cfg  install.log  install.log.syslog  test  공개  다운로드  문서  바탕화면  비디오  사진  음악  템플릿
+[root@optimus bin]# export |grep PATH
+declare -x PATH="/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin"
+[root@optimus bin]# clear
+[root@optimus bin]# mkdir /home/kgitbank/kgitbankbin
+[root@optimus bin]# cd /home/kgitbank/kgitbankbin/
+[root@optimus kgitbankbin]# pwd
+/home/kgitbank/kgitbankbin
+[root@optimus kgitbankbin]# cp /bin/pwd aaa
+[root@optimus kgitbankbin]# ll
+합계 32
+-rwxr-xr-x. 1 root root 31656 2022-02-19 20:53 aaa
+[root@optimus kgitbankbin]# cp /bin/ls bbb
+[root@optimus kgitbankbin]# ll
+합계 148
+-rwxr-xr-x. 1 root root  31656 2022-02-19 20:53 aaa
+-rwxr-xr-x. 1 root root 117048 2022-02-19 20:53 bbb
+[root@optimus kgitbankbin]# aaa
+-bash: aaa: command not found
+[root@optimus kgitbankbin]# bbb
+-bash: bbb: command not found
+[root@optimus kgitbankbin]# ./aaa
+/home/kgitbank/kgitbankbin
+[root@optimus kgitbankbin]# ./bbb -l
+합계 148
+-rwxr-xr-x. 1 root root  31656 2022-02-19 20:53 aaa
+-rwxr-xr-x. 1 root root 117048 2022-02-19 20:53 bbb
+[root@optimus kgitbankbin]# aaaa
+-bash: aaaa: command not found
+[root@optimus kgitbankbin]# bbb
+-bash: bbb: command not found
+[root@optimus kgitbankbin]# aaa
+-bash: aaa: command not found
+[root@optimus kgitbankbin]# clear
+[root@optimus kgitbankbin]# mv * /bin
+[root@optimus kgitbankbin]# ls -l
+합계 0
+[root@optimus kgitbankbin]# ls -l /bin/???
+-rwxr-xr-x. 1 root root  31656 2022-02-19 20:53 /bin/aaa
+lrwxrwxrwx. 1 root root      4 2022-02-12 16:19 /bin/awk -> gawk
+-rwxr-xr-x. 1 root root 117048 2022-02-19 20:53 /bin/bbb
+-rwxr-xr-x. 1 root root  48568 2016-05-11 17:59 /bin/cat
+lrwxrwxrwx. 1 root root      4 2022-02-12 16:24 /bin/csh -> tcsh
+-rwxr-xr-x. 1 root root  45536 2016-05-11 17:59 /bin/cut
+-rwxr-xr-x. 1 root root  26368 2016-05-11 17:59 /bin/env
+lrwxrwxrwx. 1 root root     21 2022-02-12 16:24 /bin/ksh -> /etc/alternatives/ksh
+-rwxr-xr-x. 1 root root  31656 2016-05-11 17:59 /bin/pwd
+-rwxr-xr-x. 1 root root  11576 2016-05-11 07:58 /bin/raw
+-rwxr-xr-x. 2 root root  53400 2010-11-11 15:28 /bin/red
+-rwxr-xr-x. 1 root root  30648 2016-05-11 08:49 /bin/rpm
+lrwxrwxrwx. 1 root root      2 2022-02-12 16:19 /bin/rvi -> vi
+-rwxr-xr-x. 1 root root  72248 2012-06-22 22:41 /bin/sed
+-rwxr-xr-x. 1 root root 395496 2016-05-11 03:33 /bin/tar
+[root@optimus kgitbankbin]# clear
+[root@optimus kgitbankbin]# aaa
+/home/kgitbank/kgitbankbin
+[root@optimus kgitbankbin]# bbb
+[root@optimus kgitbankbin]# bbb -l
+합계 0
+[root@optimus kgitbankbin]# bbb --color=auto
+[root@optimus kgitbankbin]# mv /bin/aaa /bin/bbb .
+[root@optimus kgitbankbin]# ls -l
+합계 148
+-rwxr-xr-x. 1 root root  31656 2022-02-19 20:53 aaa
+-rwxr-xr-x. 1 root root 117048 2022-02-19 20:53 bbb
+[root@optimus kgitbankbin]# aaa
+-bash: /bin/aaa: 그런 파일이나 디렉터리가 없습니다
+[root@optimus kgitbankbin]# bbb
+-bash: /bin/bbb: 그런 파일이나 디렉터리가 없습니다
+[root@optimus kgitbankbin]# export PATH=$PATH:/home/kgitbank/kgitbankbin
+[root@optimus kgitbankbin]# export |grep PATH
+declare -x PATH="/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/homeitbank/kgitbankbin"
+[root@optimus kgitbankbin]# aaa
+/home/kgitbank/kgitbankbin
+[root@optimus kgitbankbin]# bbb
+aaa  bbb
+[root@optimus kgitbankbin]# alias bbb='bbb --color=auto'
+[root@optimus kgitbankbin]# bbb
+aaa  bbb
+[root@optimus kgitbankbin]# alias
+alias bbb='bbb --color=auto'
+alias cp='cp -i'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@optimus kgitbankbin]# clear
+[root@optimus kgitbankbin]# bbb
+aaa  bbb
+[root@optimus kgitbankbin]# clear
+[root@optimus kgitbankbin]# cd
+[root@optimus ~]# c.ear
+-bash: c.ear: command not found
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /backup/
+합계 4
+-rw-------. 1 root root 745 2022-02-19 17:02 grub.conf
+[root@optimus ~]# cp /etc/inittab /backup/
+[root@optimus ~]# ls -l /backup/
+합계 8
+-rw-------. 1 root root 745 2022-02-19 17:02 grub.conf
+-rw-r--r--. 1 root root 884 2022-02-19 21:35 inittab
+[root@optimus ~]# clear
+[root@optimus ~]# vi /backup/inittab
+
+[1]+  Stopped                 vi /backup/inittab
+[root@optimus ~]# fg 1
+vi /backup/inittab
+
+[1]+  Stopped                 vi /backup/inittab
+[root@optimus ~]# fg 1
+vi /backup/inittab
+
+[No write since last change]
+합계 8
+-rw-------. 1 root root 745 2022-02-19 17:02 grub.conf
+-rw-r--r--. 1 root root 884 2022-02-19 21:35 inittab
+
+Press ENTER or type command to continue
+[No write since last change]
+/root
+
+Press ENTER or type command to continue
+[No write since last change]
+합계 12
+-rw-r--r--. 1 root root  12 2022-02-19 23:11 a
+-rw-------. 1 root root 745 2022-02-19 17:02 grub.conf
+-rw-r--r--. 1 root root 884 2022-02-19 21:35 inittab
+
+Press ENTER or type command to continue
+[No write since last change]
+합계 16
+-rw-r--r--. 1 root root  12 2022-02-19 23:11 a
+-rw-------. 1 root root 745 2022-02-19 17:02 grub.conf
+-rw-r--r--. 1 root root 884 2022-02-19 21:35 inittab
+-rw-r--r--. 1 root root 501 2022-02-19 23:17 ip
+
+Press ENTER or type command to continue
+합계 24
+-rw-r--r--. 1 root root  12 2022-02-19 23:11 a
+-rw-r--r--. 1 root root   4 2022-02-19 23:20 b
+-rw-r--r--. 1 root root  21 2022-02-19 23:21 c
+-rw-------. 1 root root 745 2022-02-19 17:02 grub.conf
+-rw-r--r--. 1 root root 935 2022-02-19 23:19 inittab
+-rw-r--r--. 1 root root 501 2022-02-19 23:17 ip
+
+Press ENTER or type command to continue
+[root@optimus ~]# clear
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /backup/
+합계 24
+-rw-r--r--. 1 root root  12 2022-02-19 23:11 a
+-rw-r--r--. 1 root root   4 2022-02-19 23:20 b
+-rw-r--r--. 1 root root  21 2022-02-19 23:21 c
+-rw-------. 1 root root 745 2022-02-19 17:02 grub.conf
+-rw-r--r--. 1 root root 935 2022-02-19 23:19 inittab
+-rw-r--r--. 1 root root 501 2022-02-19 23:17 ip
+[root@optimus ~]# vi /backup/d
+[root@optimus ~]# cat -n /backup/d
+     1  ddd
+[root@optimus ~]# clear
+[root@optimus ~]# vi /backup/a
+[root@optimus ~]# vi /backup/a
+[root@optimus ~]# vi /backup/a
+[root@optimus ~]# vi + /backup/a
+[root@optimus ~]# vi +3 /backup/a
+[root@optimus ~]# clear
+[root@optimus ~]# cp /etc/inittab /backup/
+cp: overwrite `/backup/inittab'? y
+[root@optimus ~]# vi /backup/inittab
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l
+합계 104
+-rw-------. 1 root root  1561 2022-02-12 16:27 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2022-02-12 16:27 install.log
+-rw-r--r--. 1 root root 10033 2022-02-12 16:24 install.log.syslog
+drwxr-xr-x. 2 root root  4096 2022-02-19 18:53 test
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 공개
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 다운로드
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 문서
+drwxr-xr-x. 2 root root  4096 2022-02-12 19:14 바탕화면
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 비디오
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 사진
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 음악
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 템플릿
+[root@optimus ~]# vi /backup/inittab
+
+[No write since last change]
+
+Press ENTER or type command to continue
+[No write since last change]
+합계 16
+-rw-r--r--. 1 root root    0 2022-02-20 00:14 1
+-rw-r--r--. 1 root root    0 2022-02-20 00:14 2
+-rw-r--r--. 1 root root    0 2022-02-20 00:14 3
+-rw-r--r--. 1 root root    0 2022-02-20 00:14 4
+drwxr-xr-x. 2 root root 4096 2022-02-20 00:14 a1
+drwxr-xr-x. 2 root root 4096 2022-02-20 00:14 a2
+drwxr-xr-x. 2 root root 4096 2022-02-20 00:14 a3
+drwxr-xr-x. 2 root root 4096 2022-02-20 00:14 a4
+
+Press ENTER or type command to continue
+[root@optimus ~]# clear
+[root@optimus ~]# rm -rf /vi
+[root@optimus ~]#

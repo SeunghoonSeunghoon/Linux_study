@@ -1,0 +1,1185 @@
+login as: root
+root@192.168.1.130's password:
+Last login: Sun Feb 20 07:12:25 2022 from 192.168.1.1
+[root@optimus ~]# history
+    2  cat -n 2 3 1
+    3  cat 1 2 3 > 4
+    4  ll
+    5  cat -n 4
+    6  rm -f 4
+    7  ll
+    8  cat 1 2 3 4 > 5
+    9  clear
+   10  ll
+   11  rm -f 5
+   12  ll
+   13  cat 1 2 3 4 1> 5
+   14  ll
+   15  cat -n 5
+   16  rm -f 5
+   17  ll
+   18  cat 1 2 3 4 2> 5
+   19  ll
+   20  cat -n 5
+   21  rm -f 5
+   22  ll
+   23  clear
+   24  cat 1 2 3 4 > 5 1>&2
+   25  ll
+   26  rm -f 5
+   27  cat 1 2 3 4 > 5 2>&1
+   28  ls -l
+   29  cat -n 5
+   30  clear
+   31  지금부터는 마지막 챕터 6에 있는 기본명령어_마지막문제 풀어주세요
+   32  history
+   33  whoami
+   34  pwd
+   35  clear
+   36  runlevel
+   37  clear
+   38  cat -n /etc/passwd | head -5\
+   39  cat -n /etc/passwd | head -5
+   40  find / -name inittab
+   41  cat -n /etc/inittab  | tail -12
+   42  clear
+   43  more -20 /etc/httpd/conf/httpd.conf
+   44  clear
+   45  cat -n /etc/httpd/conf/httpd.conf | more -20
+   46  clear
+   47  cat -n /etc/httpd/conf/httpd.conf | more -10
+   48  clear
+   49  find /etc -type d | cat -n | more -2
+   50  ls -l /etc/ | more -2
+   51  clear
+   52  find /etc -type d | cat -n
+   53  clear
+   54  mkdir /cattest
+   55  cd /cattest/
+   56  pwd
+   57  cat > a
+   58  cat > b
+   59  kk
+   60  ll
+   61  cat a b > c
+   62  ll
+   63  cat > d
+   64  ll
+   65  cat c >> d
+   66  ll
+   67  clear
+   68  ls -l /etc | cat -n > e
+   69  ll
+   70  find /etc -type d | cat -n > e
+   71  ll
+   72  clear
+   73  find / -name grub.conf -o -name inittab -o -name login.defs
+   74  pwd
+   75  cp /backup/grub.conf /etc/inittab /etc/login.defs .
+   76  ll
+   77  mkdir -p /home/test/c/d/cattest/linux/ && head -2 * > /home/test/c/d/cattest/linux/f
+   78  cat /home/test/c/d/cattest/linux/f
+   79  clear
+   80  exit
+   81  alias
+   82  exoit
+   83  exit
+   84  c
+   85  alias
+   86  clear
+   87  cat -n .bashrc
+   88  clear
+   89  alias
+   90  clear
+   91  exit
+   92  진도나가기~ 시작~
+   93  cat -n /etc/shells
+   94  clear
+   95  ksh
+   96  clear
+   97  alias
+   98  clear
+   99  pwd
+  100  whoami
+  101  ls -al
+  102  clear
+  103  cat -n .bashrc
+  104  cat >> .bashrc
+  105  cat -n .bashrc
+  106  clear
+  107  cat -n /etc/skel/.bash
+  108  cat -n /etc/skel/.bashrc
+  109  cat -n .bashrc
+  110  clear
+  111  c
+  112  alias
+  113  clear
+  114  cat -n /etc/bashrc
+  115  clear
+  116  cat >> /etc/bashrc
+  117  cat -n /etc/bashrc | tail
+  118  clear
+  119  cat -n /etc/profile
+  120  clear
+  121  ls -al .bash_profile
+  122  cat -n .bash_profile
+  123  clear
+  124  cat -n .bahsrc
+  125  cat -n .bashrc
+  126  cat -n /etc/bashrc
+  127  clear
+  128  itbank="
+  129  itbank="kgitbank"
+  130  echo $itbank
+  131  itbank=10
+  132  echo $itbank
+  133  set | grep itbank
+  134  ksh
+  135  echo $itbank
+  136  unset itbank
+  137  echo $itbank
+  138  set |grep itbank
+  139  export itbank="suzilove"
+  140  echo $itbank
+  141  export |grep itbank
+  142  ksh
+  143  echo $itbank
+  144  unset itbank
+  145  echo $itbank
+  146  clear
+  147  ls -l /bin/pwd
+  148  ls -l /bin/ls
+  149  ls -l /bin/mkdir
+  150  ls -l /bin/rmdir
+  151  ls -l /bin/touch
+  152  ls -l /bin/rm
+  153  clear
+  154  cd /bin
+  155  pwd
+  156  cd /
+  157  pwd
+  158  ls -l /pwd
+  159  pwd
+  160  clear
+  161  ls -l /bin/pwd
+  162  cd /bin
+  163  pwd
+  164  ll
+  165  clear
+  166  pwd
+  167  cd /
+  168  pwd
+  169  ls -l pwd
+  170  pwd
+  171  cd /bin
+  172  ls -l pwd
+  173  pwd
+  174  ./pwd
+  175  cd /bin
+  176  clear
+  177  ./ls -l
+  178  clear
+  179  .pwd
+  180  ./pwd
+  181  ./cd /
+  182  ./ls /root
+  183  export |grep PATH
+  184  clear
+  185  mkdir /home/kgitbank/kgitbankbin
+  186  cd /home/kgitbank/kgitbankbin/
+  187  pwd
+  188  cp /bin/pwd aaa
+  189  ll
+  190  cp /bin/ls bbb
+  191  ll
+  192  aaa
+  193  bbb
+  194  ./aaa
+  195  ./bbb -l
+  196  aaaa
+  197  bbb
+  198  aaa
+  199  clear
+  200  mv * /bin
+  201  ls -l
+  202  ls -l /bin/???
+  203  clear
+  204  aaa
+  205  bbb
+  206  bbb -l
+  207  bbb --color=auto
+  208  mv /bin/aaa /bin/bbb .
+  209  ls -l
+  210  aaa
+  211  bbb
+  212  export PATH=$PATH:/home/kgitbank/kgitbankbin
+  213  export |grep PATH
+  214  aaa
+  215  bbb
+  216  alias bbb='bbb --color=auto'
+  217  bbb
+  218  alias
+  219  clear
+  220  bbb
+  221  clear
+  222  cd
+  223  c.ear
+  224  clear
+  225  ls -l /backup/
+  226  cp /etc/inittab /backup/
+  227  ls -l /backup/
+  228  clear
+  229  vi /backup/inittab
+  230  fg 1
+  231  clear
+  232  ls -l /backup/
+  233  vi /backup/d
+  234  cat -n /backup/d
+  235  clear
+  236  vi /backup/a
+  237  vi /backup/a
+  238  vi + /backup/a
+  239  vi +3 /backup/a
+  240  clear
+  241  cp /etc/inittab /backup/
+  242  vi /backup/inittab
+  243  clear
+  244  ls -l
+  245  vi /backup/inittab
+  246  clear
+  247  rm -rf /vi
+  248  clear
+  249  whoami
+  250  pwd
+  251  runlevel
+  252  id
+  253  clear
+  254  vi /etc/login.defs
+  255  vi /etc/default/useradd
+  256  vi /etc/passwd
+  257  vi /etc/shadow
+  258  vi /etc/group
+  259  ls -l /home/
+  260  rm -rf /home/test
+  261  ls -l /home/
+  262  clear
+  263  useradd user1
+  264  clear
+  265  tail -2 /etc/passwd
+  266  tail -2 /etc/shadow
+  267  passwd user1
+  268  tail -2 /etc/shadow
+  269  clear
+  270  tail -2 /etc/group
+  271  ls -l /etc/skel/
+  272  ls -al /etc/skel/
+  273  ls -al ~user1
+  274  clear
+  275  ls -l /var/spool/mail/
+  276  clear
+  277  tail -2 /etc/passwd
+  278  grep user1 /etc/passwd
+  279  grep user1 /etc/passwd /etc/shadow /etc/group && ls -ld ~user1 /var/spool/mail/user1
+  280  clear
+  281  useradd user1
+  282  clear
+  283  tail -2 /etc/passwd
+  284  cd /etc/skel/
+  285  pwd
+  286  ls -l
+  287  ls -al
+  288  mkdir public_html
+  289  vi public_html/index.html
+  290  cat -n public_html/index.html
+  291  cd
+  292  pwd
+  293  useradd user2
+  294  passwd user2
+  295  clear
+  296  useradd user2
+  297  tail -3 /etc/passwd
+  298  tail -3 /etc/shadow
+  299  tail -3 /etc/group
+  300  ls -al /etc/skel/
+  301  ls -al /home/user2
+  302  clear
+  303  cat -n /home/user2/public_html/index.html
+  304  cat -n /etc/skel/public_html/index.html
+  305  ls -l /var/spool/mail/
+  306  clear
+  307  rm -rf /etc/skel/public_html/
+  308  ls -al /etc/skel/
+  309  rm -rf /etc/skel/
+  310  ls -ld /etc/sk
+  311  ls -ld /etc/ske;
+  312  ls -ld /etc/skel
+  313  cp -r /home/user2 /etc/skel
+  314  ls -al /etc/skel/
+  315  rm -rf /etc/skel/public_html/
+  316  ls -al /etc/skel/
+  317  clear
+  318  ls -al /etc/skel/
+  319  clear
+  320  vi /etc/login.defs
+  321  vi /etc/passwd
+  322  clear
+  323  ls
+  324  ls -l
+  325  clear
+  326  tail /etc/passwd
+  327  clear
+  328  useradd -u 700  user3
+  329  passwd user3
+  330  tail -4 /etc/passwd
+  331  tail -4 /etc/shadow
+  332  tail -4 /etc/group
+  333  ls -l /home/
+  334  ls -l /var/spool/mail/
+  335  clear
+  336  useradd -g 800 user4
+  337  groupadd -g 800 iu
+  338  tail -5 /etc/group
+  339  useradd -g iu user4
+  340  clear
+  341  tail /etc/passwd
+  342  tail /etc/group
+  343  clear
+  344  id user4
+  345  clear
+  346  -g 기본그룹 지정
+  347  -G 추가그룹 지정 = 추가그룹으로 지정될 그룹은 미리 생성되어져 있어야 합니다
+  348  useradd -G iu user5
+  349  tail /etc/passwd
+  350  id user5
+  351  tail /etc/group
+  352  clear
+  353  tail /etc/passwd
+  354  groupadd -g 703 suzi
+  355  useradd user6
+  356  tail /etc/passwd
+  357  useradd user7
+  358  tail /etc/passwd
+  359  clear
+  360  tail /etc/passwd
+  361  groupadd -g 705 user8
+  362  useradd user8
+  363  tail /etc/passwd
+  364  clear
+  365  useradd -c 총무부 user9
+  366  tail /etc/passwd
+  367  mkdir -p /export/sdb/home
+  368  useradd -d /export/sdb/home/user10 user10
+  369  tail /etc/passwd
+  370  clear
+  371  ls -ld /export/sdb/home/user10/
+  372  useradd -d /export/sdb/home/bugtest user11
+  373  ls -l /export/sdb/home/
+  374  clear
+  375  useradd -s /bin/ksh user12
+  376  tail /etc/passwd
+  377  clear
+  378  ls -al /etc/skel/
+  379  cp -r /etc/skel/ /etc/skel1
+  380  ls -ld /etc/skel*
+  381  cd /etc/skel1
+  382  pwd
+  383  ls -al
+  384  vi index.html
+  385  cat -n index.html
+  386  ls -al
+  387  cd
+  388  clear
+  389  tail /etc/passwd
+  390  useradd -mk /etc/skel1 user13
+  391  ls -al /home/user13
+  392  clear
+  393  ls -al /etc/skel1 /home/user13
+  394  clear
+  395  man useradd
+  396  clear
+  397  cat -n /etc/default/useradd
+  398  vi /etc/default/useradd
+  399  clear
+  400  cat -n /etc/default/useradd
+  401  tail -1 /etc/passwd
+  402  useradd user14
+  403  passwd user14
+  404  clear
+  405  grep user14 /etc/passwd
+  406  ls -al ~user14
+  407  ls -al /etc/skel1
+  408  ls -l /var/spool/mail/
+  409  clear
+  410  ls -l /home/
+  411  ls -l /export/sdb/home/
+  412  clear
+  413  vi /etc/default/useradd
+  414  cat -n /etc/default/useradd
+  415  clear
+  416  tail /etc/passwd
+  417  이제는 usermod  사용자 수정 할꺼에요 옵션은 useradd랑 똑같아요
+  418  usermod -u 1000 user14
+  419  tail /etc/passwd
+  420  clear
+  421  grep suzi /etc/group
+  422  grep iu /etc/group
+  423  grep user14 /etc/passwd
+  424  usermod -g suzi user14
+  425  grep user14 /etc/passwd
+  426  id user14
+  427  usermod -G iu user14
+  428  id user14
+  429  usermod -c genius user14
+  430  id user14
+  431  grep user14 /etc/passwd
+  432  usermod -s /bin/bash user14
+  433  grep user14 /etc/passwd
+  434  clear
+  435  man usermod
+  436  claer
+  437  clear
+  438  grep user7 /etc/passwd && ls -ld ~user7
+  439  vi /etc/passwd
+  440  ls -l /home/
+  441  ls -ld ~kgitbank
+  442  ls -ld /home/kgitbank/
+  443  vi /etc/passwd
+  444  ls -ld ~kgitbank
+  445  clear
+  446  grep user7 /etc/passwd
+  447  ls -ld ~user7
+  448  ls -al ~user7
+  449  clear
+  450  grep user7 /etc/shadow
+  451  passwd user7
+  452  cear
+  453  clear
+  454  usermod -d /export/sdb/home/user7 user7
+  455  grep user7 /etc/passwd
+  456  ls -ld ~user7
+  457  ls -ld /export/sdb/home/user7
+  458  clear
+  459  ls -ld /home/user7
+  460  clar
+  461  clear
+  462  mv /home/user7 /export/sdb/home/
+  463  ls -ld /export/sdb/home/user7
+  464  ls -ld /home/user7
+  465  clear
+  466  grep user7 /etc/passwd && ls -ld ~user7
+  467  ls -ld /home/user7
+  468  usermod -md /home/user7 user7
+  469  grep user7 /etc/passwd && ls -ld ~user7
+  470  usermod -md /export/sdb/home/user7 user7
+  471  grep user7 /etc/passwd && ls -ld ~user7
+  472  ls -ld /home/user7
+  473  clear
+  474  userdel user7
+  475  grep user7 /etc/passwd
+  476  grep user7 /etc/shadow
+  477  grep user7 /etc/group
+  478  ls -ld /export/sdb/home/user7
+  479  ls -l /var/spool/mail/user7
+  480  userdel -r user7
+  481  rm -rf /export/sdb/home/user7 /var/spool/mail/user7
+  482  ls -ld /export/sdb/home/user7 /var/spool/mail/user7
+  483  clear
+  484  userderl -r user1
+  485  userdel -r user1
+  486  userdel -r user2
+  487  userdel -r user3
+  488  userdel -r user4
+  489  userdel -r user5
+  490  userdel -r user6
+  491  userdel -r user7
+  492  userdel -r user8
+  493  userdel -r user9
+  494  userdel -r user10
+  495  userdel -r user11
+  496  userdel -r user12
+  497  userdel -r user13
+  498  userdel -r user14
+  499  userdel -r user15
+  500  userdel -r user16
+  501  clear
+  502  tail /etc/passwd
+  503  tail /etc/shadow
+  504  clear
+  505  tail /etc/group
+  506  groupdel iu
+  507  groupdel suzi
+  508  groupdel user8
+  509  groupdel user14
+  510  tail /etc/group
+  511  clear
+  512  rm -rf /export/ /etc/skel?
+  513  ls -ld /etc/skel*
+  514  ls -l /var/spool/mail/
+  515  cat -n /etc/default/useradd
+  516  clear
+  517  tail /etc/passwd
+  518  tail /etc/shadow
+  519  clear
+  520  tail /etc/group
+  521  clear
+  522  ls -l /home/
+  523  ls -l /var/spool/mail/
+  524  clear
+  525  rm -rf /export
+  526  ls -ld /export
+  527  ls -ld /etc/skel*
+  528  rm -rf /etc/skel?
+  529  cat -n /etc/default/useradd
+  530  점검끝~ = 초기화했어요
+  531  침ㄱ
+  532  clear
+  533  grep kgitbank /etc/shadow
+  534  cat -n /etc/default/useradd
+  535  clear
+  536  grep kgitbank /etc/group
+  537  ls -l /etc/shadow /etc/gshadow
+  538  clear
+  539  useradd iu
+  540  useradd suzi
+  541  passwd iu
+  542  passwd suzi
+  543  clear
+  544  tail -3 /etc/passwd
+  545  clear
+  546  id kgitank
+  547  id kgitbank
+  548  id iu
+  549  id suzi
+  550  clear
+  551  usermod -G kgitbank iu
+  552  grep kgitbank /etc/group
+  553  usermod -G kgitbank suzi
+  554  grep kgitbank /etc/group
+  555  id iu
+  556  id suzi
+  557  clear
+  558  vi /etc/group
+  559  id iu
+  560  id suzi
+  561  vi /etc/group
+  562  id iu
+  563  clear
+  564  gpasswd -d iu kgitbank
+  565  id iu
+  566  gpasswd -a iu,suzi kgitbank
+  567  gpasswd -a iu kgitbank
+  568  gpasswd -a suzi kgitbank
+  569  grep kgitbank /etc/group
+  570  gpasswd -d iu,suzi kgitbank
+  571  gpasswd -d iu kgitbank
+  572  gpasswd -d suzi kgitbank
+  573  clear
+  574  gpasswd -M iu,suzi kgitbank
+  575  grep kgitbank /etc/group
+  576  gpasswd -M root kgitbank
+  577  grep kgitbank /etc/group
+  578  usermod -G 얘보다 훨씬 좋아요
+  579  clear
+  580  tail /etc/passwd
+  581  userdel -r iu
+  582  userdel -r suzio\
+  583  userdel -r suzi
+  584  tail /etc/passwd
+  585  tail /etc/shadow
+  586  tail /etc/group
+  587  ls -l /home/
+  588  ls -l /export
+  589  ls -ld /etc/skel*\
+  590  ls -ld /etc/skel*
+  591  vi /etc/default/useradd
+  592  clear
+  593  mkdir -p /xeneration/spur/home
+  594  useradd -d /xeneration/spur/home/user1 user1
+  595  passwd user1
+  596  tail /etc/passwd
+  597  clear
+  598  useradd -d /xeneration/spur/home/user2 -s /bin/ksh user2
+  599  passwd user2
+  600  clear
+  601  tail /etc/passwd
+  602  clear
+  603  mkdir -p /test/home
+  604  useradd -d /test/home/user3 -s /bin/ksh -c genius -u 510 user3
+  605  passwd user3
+  606  clear
+  607  tail /etc/passwd
+  608  ls -ld ~user3
+  609  clear
+  610  ls -al /etc/skel/
+  611  clear
+  612  cp -r /etc/skel/ /etc/skel1
+  613  ls -ld /etc/skel*
+  614  cd /etc/skel1
+  615  pwd
+  616  ls -al
+  617  pwd
+  618  vi index.html
+  619  cat -n index.html
+  620  cd
+  621  pwd
+  622  clear
+  623  useradd -mkd /etc/skel1 user4
+  624  useradd -mk /etc/skel1 user4
+  625  passwd user4
+  626  clear
+  627  useradd user5
+  628  passwd user5
+  629  grep user5 /etc/passwd && ls -ld ~user5
+  630  usermod -d /xeneration/spur/home/user5 user5
+  631  grep user5 /etc/passwd
+  632  ls -ld ~user5
+  633  clear
+  634  ls -ld /home/user5
+  635  mv /home/user5 /xeneration/spur/home/
+  636  ls -ld ~user5
+  637  clear
+  638  useradd user6
+  639  passwd user6
+  640  clear
+  641  grep user6 /etc/passwd && ls -ld ~user6
+  642  ls -l /xeneration/spur/home/
+  643  usermod -md /xeneration/spur/home/user6 user6
+  644  grep user6 /etc/passwd && ls -ld ~user6
+  645  ls -ld /home/user6
+  646  clear
+  647  cp -r /etc/skel /aaa
+  648  ls -al /aaa/
+  649  clear
+  650  cd /aaa/
+  651  ls -al
+  652  mkdir test
+  653  cd test/
+  654  touch aaa aa a 1 11 111 1321 1231
+  655  ll
+  656  cd
+  657  clear
+  658  useradd -mk /aaa/ user7
+  659  passwd user7
+  660  clear
+  661  ls -lR ~user7
+  662  clear
+  663  userdel -r user1
+  664  userdel -r user2
+  665  userdel -r user3
+  666  userdel -r user4
+  667  userdel -r user5
+  668  tail /etc/passwd
+  669  clear
+  670  ls -l /backup/
+  671  mkdir /backup/home
+  672  ls -al /etc/skel1
+  673  clear
+  674  vi /etc/default/useradd
+  675  cp -r /etc/skel1 /test/
+  676  ls -al /test/skel1/
+  677  clear
+  678  useradd user8
+  679  useradd user9
+  680  useradd user10
+  681  ls -l ~user8 ~user9 ~user10
+  682  tail /etc/passwd
+  683  userdel -r user10
+  684  userdel -r user9
+  685  userdel -r user8
+  686  userdel -r user7
+  687  userdel -r user6
+  688  clear
+  689  tail /etc/passwd
+  690  tail /etc/shadow
+  691  tail /etc/group
+  692  clear
+  693  ls -l /home/
+  694  rm -rf /xeneration/ /backup/home/ /aaa /etc/skel?
+  695  vi /etc/default/
+  696  vi /etc/default/useradd
+  697  clear
+  698  tail /etc/passwd
+  699  exit
+  700  netstat -lntup |grep dhclient
+  701  ifconfig eth0
+  702  ifup eth0
+  703  clear
+  704  netstat -lntup |grep dhclient
+  705  netstat -lntup |grep sshd
+  706  ifconfig eth0
+  707  clear
+  708  ping 192.168.1.1
+  709  clear
+  710  ifconfig eth0
+  711  clear
+  712  ifconfig eth0
+  713  claer
+  714  clear
+  715  netstat -lntup |grep dhclient
+  716  ifconfig eth0
+  717  ifup eth0
+  718  clear
+  719  ifconfig eth0
+  720  ping 192.168.1.1
+  721  clear
+  722  ifconfig eth0
+  723  clear
+  724  tail /etc/passwd
+  725  useradd -c testuser -s /bin/ksh user1
+  726  passwd user1
+  727  clear
+  728  grep user1 /etc/passwd /etc/shadow /etc/group && ls -ld ~user1 /var/spool/mail/user1
+  729  clear
+  730  cp -r /etc/skel/ /etc/skel2
+  731  touch /etc/skel2
+  732  touch /etc/skel2/kgitbank
+  733  ls -al /etc/skel2
+  734  clear
+  735  useradd -mk /etc/skel2 user2
+  736  passwd user2
+  737  ls -l ~user2
+  738  clear
+  739  mkdir /etc/skel3
+  740  cd /etc/skel3
+  741  pwd
+  742  ls -al
+  743  ls -al /etc/skel
+  744  clear
+  745  cp -r /etc/skel/.* .
+  746  y
+  747  clear
+  748  ls -al
+  749  clear
+  750  ls -l /etc/
+  751  clear
+  752  ls -al
+  753  clear
+  754  rm -rf *
+  755  ls -al
+  756  rm -f .pwd.lock
+  757  ls -al
+  758  clar
+  759  clear
+  760  ls -al
+  761  rm -rf .*
+  762  ls -al
+  763  clear
+  764  cp -r /etc/skel/. .
+  765  ls -al
+  766  rm -rf .*
+  767  ls -al
+  768  clear
+  769  cp -r /etc/skel/.??* .
+  770  ls -al
+  771  rm -rf .*
+  772  ls -al
+  773  clear
+  774  ls -al /etc/skel
+  775  clear
+  776  ls -al
+  777  cp -r /etc/skel/. .
+  778  ls -al
+  779  touch test
+  780  ll
+  781  cd
+  782  useradd -mk /etc/skel3 user3
+  783  passwd user3
+  784  clear
+  785  ls -al ~user3
+  786  clera
+  787  clear
+  788  mkdir /etc/skel4
+  789  cd /etc/skel4
+  790  pwd
+  791  ls -al
+  792  cp -r /etc/skel/.??* .
+  793  ls -al
+  794  clear
+  795  mkdir public_html
+  796  ll
+  797  cd
+  798  useradd -mk /etc/skel4 user4
+  799  passwd user4
+  800  clear
+  801  ls -l ~user4
+  802  clear
+  803  vi /etc/default/useradd
+  804  mkdir -p /export/home
+  805  useradd user5
+  806  grep user5 /etc/passwd && ls -ld ~user5
+  807  clear
+  808  mkdir -p /local_host/home
+  809  vi /etc/default/useradd
+  810  clear
+  811  useradd -d /local_host/home/user6 user6
+  812  passwd user6
+  813  clear
+  814  grep user6 /etc/passwd && ls -ld ~user6
+  815  ls -al /etc/skel4
+  816  clear
+  817  ls -al ~user6
+  818  clear
+  819  vi /etc/default/useradd
+  820  groupadd g1
+  821  ls -ld /local_host/home/
+  822  ls -ld /etc/skel*
+  823  clear
+  824  mkdir /etc/skel5
+  825  cd /etc/skel5
+  826  clear
+  827  cp -r /etc/skel/. .
+  828  ls -al
+  829  clear
+  830  mkdir public_html
+  831  vi public_html/index.html
+  832  cd
+  833  useradd -u 700 -g g1 -c 김덕현천재 -d /local_host/home/user7 -s /bin/ksh -mk /etc/skel5 user7
+  834  passwd user7
+  835  clear
+  836  grep user7 /etc/passwd /etc/shadow /etc/group && ls -ld ~user7 /var/spool/mail/user7
+  837  cler
+  838  clear
+  839  ls -lR ~user7
+  840  cat -n ~user7/public_html/index.html
+  841  clear
+  842  tail /etc/passwd
+  843  clear
+  844  ls -ld ~user5 ~user6 ~user7
+  845  clear
+  846  ls -l /home/
+  847  clear
+  848  usermod -md /home/user5 user5
+  849  usermod -md /home/user6 user6
+  850  usermod -md /home/user7 user7
+  851  tail -3 /etc/passwd
+  852  clear
+  853  ls -l /local_host/home/
+  854  ls -l /export/home/
+  855  ls -l /home/
+  856  clear
+  857  userdel user7
+  858  grep user7 /etc/passwd /etc/shadow /etc/group
+  859  ls -ld /home/user7 /var/spool/mail/user7
+  860  rm -rf /home/user7 /var/spool/mail/user7
+  861  ls -ld /home/user7 /var/spool/mail/user7
+  862  clear
+  863  usedel -r user6
+  864  userdel -r user6
+  865  grep user6 /etc/passwd /etc/shadow /etc/group
+  866  ls -ld /home/user6 /var/spool/mail/user6
+  867  clear
+  868  tail /etc/passwd
+  869  userdel -r user1
+  870  userdel -r user2
+  871  userdel -r user3
+  872  userdel -r user4
+  873  userdel -r user5
+  874  clear
+  875  tail /etc/passwd
+  876  clear
+  877  tail /etc/shadow
+  878  tail /etc/group
+  879  groupdel g1
+  880  tail /etc/group
+  881  ls -l /home/
+  882  clear
+  883  rm -rf /test/ /local_host/ /etc/skel?
+  884  ls -ld /test /local_host /etc/skel*
+  885  cat -n /etc/default/useradd
+  886  clear
+  887  exit
+  888  whoami
+  889  ls -l
+  890  celar
+  891  clear
+  892  ls -l /dev
+  893  clear
+  894  pwd
+  895  ll
+  896  touch 1
+  897  ll ?
+  898  cat > 2
+  899  ll ?
+  900  vi 3
+  901  clear
+  902  ll ?
+  903  clear
+  904  ls -l /bin
+  905  clear
+  906  ls -l /bin/pwd
+  907  ls -l /bin/
+  908  clear
+  909  vi 1
+  910  cat -n /bin/pwd
+  911  PuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTY
+  912  clear
+  913  vi 1
+  914  vi 2
+  915  vi 3
+  916  cat -n 1 2 3
+  917  ls -l ?
+  918  chmod 755 ?
+  919  ls -l ?
+  920  1
+  921  mv ? /bin
+  922  ls -l ?
+  923  ls -l /bin/?
+  924  3
+  925  1
+  926  3
+  927  2
+  928  3
+  929  clear
+  930  ls -l /bin/?
+  931  clear
+  932  find / -name *.sh
+  933  ls -ld /usr/lib64/nspluginwrapper/npviewer.sh
+  934  clear
+  935  ls -l
+  936  clear
+  937  useradd user1
+  938  passwd user1
+  939  useradd user2
+  940  passwd user2
+  941  tail -3 /etc/passwd
+  942  clear
+  943  ls -ld ~kgitbank/ ~user1/ ~user2/
+  944  vi /etc/login.defs
+  945  clear
+  946  whoami
+  947  pwd
+  948  cd ~kgitbank
+  949  pwd
+  950  cd
+  951  pwd
+  952  clear
+  953  ls -ld /
+  954  ls -ld /home/
+  955  cd /home/
+  956  clear
+  957  ls -ld /home/kgitbank/
+  958  clear
+  959  whoami
+  960  cd
+  961  pwd
+  962  rm -rf ~kgitbank/*
+  963  ls -l ~kgitbank/
+  964  clear
+  965  whoami
+  966  pwd
+  967  mkdir ~kgitbank/test_root
+  968  umask
+  969  ls -l ~kgitbank/
+  970  ls -l ~kgitbank/test_kg/
+  971  clear
+  972  cat -n ~kgitbank/1
+  973  whoami
+  974  pwd
+  975  clear
+  976  whoami
+  977  pwd
+  978  cat -n /etc/profile
+  979  clear
+  980  cat -n /etc/bashrc
+  981  clear
+  982  whoami
+  983  pwd
+  984  cd ~kgitbank/
+  985  clear
+  986  ll
+  987  pwd
+  988  whoami
+  989  chown root test_kg/
+  990  ls -ld test_kg/
+  991  chown :root test_kg/
+  992  ls -ld test_kg/
+  993  chown kgitbank: test_kg/
+  994  ls -ld test_kg/
+  995  chown user1:user2 test_kg/
+  996  ls -ld test_kg/
+  997  chgrp kgitbank test_kg/
+  998  ls -ld test_kg/
+  999  clear
+ 1000  exit
+ 1001  history
+[root@optimus ~]# clear
+[root@optimus ~]# whoami
+root
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# ll
+합계 104
+-rw-------. 1 root root  1561 2022-02-12 16:27 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2022-02-12 16:27 install.log
+-rw-r--r--. 1 root root 10033 2022-02-12 16:24 install.log.syslog
+drwxr-xr-x. 2 root root  4096 2022-02-19 18:53 test
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 공개
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 다운로드
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 문서
+drwxr-xr-x. 2 root root  4096 2022-02-12 19:14 바탕화면
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 비디오
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 사진
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 음악
+drwxr-xr-x. 2 root root  4096 2022-02-12 16:51 템플릿
+[root@optimus ~]# rm -rf test
+[root@optimus ~]# ls -ld test
+ls: cannot access test: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# clear
+[root@optimus ~]# touch 1
+[root@optimus ~]# mv 1 a
+[root@optimus ~]# ll ?
+-rw-r--r--. 1 root root 0 2022-02-20 09:28 a
+[root@optimus ~]# mv a 1
+[root@optimus ~]# ll ?
+-rw-r--r--. 1 root root 0 2022-02-20 09:28 1
+[root@optimus ~]# rm -f 1
+[root@optimus ~]# ll ?
+ls: cannot access ?: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# touch 1
+[root@optimus ~]# chattr +i 1
+[root@optimus ~]# mv 1 a
+mv: cannot move `1' to `a': 명령을 허용하지 않음
+[root@optimus ~]# rm -f 1
+rm: cannot remove `1': 명령을 허용하지 않음
+[root@optimus ~]# ll ?
+-rw-r--r--. 1 root root 0 2022-02-20 09:29 1
+[root@optimus ~]# chattr -i 1
+[root@optimus ~]# rm -f 1
+[root@optimus ~]# ll ?
+ls: cannot access ?: 그런 파일이나 디렉터리가 없습니다
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir /acl
+[root@optimus ~]# ls -ld /acl
+drwxr-xr-x. 2 root root 4096 2022-02-20 09:35 /acl
+[root@optimus ~]# getfacl /acl/
+getfacl: Removing leading '/' from absolute path names
+# file: acl/
+# owner: root
+# group: root
+user::rwx
+group::r-x
+other::r-x
+
+[root@optimus ~]# setfacl -m u:user1:rwx,u:user2:rwx,u:kgitbank:rwx /acl
+[root@optimus ~]# ls -ld /acl
+drwxrwxr-x+ 2 root root 4096 2022-02-20 09:35 /acl
+[root@optimus ~]# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::rwx
+user:kgitbank:rwx
+user:user1:rwx
+user:user2:rwx
+group::r-x
+mask::rwx
+other::r-x
+
+[root@optimus ~]# setfacl -x u:user1 /acl
+[root@optimus ~]# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::rwx
+user:kgitbank:rwx
+user:user2:rwx
+group::r-x
+mask::rwx
+other::r-x
+
+[root@optimus ~]# setfacl -b /acl
+[root@optimus ~]# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::rwx
+group::r-x
+other::r-x
+
+[root@optimus ~]# ls -ld /acl
+drwxr-xr-x. 2 root root 4096 2022-02-20 09:35 /acl
+[root@optimus ~]# clear
+[root@optimus ~]# setfacl -m u:kgitbank:rwx,u:user1:x /acl
+[root@optimus ~]# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::rwx
+user:kgitbank:rwx
+user:user1:--x
+group::r-x
+mask::rwx
+other::r-x
+
+[root@optimus ~]# cler
+-bash: cler: command not found
+[root@optimus ~]# clear
+[root@optimus ~]# a:kgitbank:rwx
+-bash: a:kgitbank:rwx: command not found
+[root@optimus ~]# user:user1:--x
+-bash: user:user1:--x: command not found
+[root@optimus ~]# whoami
+root
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# setfacl -b /acl
+[root@optimus ~]# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::rwx
+group::r-x
+other::r-x
+
+[root@optimus ~]# ls -ld /acl
+drwxr-xr-x. 2 root root 4096 2022-02-20 09:46 /acl
+[root@optimus ~]# cear
+-bash: cear: command not found
+[root@optimus ~]# clear
+[root@optimus ~]# grep wheel /etc/group
+wheel:x:10:
+[root@optimus ~]# clear
+[root@optimus ~]# ls -l /bin/su
+-rwsr-xr-x. 1 root root 34904 2016-05-11 17:59 /bin/su
+[root@optimus ~]# umas
+-bash: umas: command not found
+[root@optimus ~]# umask
+0022
+[root@optimus ~]# chmod 755 /bin/su
+[root@optimus ~]# ls -l /bin/su
+-rwxr-xr-x. 1 root root 34904 2016-05-11 17:59 /bin/su
+[root@optimus ~]# chmod 4755 /bin/su
+[root@optimus ~]# ls -l /bin/su
+-rwsr-xr-x. 1 root root 34904 2016-05-11 17:59 /bin/su
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]# clear
+[root@optimus ~]# chown :wheel /bin/su
+[root@optimus ~]# ls -l /bin/su
+-rwxr-xr-x. 1 root wheel 34904 2016-05-11 17:59 /bin/su
+[root@optimus ~]# usermod -G wheel kgitbank
+[root@optimus ~]# chmod 4750 /bin/su
+[root@optimus ~]# usermod -G wheel kgitbank
+[root@optimus ~]# ls -l /bin/su
+-rwsr-x---. 1 root wheel 34904 2016-05-11 17:59 /bin/su
+[root@optimus ~]# chmod 4755 /bin/su
+[root@optimus ~]# ls -l /bin/su
+-rwsr-xr-x. 1 root wheel 34904 2016-05-11 17:59 /bin/su
+[root@optimus ~]# chmod 4750 /bin/su
+[root@optimus ~]# ls -l /bin/su
+-rwsr-x---. 1 root wheel 34904 2016-05-11 17:59 /bin/su
+[root@optimus ~]# clear
+[root@optimus ~]# grep wheel /etc/group
+wheel:x:10:kgitbank
+[root@optimus ~]# gpasswd -a user1 wheel
+사용자 user1을(를) wheel 그룹에 등록 중
+[root@optimus ~]# grep wheel /etc/group
+wheel:x:10:kgitbank,user1
+[root@optimus ~]#

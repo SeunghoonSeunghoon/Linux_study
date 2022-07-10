@@ -1,0 +1,526 @@
+login as: root
+root@192.168.1.130's password:
+Last login: Sat Feb 19 17:44:30 2022 from 192.168.1.1
+[root@optimus ~]# whoami
+root
+[root@optimus ~]# pwd
+/root
+[root@optimus ~]# clear
+[root@optimus ~]# runlevel
+N 5
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /etc/passwd | head -5\
+> ^C
+[root@optimus ~]# cat -n /etc/passwd | head -5
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+[root@optimus ~]# find / -name inittab
+/etc/inittab
+
+[root@optimus ~]#
+[root@optimus ~]#
+[root@optimus ~]# cat -n /etc/inittab  | tail -12
+    15  # upstart works, see init(5), init(8), and initctl(8).
+    16  #
+    17  # Default runlevel. The runlevels used are:
+    18  #   0 - halt (Do NOT set initdefault to this)
+    19  #   1 - Single user mode
+    20  #   2 - Multiuser, without NFS (The same as 3, if you do not have networking)
+    21  #   3 - Full multiuser mode
+    22  #   4 - unused
+    23  #   5 - X11
+    24  #   6 - reboot (Do NOT set initdefault to this)
+    25  #
+    26  id:5:initdefault:
+[root@optimus ~]# clear
+[root@optimus ~]# more -20 /etc/httpd/conf/httpd.conf
+#
+# This is the main Apache server configuration file.  It contains the
+# configuration directives that give the server its instructions.
+# See <URL:http://httpd.apache.org/docs/2.2/> for detailed information.
+# In particular, see
+# <URL:http://httpd.apache.org/docs/2.2/mod/directives.html>
+# for a discussion of each configuration directive.
+#
+#
+# Do NOT simply read the instructions in here without understanding
+# what they do.  They're here only as hints or reminders.  If you are unsure
+# consult the online docs. You have been warned.
+#
+# The configuration directives are grouped into three basic sections:
+#  1. Directives that control the operation of the Apache server process as a
+#     whole (the 'global environment').
+#  2. Directives that define the parameters of the 'main' or 'default' server,
+#     which responds to requests that aren't handled by a virtual host.
+#     These directives also provide default values for the settings
+#     of all virtual hosts.
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /etc/httpd/conf/httpd.conf | more -20
+     1  #
+     2  # This is the main Apache server configuration file.  It contains the
+     3  # configuration directives that give the server its instructions.
+     4  # See <URL:http://httpd.apache.org/docs/2.2/> for detailed information.
+     5  # In particular, see
+     6  # <URL:http://httpd.apache.org/docs/2.2/mod/directives.html>
+     7  # for a discussion of each configuration directive.
+     8  #
+     9  #
+    10  # Do NOT simply read the instructions in here without understanding
+    11  # what they do.  They're here only as hints or reminders.  If you are unsure
+    12  # consult the online docs. You have been warned.
+    13  #
+    14  # The configuration directives are grouped into three basic sections:
+    15  #  1. Directives that control the operation of the Apache server process as a
+    16  #     whole (the 'global environment').
+    17  #  2. Directives that define the parameters of the 'main' or 'default' server,
+    18  #     which responds to requests that aren't handled by a virtual host.
+    19  #     These directives also provide default values for the settings
+    20  #     of all virtual hosts.
+    21  #  3. Settings for virtual hosts, which allow Web requests to be sent to
+    22  #     different IP addresses or hostnames and have them handled by the
+    23  #     same Apache server process.
+    24  #
+    25  # Configuration and logfile names: If the filenames you specify for many
+    26  # of the server's control files begin with "/" (or "drive:/" for Win32), the
+    27  # server will use that explicit path.  If the filenames do *not* begin
+    28  # with "/", the value of ServerRoot is prepended -- so "logs/foo.log"
+    29  # with ServerRoot set to "/etc/httpd" will be interpreted by the
+    30  # server as "/etc/httpd/logs/foo.log".
+    31  #
+    32
+    33  ### Section 1: Global Environment
+    34  #
+    35  # The directives in this section affect the overall operation of Apache,
+    36  # such as the number of concurrent requests it can handle or where it
+    37  # can find its configuration files.
+    38  #
+    39
+    40  #
+    41  # Don't give away too much information about all the subcomponents
+    42  # we are running.  Comment out this line if you don't mind remote sites
+    43  # finding out what major optional modules you are running
+    44  ServerTokens OS
+    45
+    46  #
+    47  # ServerRoot: The top of the directory tree under which the server's
+    48  # configuration, error, and log files are kept.
+    49  #
+    50  # NOTE!  If you intend to place this on an NFS (or otherwise network)
+    51  # mounted filesystem then please read the LockFile documentation
+    52  # (available at <URL:http://httpd.apache.org/docs/2.2/mod/mpm_common.html#lockfile>);
+    53  # you will save yourself a lot of trouble.
+    54  #
+    55  # Do NOT add a slash at the end of the directory path.
+    56  #
+    57  ServerRoot "/etc/httpd"
+    58
+    59  #
+    60  # PidFile: The file in which the server should record its process
+[root@optimus ~]# clear
+[root@optimus ~]# cat -n /etc/httpd/conf/httpd.conf | more -10
+     1  #
+     2  # This is the main Apache server configuration file.  It contains the
+     3  # configuration directives that give the server its instructions.
+     4  # See <URL:http://httpd.apache.org/docs/2.2/> for detailed information.
+     5  # In particular, see
+     6  # <URL:http://httpd.apache.org/docs/2.2/mod/directives.html>
+     7  # for a discussion of each configuration directive.
+     8  #
+     9  #
+    10  # Do NOT simply read the instructions in here without understanding
+[root@optimus ~]# clear
+[root@optimus ~]# find /etc -type d | cat -n | more -2
+     1  /etc
+     2  /etc/ssh
+     3  /etc/redhat-lsb
+     4  /etc/dracut.conf.d
+     5  /etc/sudoers.d
+     6  /etc/cron.weekly
+     7  /etc/gnome-vfs-2.0
+     8  /etc/gnome-vfs-2.0/modules
+[root@optimus ~]# ls -l /etc/ | more -2
+합계 2048
+drwxr-xr-x.  5 root root   4096 2022-02-12 16:20 ConsoleKit
+-rw-r--r--.  1 root root   4439 2016-04-12 16:56 DIR_COLORS
+-rw-r--r--.  1 root root   5139 2016-04-12 16:56 DIR_COLORS.256color
+-rw-r--r--.  1 root root   4113 2016-04-12 16:56 DIR_COLORS.lightbgcolor
+[root@optimus ~]# clear
+[root@optimus ~]# find /etc -type d | cat -n
+     1  /etc
+     2  /etc/ssh
+     3  /etc/redhat-lsb
+     4  /etc/dracut.conf.d
+     5  /etc/sudoers.d
+     6  /etc/cron.weekly
+     7  /etc/gnome-vfs-2.0
+     8  /etc/gnome-vfs-2.0/modules
+     9  /etc/cron.hourly
+    10  /etc/terminfo
+    11  /etc/sasl2
+    12  /etc/alternatives
+    13  /etc/popt.d
+    14  /etc/logrotate.d
+    15  /etc/httpd
+    16  /etc/httpd/conf
+    17  /etc/httpd/conf.d
+    18  /etc/profile.d
+    19  /etc/rwtab.d
+    20  /etc/pango
+    21  /etc/pango/x86_64-redhat-linux-gnu
+    22  /etc/obex-data-server
+    23  /etc/gcrypt
+    24  /etc/pulse
+    25  /etc/ipa
+    26  /etc/ld.so.conf.d
+    27  /etc/request-key.d
+    28  /etc/gnupg
+    29  /etc/chkconfig.d
+    30  /etc/PackageKit
+    31  /etc/pkcs11
+    32  /etc/pkcs11/modules
+    33  /etc/avahi
+    34  /etc/polkit-1
+    35  /etc/polkit-1/localauthority.conf.d
+    36  /etc/polkit-1/localauthority
+    37  /etc/polkit-1/localauthority/50-local.d
+    38  /etc/polkit-1/localauthority/30-site.d
+    39  /etc/polkit-1/localauthority/90-mandatory.d
+    40  /etc/polkit-1/localauthority/20-org.d
+    41  /etc/polkit-1/localauthority/10-vendor.d
+    42  /etc/polkit-1/nullbackend.conf.d
+    43  /etc/jvm
+    44  /etc/jvm-commmon
+    45  /etc/opt
+    46  /etc/sssd
+    47  /etc/iproute2
+    48  /etc/kde
+    49  /etc/kde/env
+    50  /etc/openldap
+    51  /etc/openldap/certs
+    52  /etc/maven
+    53  /etc/maven/fragments
+    54  /etc/scl
+    55  /etc/scl/prefixes
+    56  /etc/dnsmasq.d
+    57  /etc/bluetooth
+    58  /etc/blkid
+    59  /etc/abrt
+    60  /etc/abrt/plugins
+    61  /etc/ppp
+    62  /etc/ppp/peers
+    63  /etc/xml
+    64  /etc/sysconfig
+    65  /etc/sysconfig/network-scripts
+    66  /etc/sysconfig/networking
+    67  /etc/sysconfig/networking/devices
+    68  /etc/sysconfig/networking/profiles
+    69  /etc/sysconfig/networking/profiles/default
+    70  /etc/sysconfig/modules
+    71  /etc/sysconfig/console
+    72  /etc/sysconfig/cbq
+    73  /etc/audisp
+    74  /etc/audisp/plugins.d
+    75  /etc/ntp
+    76  /etc/ntp/crypto
+    77  /etc/libreport
+    78  /etc/libreport/events
+    79  /etc/libreport/plugins
+    80  /etc/libreport/events.d
+    81  /etc/ssl
+    82  /etc/sound
+    83  /etc/sound/events
+    84  /etc/rpm
+    85  /etc/rdma
+    86  /etc/cron.daily
+    87  /etc/gdm
+    88  /etc/gdm/PreSession
+    89  /etc/gdm/Init
+    90  /etc/gdm/PostLogin
+    91  /etc/gdm/PostSession
+    92  /etc/pcmcia
+    93  /etc/modprobe.d
+    94  /etc/sysctl.d
+    95  /etc/setuptool.d
+    96  /etc/cron.d
+    97  /etc/libnl
+    98  /etc/bash_completion.d
+    99  /etc/prelink.conf.d
+   100  /etc/gtk-2.0
+   101  /etc/ghostscript
+   102  /etc/ghostscript/8.70
+   103  /etc/statetab.d
+   104  /etc/xdg
+   105  /etc/xdg/autostart
+   106  /etc/xdg/menus
+   107  /etc/xdg/menus/preferences-post-merged
+   108  /etc/xdg/menus/settings-merged
+   109  /etc/xdg/menus/applications-merged
+   110  /etc/xdg/menus/preferences-merged
+   111  /etc/yum
+   112  /etc/yum/pluginconf.d
+   113  /etc/yum/protected.d
+   114  /etc/yum/vars
+   115  /etc/plymouth
+   116  /etc/dbus-1
+   117  /etc/dbus-1/system.d
+   118  /etc/dbus-1/session.d
+   119  /etc/pam.d
+   120  /etc/sane.d
+   121  /etc/sane.d/dll.d
+   122  /etc/cron.monthly
+   123  /etc/fonts
+   124  /etc/fonts/conf.d
+   125  /etc/fonts/conf.avail
+   126  /etc/rc.d
+   127  /etc/rc.d/init.d
+   128  /etc/rc.d/rc0.d
+   129  /etc/rc.d/rc5.d
+   130  /etc/rc.d/rc2.d
+   131  /etc/rc.d/rc6.d
+   132  /etc/rc.d/rc4.d
+   133  /etc/rc.d/rc3.d
+   134  /etc/rc.d/rc1.d
+   135  /etc/hp
+   136  /etc/cups
+   137  /etc/cups/interfaces
+   138  /etc/cups/ssl
+   139  /etc/cups/ppd
+   140  /etc/portreserve
+   141  /etc/purple
+   142  /etc/lvm
+   143  /etc/lvm/archive
+   144  /etc/lvm/profile
+   145  /etc/lvm/cache
+   146  /etc/lvm/backup
+   147  /etc/oddjobd.conf.d
+   148  /etc/vsftpd
+   149  /etc/latrace.d
+   150  /etc/latrace.d/sysdeps
+   151  /etc/latrace.d/sysdeps/x86_64
+   152  /etc/makedev.d
+   153  /etc/kdump-adv-conf
+   154  /etc/kdump-adv-conf/kdump_initscripts
+   155  /etc/kdump-adv-conf/kdump_sample_manifests
+   156  /etc/wpa_supplicant
+   157  /etc/pm
+   158  /etc/pm/sleep.d
+   159  /etc/pm/config.d
+   160  /etc/pm/power.d
+   161  /etc/acpi
+   162  /etc/acpi/events
+   163  /etc/acpi/actions
+   164  /etc/NetworkManager
+   165  /etc/NetworkManager/VPN
+   166  /etc/NetworkManager/system-connections
+   167  /etc/NetworkManager/dispatcher.d
+   168  /etc/default
+   169  /etc/rsyslog.d
+   170  /etc/java
+   171  /etc/java/security
+   172  /etc/java/security/security.d
+   173  /etc/xinetd.d
+   174  /etc/X11
+   175  /etc/X11/xorg.conf.d
+   176  /etc/X11/fontpath.d
+   177  /etc/X11/xinit
+   178  /etc/X11/xinit/xinput.d
+   179  /etc/X11/xinit/Xclients.d
+   180  /etc/X11/xinit/xinitrc.d
+   181  /etc/X11/applnk
+   182  /etc/bonobo-activation
+   183  /etc/pki
+   184  /etc/pki/rpm-gpg
+   185  /etc/pki/nssdb
+   186  /etc/pki/CA
+   187  /etc/pki/CA/certs
+   188  /etc/pki/CA/crl
+   189  /etc/pki/CA/private
+   190  /etc/pki/CA/newcerts
+   191  /etc/pki/tls
+   192  /etc/pki/tls/certs
+   193  /etc/pki/tls/private
+   194  /etc/pki/tls/misc
+   195  /etc/pki/java
+   196  /etc/pki/rsyslog
+   197  /etc/pki/ca-trust
+   198  /etc/pki/ca-trust/extracted
+   199  /etc/pki/ca-trust/extracted/openssl
+   200  /etc/pki/ca-trust/extracted/java
+   201  /etc/pki/ca-trust/extracted/pem
+   202  /etc/pki/ca-trust/source
+   203  /etc/pki/ca-trust/source/blacklist
+   204  /etc/pki/ca-trust/source/anchors
+   205  /etc/lsb-release.d
+   206  /etc/ConsoleKit
+   207  /etc/ConsoleKit/seats.d
+   208  /etc/ConsoleKit/run-session.d
+   209  /etc/ConsoleKit/run-seat.d
+   210  /etc/foomatic
+   211  /etc/firefox
+   212  /etc/firefox/pref
+   213  /etc/sgml
+   214  /etc/sgml/docbook
+   215  /etc/samba
+   216  /etc/yum.repos.d
+   217  /etc/gconf
+   218  /etc/gconf/gconf.xml.system
+   219  /etc/gconf/schemas
+   220  /etc/gconf/gconf.xml.mandatory
+   221  /etc/gconf/2
+   222  /etc/gconf/gconf.xml.defaults
+   223  /etc/certmonger
+   224  /etc/alsa
+   225  /etc/oddjob
+   226  /etc/hal
+   227  /etc/hal/fdi
+   228  /etc/hal/fdi/preprobe
+   229  /etc/hal/fdi/information
+   230  /etc/hal/fdi/policy
+   231  /etc/selinux
+   232  /etc/selinux/targeted
+   233  /etc/selinux/targeted/contexts
+   234  /etc/selinux/targeted/contexts/users
+   235  /etc/selinux/targeted/contexts/files
+   236  /etc/selinux/targeted/modules
+   237  /etc/selinux/targeted/modules/active
+   238  /etc/selinux/targeted/modules/active/modules
+   239  /etc/selinux/targeted/logins
+   240  /etc/selinux/targeted/policy
+   241  /etc/audit
+   242  /etc/audit/rules.d
+   243  /etc/festival
+   244  /etc/.java
+   245  /etc/.java/.systemPrefs
+   246  /etc/security
+   247  /etc/security/namespace.d
+   248  /etc/security/limits.d
+   249  /etc/security/console.perms.d
+   250  /etc/security/console.apps
+   251  /etc/skel
+   252  /etc/skel/.mozilla
+   253  /etc/skel/.mozilla/plugins
+   254  /etc/skel/.mozilla/extensions
+   255  /etc/skel/.gnome2
+   256  /etc/postfix
+   257  /etc/udev
+   258  /etc/udev/makedev.d
+   259  /etc/udev/rules.d
+   260  /etc/dhcp
+   261  /etc/dhcp/dhclient.d
+   262  /etc/depmod.d
+   263  /etc/init
+[root@optimus ~]# ^C
+[root@optimus ~]# clear
+[root@optimus ~]# mkdir /cattest
+[root@optimus ~]# cd /cattest/
+[root@optimus cattest]# pwd
+/cattest
+[root@optimus cattest]# cat > a
+1 2 3
+^C
+[root@optimus cattest]# cat > b
+1
+2
+^C
+[root@optimus cattest]# kk
+-bash: kk: command not found
+[root@optimus cattest]# ll
+합계 8
+-rw-r--r--. 1 root root 6 2022-02-19 19:40 a
+-rw-r--r--. 1 root root 4 2022-02-19 19:40 b
+[root@optimus cattest]# cat a b > c
+[root@optimus cattest]# ll
+합계 12
+-rw-r--r--. 1 root root  6 2022-02-19 19:40 a
+-rw-r--r--. 1 root root  4 2022-02-19 19:40 b
+-rw-r--r--. 1 root root 10 2022-02-19 19:40 c
+[root@optimus cattest]# cat > d
+kgitbank
+^C
+[root@optimus cattest]# ll
+합계 16
+-rw-r--r--. 1 root root  6 2022-02-19 19:40 a
+-rw-r--r--. 1 root root  4 2022-02-19 19:40 b
+-rw-r--r--. 1 root root 10 2022-02-19 19:40 c
+-rw-r--r--. 1 root root  9 2022-02-19 19:40 d
+[root@optimus cattest]# cat c >> d
+[root@optimus cattest]# ll
+합계 16
+-rw-r--r--. 1 root root  6 2022-02-19 19:40 a
+-rw-r--r--. 1 root root  4 2022-02-19 19:40 b
+-rw-r--r--. 1 root root 10 2022-02-19 19:40 c
+-rw-r--r--. 1 root root 19 2022-02-19 19:41 d
+[root@optimus cattest]# clear
+[root@optimus cattest]# ls -l /etc | cat -n > e
+[root@optimus cattest]# ll
+합계 36
+-rw-r--r--. 1 root root     6 2022-02-19 19:40 a
+-rw-r--r--. 1 root root     4 2022-02-19 19:40 b
+-rw-r--r--. 1 root root    10 2022-02-19 19:40 c
+-rw-r--r--. 1 root root    19 2022-02-19 19:41 d
+-rw-r--r--. 1 root root 16849 2022-02-19 19:41 e
+[root@optimus cattest]# find /etc -type d | cat -n > e
+[root@optimus cattest]# ll
+합계 24
+-rw-r--r--. 1 root root    6 2022-02-19 19:40 a
+-rw-r--r--. 1 root root    4 2022-02-19 19:40 b
+-rw-r--r--. 1 root root   10 2022-02-19 19:40 c
+-rw-r--r--. 1 root root   19 2022-02-19 19:41 d
+-rw-r--r--. 1 root root 6830 2022-02-19 19:41 e
+[root@optimus cattest]# clear
+[root@optimus cattest]# find / -name grub.conf -o -name inittab -o -name login.defs
+/etc/login.defs
+/etc/inittab
+/etc/grub.conf
+/media/CentOS_6.8_Final/isolinux/grub.conf
+/backup/grub.conf
+[root@optimus cattest]# pwd
+/cattest
+[root@optimus cattest]# cp /backup/grub.conf /etc/inittab /etc/login.defs .
+[root@optimus cattest]# ll
+합계 36
+-rw-r--r--. 1 root root    6 2022-02-19 19:40 a
+-rw-r--r--. 1 root root    4 2022-02-19 19:40 b
+-rw-r--r--. 1 root root   10 2022-02-19 19:40 c
+-rw-r--r--. 1 root root   19 2022-02-19 19:41 d
+-rw-r--r--. 1 root root 6830 2022-02-19 19:41 e
+-rw-------. 1 root root  745 2022-02-19 19:42 grub.conf
+-rw-r--r--. 1 root root  884 2022-02-19 19:42 inittab
+-rw-r--r--. 1 root root 1816 2022-02-19 19:42 login.defs
+[root@optimus cattest]# mkdir -p /home/test/c/d/cattest/linux/ && head -2 * > /home/test/c/d/cattest/linux/f
+[root@optimus cattest]# cat /home/test/c/d/cattest/linux/f
+==> a <==
+1 2 3
+
+==> b <==
+1
+2
+
+==> c <==
+1 2 3
+1
+
+==> d <==
+kgitbank
+1 2 3
+
+==> e <==
+     1  /etc
+     2  /etc/ssh
+
+==> grub.conf <==
+# grub.conf generated by anaconda
+#
+
+==> inittab <==
+# inittab is only used by upstart for the default runlevel.
+#
+
+==> login.defs <==
+#
+# Please note that the parameters in this configuration file control the
+[root@optimus cattest]# clear
+[root@optimus cattest]#
